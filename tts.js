@@ -7,8 +7,13 @@ speechSynthesis.addEventListener("voiceschanged", () => {
 
 setTimeout(function(){
     var elems = document.getElementsByClassName("rb")
+    if(window.matchMedia("(pointer: coarse)").matches) {
+        var clicker = "dblclick"
+    } else {
+        var clicker = "click"
+    }
     for(i=0;i<elems.length;i++){
-        elems[i].parentElement.addEventListener("touchstart",function(event){
+        elems[i].parentElement.addEventListener(clicker,function(event){
             if(event.srcElement.parentElement.parentElement.id == "particle"){
                 if(event.srcElement.innerText == "は"){
                     synth.text = "わ"
@@ -26,4 +31,4 @@ setTimeout(function(){
             window.speechSynthesis.speak(synth) 
         })
     }
-},100)
+},150)
