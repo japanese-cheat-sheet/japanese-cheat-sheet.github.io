@@ -8,7 +8,7 @@ speechSynthesis.addEventListener("voiceschanged", () => {
 setTimeout(function(){
     var elems = document.getElementsByClassName("rb")
     for(i=0;i<elems.length;i++){
-        elems[i].parentElement.addEventListener("mousedown",function(event){
+        elems[i].parentElement.addEventListener("mouseover",function(event){
             if(event.srcElement.parentElement.parentElement.id == "particle"){
                 if(event.srcElement.innerText == "は"){
                     synth.text = "わ"
