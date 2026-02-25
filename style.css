@@ -17,8 +17,8 @@ body{
     left: 0;
     right: 0;
     margin: auto;
-    margin-top: 2vw;
-    margin-bottom: 2vw;
+    margin-top: 3vw;
+    margin-bottom: 3vw;
     border: 5px var(--border-color) solid;
     padding: 50px;
     padding-left: 100px;
@@ -254,8 +254,8 @@ main p{
     }
 
     .center{
-        margin-top: 15vw;
-        margin-bottom: 15vw;
+        margin-top: 16vw;
+        margin-bottom: 16vw;
     }
 
     .hint-container{

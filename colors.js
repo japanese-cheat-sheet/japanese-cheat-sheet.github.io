@@ -1,13 +1,10 @@
 // light, dark
 
-if(window.localStorage.getItem("colors") == null){
-    var colors = ["#eeeeee", "#111111"]
-    window.localStorage.setItem("colors", colors)
+if(window.localStorage.getItem("PRIMARY") == null && window.localStorage.getItem("SECONDARY") == null ){
+    window.localStorage.setItem("PRIMARY", "#EEEEEE")
+    window.localStorage.setItem("SECONDARY", "#111111")
     console.log("test 1")
-} else {
-    var colors = window.localStorage.getItem("colors").split(",")
 }
-
 
 var r = document.querySelector(':root');
 function setColors(array){
@@ -24,13 +21,15 @@ function setColors(array){
         r.style.setProperty(secondary[i],array[1])
     }
 }
-setColors(colors)
+setColors([window.localStorage.getItem("PRIMARY"),window.localStorage.getItem("SECONDARY")])
 
-var toggle = false
 function toggleColors(){
-        window.localStorage.setItem("colors", [colors[1], colors[0]])
-        setColors(window.localStorage.getItem("colors").split(","))
+        var temp = window.localStorage.getItem("PRIMARY")
+        window.localStorage.setItem("PRIMARY", window.localStorage.getItem("SECONDARY"))
+        window.localStorage.setItem("SECONDARY", temp)
+        setColors([window.localStorage.getItem("PRIMARY"), window.localStorage.getItem("SECONDARY")])
 }
+
 setTimeout(function(){
     if(window.matchMedia("(pointer: coarse)").matches) {
         var double = "Ｄｏｕｂｌｅ　ｔａｐ　ｔｅｘｔ　ｔｏ\nｕｓｅ　Ｔｅｘｔ－Ｔｏ－Ｓｐｅｅｃｈ"
