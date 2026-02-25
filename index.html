@@ -1,0 +1,474 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Japanese</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="japanese-l-u.js"></script>
+    <script src="colors.js"></script>
+    <script src="tts.js"></script>
+</head>
+<body>
+<div class="center">
+    <h1 class="js-post-body">日本語{にほんご}（ＪＡＰＡＮＥＳＥ）
+        <div class="hint-container">
+            <p class="hint-text">Ｐｒｅｓｓ　Ｐ　ｔｏ　ｔｏｇｇｌｅ　Ｄａｒｋ　Ｍｏｄｅ</p>
+        </div>
+    </h1>
+    
+    <div class="hiragana">
+    <h2 class="js-post-body">平仮名{ひらがな}（ＨＩＲＡＧＡＮＡ）</h2>
+        <table>
+            <tr>
+                <th class="js-post-body">あ{a}</th>
+                <th class="js-post-body">か{ka}</th>
+                <th class="js-post-body">さ{sa}</th>
+                <th class="js-post-body">た{ta}</th>
+                <th class="js-post-body">な{na}</th>
+                <th class="js-post-body">は{ha}</th>
+                <th class="js-post-body">ま{ma}</th>
+                <th class="js-post-body">や{ya}</th>
+                <th class="js-post-body">ら{ra}</th>
+                <th class="js-post-body">わ{wa}</th>
+                <th></th>
+                <th class="js-post-body">ぱ{pa}</th>
+                <th class="js-post-body">ば{ba}</th>
+                <th class="js-post-body">だ{da}</th>
+                <th class="js-post-body">ざ{za}</th>
+                <th class="js-post-body">が{ga}</th>
+            </tr>
+            <tr>
+                <th class="js-post-body">い{i}</th>
+                <th class="js-post-body">き{ki}</th>
+                <th class="js-post-body">し{shi}</th>
+                <th class="js-post-body">ち{chi}</th>
+                <th class="js-post-body">に{ni}</th>
+                <th class="js-post-body">ひ{hi}</th>
+                <th class="js-post-body">み{mi}</th>
+                <th></th>
+                <th class="js-post-body">り{ri}</th>
+                <th></th>
+                <th></th>
+                <th class="js-post-body">ぴ{pi}</th>
+                <th class="js-post-body">び{bi}</th>
+                <th class="js-post-body">ぢ{di}</th>
+                <th class="js-post-body">じ{ji}</th>
+                <th class="js-post-body">ぎ{gi}</th>
+            </tr>
+            <tr>
+                <th class="js-post-body">う{u}</th>
+                <th class="js-post-body">く{ku}</th>
+                <th class="js-post-body">す{su}</th>
+                <th class="js-post-body">つ{tsu}</th>
+                <th class="js-post-body">ぬ{nu}</th>
+                <th class="js-post-body">ふ{fu}</th>
+                <th class="js-post-body">む{mu}</th>
+                <th class="js-post-body">ゆ{yu}</th>
+                <th class="js-post-body">る{ru}</th>
+                <th></th>
+                <th></th>
+                <th class="js-post-body">ぷ{pu}</th>
+                <th class="js-post-body">ぶ{bu}</th>
+                <th class="js-post-body">づ{dzu}</th>
+                <th class="js-post-body">ず{zu}</th>
+                <th class="js-post-body">ぐ{gu}</th>
+            </tr>
+            <tr>
+                <th class="js-post-body">え{e}</th>
+                <th class="js-post-body">け{ke}</th>
+                <th class="js-post-body">せ{se}</th>
+                <th class="js-post-body">て{te}</th>
+                <th class="js-post-body">ね{ne}</th>
+                <th class="js-post-body">へ{he}</th>
+                <th class="js-post-body">め{me}</th>
+                <th></th>
+                <th class="js-post-body">れ{re}</th>
+                <th></th>
+                <th></th>
+                <th class="js-post-body">ぺ{pe}</th>
+                <th class="js-post-body">べ{be}</th>
+                <th class="js-post-body">で{de}</th>
+                <th class="js-post-body">ぜ{ze}</th>
+                <th class="js-post-body">げ{ge}</th>
+            </tr>
+            <tr>
+                <th class="js-post-body">お{o}</th>
+                <th class="js-post-body">こ{ko}</th>
+                <th class="js-post-body">そ{so}</th>
+                <th class="js-post-body">と{to}</th>
+                <th class="js-post-body">の{no}</th>
+                <th class="js-post-body">ほ{ho}</th>
+                <th class="js-post-body">も{mo}</th>
+                <th class="js-post-body">よ{yo}</th>
+                <th class="js-post-body">ろ{ro}</th>
+                <th class="js-post-body">を{wo}</th>
+                <th></th>
+                <th class="js-post-body">ぽ{po}</th>
+                <th class="js-post-body">ぼ{bo}</th>
+                <th class="js-post-body">ど{do}</th>
+                <th class="js-post-body">ぞ{zo}</th>
+                <th class="js-post-body">ご{go}</th>
+            </tr>
+            <tr>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th class="js-post-body">ん{n}</th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+            </tr>
+        </table>
+        <table>
+            <tr>
+                <th class="js-post-body">きゃ{kya}</th>
+                <th class="js-post-body">しゃ{sha}</th>
+                <th class="js-post-body">ちゃ{cha}</th>
+                <th class="js-post-body">にゃ{nya}</th>
+                <th class="js-post-body">ひゃ{hya}</th>
+                <th class="js-post-body">みゃ{mya}</th>
+                <th class="js-post-body">りゃ{rya}</th>
+                <th class="js-post-body">ぴゃ{pya}</th>
+                <th class="js-post-body">びゃ{bya}</th>
+                <th class="js-post-body">じゃ{ja}</th>
+                <th class="js-post-body">ぎゃ{gya}</th>
+            </tr>
+            <tr>
+                <th class="js-post-body">きゅ{kyu}</th>
+                <th class="js-post-body">しゅ{shu}</th>
+                <th class="js-post-body">ちゅ{chu}</th>
+                <th class="js-post-body">にゅ{nyu}</th>
+                <th class="js-post-body">ひゅ{hyu}</th>
+                <th class="js-post-body">みゅ{myu}</th>
+                <th class="js-post-body">りゅ{ryu}</th>
+                <th class="js-post-body">ぴゅ{pyu}</th>
+                <th class="js-post-body">びゅ{byu}</th>
+                <th class="js-post-body">じゅ{ju}</th>
+                <th class="js-post-body">ぎゅ{gyu}</th>
+            </tr>
+            <tr>
+                <th class="js-post-body">きょ{kyo}</th>
+                <th class="js-post-body">しょ{sho}</th>
+                <th class="js-post-body">ちょ{cho}</th>
+                <th class="js-post-body">にょ{nyo}</th>
+                <th class="js-post-body">ひょ{hyo}</th>
+                <th class="js-post-body">みょ{myo}</th>
+                <th class="js-post-body">りょ{ryo}</th>
+                <th class="js-post-body">ぴょ{pyo}</th>
+                <th class="js-post-body">びょ{byo}</th>
+                <th class="js-post-body">じょ{jo}</th>
+                <th class="js-post-body">ぎょ{gyo}</th>
+            </tr>
+        </table>
+    </div>
+    <div class="katakana">
+    <h2 class="js-post-body">片仮名{かたかな}（ＫＡＴＡＫＡＮＡ）</h2>
+        <table>
+            <tr>
+                <th class="js-post-body">ア{a}</th>
+                <th class="js-post-body">カ{ka}</th>
+                <th class="js-post-body">サ{sa}</th>
+                <th class="js-post-body">タ{ta}</th>
+                <th class="js-post-body">ナ{na}</th>
+                <th class="js-post-body">ハ{ha}</th>
+                <th class="js-post-body">マ{ma}</th>
+                <th class="js-post-body">ヤ{ya}</th>
+                <th class="js-post-body">ラ{ra}</th>
+                <th class="js-post-body">ワ{wa}</th>
+                <th></th>
+                <th class="js-post-body">パ{pa}</th>
+                <th class="js-post-body">バ{ba}</th>
+                <th class="js-post-body">ダ{da}</th>
+                <th class="js-post-body">ザ{za}</th>
+                <th class="js-post-body">ガ{ga}</th>
+            </tr>
+            <tr>
+                <th class="js-post-body">イ{i}</th>
+                <th class="js-post-body">キ{ki}</th>
+                <th class="js-post-body">シ{shi}</th>
+                <th class="js-post-body">チ{chi}</th>
+                <th class="js-post-body">ニ{ni}</th>
+                <th class="js-post-body">ヒ{hi}</th>
+                <th class="js-post-body">ミ{mi}</th>
+                <th></th>
+                <th class="js-post-body">リ{ri}</th>
+                <th></th>
+                <th></th>
+                <th class="js-post-body">ピ{pi}</th>
+                <th class="js-post-body">ビ{bi}</th>
+                <th class="js-post-body">ヂ{di}</th>
+                <th class="js-post-body">ジ{ji}</th>
+                <th class="js-post-body">ギ{gi}</th>
+            </tr>
+            <tr>
+                <th class="js-post-body">ウ{u}</th>
+                <th class="js-post-body">ク{ku}</th>
+                <th class="js-post-body">ス{su}</th>
+                <th class="js-post-body">ツ{tsu}</th>
+                <th class="js-post-body">ヌ{nu}</th>
+                <th class="js-post-body">フ{fu}</th>
+                <th class="js-post-body">ム{mu}</th>
+                <th class="js-post-body">ユ{yu}</th>
+                <th class="js-post-body">ル{ru}</th>
+                <th></th>
+                <th></th>
+                <th class="js-post-body">プ{pu}</th>
+                <th class="js-post-body">ブ{bu}</th>
+                <th class="js-post-body">ヅ{dzu}</th>
+                <th class="js-post-body">ズ{zu}</th>
+                <th class="js-post-body">グ{gu}</th>
+            </tr>
+            <tr>
+                <th class="js-post-body">エ{e}</th>
+                <th class="js-post-body">ケ{ke}</th>
+                <th class="js-post-body">セ{se}</th>
+                <th class="js-post-body">テ{te}</th>
+                <th class="js-post-body">ネ{ne}</th>
+                <th class="js-post-body">ヘ{he}</th>
+                <th class="js-post-body">メ{me}</th>
+                <th></th>
+                <th class="js-post-body">レ{re}</th>
+                <th></th>
+                <th></th>
+                <th class="js-post-body">ペ{pe}</th>
+                <th class="js-post-body">ベ{be}</th>
+                <th class="js-post-body">デ{de}</th>
+                <th class="js-post-body">ゼ{ze}</th>
+                <th class="js-post-body">ゲ{ge}</th>
+            </tr>
+            <tr>
+                <th class="js-post-body">オ{o}</th>
+                <th class="js-post-body">コ{ko}</th>
+                <th class="js-post-body">ソ{so}</th>
+                <th class="js-post-body">ト{to}</th>
+                <th class="js-post-body">ノ{no}</th>
+                <th class="js-post-body">ホ{ho}</th>
+                <th class="js-post-body">モ{mo}</th>
+                <th class="js-post-body">ヨ{yo}</th>
+                <th class="js-post-body">ロ{ro}</th>
+                <th class="js-post-body">ヲ{wo}</th>
+                <th></th>
+                <th class="js-post-body">ポ{po}</th>
+                <th class="js-post-body">ボ{bo}</th>
+                <th class="js-post-body">ド{do}</th>
+                <th class="js-post-body">ゾ{zo}</th>
+                <th class="js-post-body">ゴ{go}</th>
+            </tr>
+            <tr>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th class="js-post-body">ン{n}</th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+            </tr>
+        </table>
+        <table>
+            <tr>
+                <th class="js-post-body">キャ{kya}</th>
+                <th class="js-post-body">シャ{sha}</th>
+                <th class="js-post-body">チャ{cha}</th>
+                <th class="js-post-body">ニャ{nya}</th>
+                <th class="js-post-body">ヒャ{hya}</th>
+                <th class="js-post-body">ミャ{mya}</th>
+                <th class="js-post-body">リャ{rya}</th>
+                <th class="js-post-body">ピャ{pya}</th>
+                <th class="js-post-body">ビャ{bya}</th>
+                <th class="js-post-body">ジャ{ja}</th>
+                <th class="js-post-body">ギャ{gya}</th>
+            </tr>
+            <tr>
+                <th class="js-post-body">キュ{kyu}</th>
+                <th class="js-post-body">シュ{shu}</th>
+                <th class="js-post-body">チュ{chu}</th>
+                <th class="js-post-body">ニュ{nyu}</th>
+                <th class="js-post-body">ヒュ{hyu}</th>
+                <th class="js-post-body">ミュ{myu}</th>
+                <th class="js-post-body">リュ{ryu}</th>
+                <th class="js-post-body">ピュ{pyu}</th>
+                <th class="js-post-body">ビュ{byu}</th>
+                <th class="js-post-body">ジュ{ju}</th>
+                <th class="js-post-body">ギュ{gyu}</th>
+            </tr>
+            <tr>
+                <th class="js-post-body">キョ{kyo}</th>
+                <th class="js-post-body">ショ{sho}</th>
+                <th class="js-post-body">チョ{cho}</th>
+                <th class="js-post-body">ニョ{nyo}</th>
+                <th class="js-post-body">ヒョ{hyo}</th>
+                <th class="js-post-body">ミョ{myo}</th>
+                <th class="js-post-body">リョ{ryo}</th>
+                <th class="js-post-body">ピョ{pyo}</th>
+                <th class="js-post-body">ビョ{byo}</th>
+                <th class="js-post-body">ジョ{jo}</th>
+                <th class="js-post-body">ギョ{gyo}</th>
+            </tr>
+        </table>
+        <table>
+            <tr>
+                <th class="js-post-body">ヴァ{va}</th>
+                <th class="js-post-body">ファ{fa}</th>
+                <th class="js-post-body">ヒェ{hye}</th>
+                <th class="js-post-body">トゥ{tu}</th>
+                <th class="js-post-body">ティ{ti}</th>
+                <th class="js-post-body">ツァ{tsa}</th>
+                <th class="js-post-body">シェ{she}</th>
+                <th class="js-post-body">クァ{kwa}</th>
+                <th class="js-post-body">キェ{kye}</th>
+                <th class="js-post-body">イェ{ye}</th>
+            </tr>
+            <tr>
+                <th class="js-post-body">ヴィ{vi}</th>
+                <th class="js-post-body">フィ{fi}</th>
+                <th></th>
+                <th class="js-post-body">トュ{tyu}</th>
+                <th class="js-post-body">ディ{di}</th>
+                <th class="js-post-body">ツェ{tse}</th>
+                <th class="js-post-body">チェ{che}</th>
+                <th class="js-post-body">クィ{kwi}</th>
+                <th class="js-post-body">ギェ{gye}</th>
+                <th class="js-post-body">ウィ{wi}</th>
+            </tr>
+            <tr>
+                <th class="js-post-body">ヴ{vu}</th>
+                <th class="js-post-body">フュ{fyu}</th>
+                <th></th>
+                <th class="js-post-body">ドゥ{du}</th>
+                <th class="js-post-body">デュ{dyu}</th>
+                <th class="js-post-body">ツォ{tso}</th>
+                <th></th>
+                <th class="js-post-body">クェ{kwe}</th>
+                <th></th>
+                <th class="js-post-body">ウェ{we}</th>
+            </tr>
+            <tr>
+                <th class="js-post-body">ヴェ{ve}</th>
+                <th class="js-post-body">フェ{fe}</th>
+                <th></th>
+                <th class="js-post-body">ドュ{dyu}</th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th class="js-post-body">クォ{kwo}</th>
+                <th></th>
+                <th class="js-post-body">ウォ{wo}</th>
+            </tr>
+            <tr>
+                <th class="js-post-body">ヴォ{vo}</th>
+                <th class="js-post-body">フォ{fo}</th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+            </tr>
+        </table>
+    </div>
+    <h2 class="js-post-body">助詞{じょし}（ＰＡＲＴＩＣＬＥＳ）</h2>
+    <div class="particles">
+        <h3 id="first" class="js-post-body">格助詞{かくじょし}（ＣＡＳＥ　ＰＡＲＴＩＣＬＥＳ）</h3>
+        <p class="descriptor">
+            In English, word order is used to define what grammatical role (a.k.a case) a word
+            has. In Japanese, Case Particles are used to identify the case of the noun that 
+            comes before it, for example: subject, direct object, loaction, destination, etc
+        </p>
+            <div class="particle-container">
+
+            </div>
+        <h3 class="js-post-body">並立助詞{へいれつじょし}（ＰＡＲＡＬＬＥＬ　ＰＡＲＴＩＣＬＥＳ）</h3>
+        <p class="descriptor">
+            Parallel particles are used put nouns and noun phrases in parallel (thus the name), 
+            and in English they mostly translate to words similar to "and" and "or"
+        </p>
+        <div class="particle-container">
+                
+        </div>
+        <h3 class="js-post-body">終助詞{しゅうじょし}（ＳＥＮＴＥＮＣＥ－ＥＮＤＩＮＧ　ＰＡＲＴＩＣＬＥＳ）</h3>
+        <p class="descriptor">
+            Sentence-ending particles are gramatical kana placed at the end of sentences to show its
+            force, such as emphasis, confirmation, questioning, emotion, etc
+        </p>
+        <div class="particle-container">
+                
+        </div>
+        <h3 class="js-post-body">間投助詞{かんとうじょし}（ＩＮＴＥＲＪＥＣＴＯＲＹ　ＰＡＲＴＩＣＬＥＳ）</h3>
+        <p class="descriptor">
+            Interjectory particles are used to show emotion, emphasis, or gain attention from the 
+            listener, primarly focusing on feeling and conversational tone rather than gramatical structures
+        </p>
+        <div class="particle-container">
+                
+        </div>
+        <h3 class="js-post-body">副助詞{ふくじょし}（ＡＤＶＥＲＢＩＡＬ　ＰＡＲＴＩＣＬＥＳ）</h3>
+        <p class="descriptor">
+            Adverbial particles act similarly to adverbs (thus the name) by modifiy words 
+            or phrases to express concepts like limits, addition, emphasis, etc
+        </p>
+        <div class="particle-container">
+                
+        </div>
+        <h3 class="js-post-body">係助詞{かかりじょし}（ＢＩＮＤＩＮＧ　ＰＡＲＴＩＣＬＥＳ）</h3>
+        <p class="descriptor">
+            Binding particles attach/bind to words and phrases and highlight them, creating
+            emphasis, contrast, restriction, and overall affecting how the sentence is
+            interpreted or structured
+        </p>
+        <div class="particle-container">
+                
+        </div>
+        <h3 class="js-post-body">接続助詞{せつぞくじょし}（ＣＯＮＪＵＮＣＴＩＶＥ　ＰＡＲＴＩＣＬＥＳ）</h3>
+        <p class="descriptor">
+            Conjunctive particles connect one clause to another and shows the relationship between
+            the them, whether it is in contrast, cause or reason, time sequence, condition, etc
+        </p>
+        <div class="particle-container">
+                
+        </div>
+        <h3 class="js-post-body">準体助詞{じゅんたいじょし}（ＰＨＲＡＳＡＬ　ＰＡＲＴＩＣＬＥＳ）</h3>
+        <p class="descriptor">test text</p>
+        <div class="particle-container">
+                
+        </div>
+        <!-- 
+<main>
+    <div class="particle-area">
+        <table>
+            <th id="particle" class="js-post-body">{}</th>
+        </table>
+    </div>
+    <p></p>
+</main>
+        -->
+    </div>
+
+    <h2>ＶＥＲＢ　ＣＯＮＪＵＧＡＴＩＯＮ</h2>
+</div>
+</body>
+</html>

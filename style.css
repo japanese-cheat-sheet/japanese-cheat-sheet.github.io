@@ -1,0 +1,246 @@
+body{
+    user-select: none;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--background);
+    background-image:url("bng.jpeg"), linear-gradient(var(--background) 0 100%);
+    background-blend-mode:soft-light, normal;
+    background-attachment:fixed;
+    background-position: center;
+    margin:0;
+}
+
+.center{
+    width: max-content;
+    height: max-content;
+    left: 0;
+    right: 0;
+    margin: auto;
+    margin-top: 1vw;
+    margin-bottom: 1vw;
+    border: 5px var(--border-color) solid;
+    padding: 50px;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+h1{
+    text-align: center;
+    position: relative;
+    font-size: 30pt;
+    color: var(--heading-text-color);
+    margin-block-start: 0;
+    margin-block-end: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    padding-top:40px;
+    padding-bottom: 60px;
+    width: max-content;
+}
+
+.hint-container{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+}
+
+.hint-text{
+    padding:0;
+    font-size: 10pt;
+    font-family: "ＭＳ Ｐゴシック";
+    border: 2px var(--border-color) solid;
+    background-color: var(--table-background);
+    margin: 10px;
+    padding: 10px;
+}
+
+h2{
+    position: relative;
+    font-size: 25pt;
+    font-weight: 400;
+    color: var(--heading-text-color);
+    margin-block-start: 0;
+    margin-block-end: 0;
+    padding-top:10px;
+    padding-bottom: 10px;
+}
+
+h3{
+    position: relative;
+    font-size: 20pt;
+    font-weight: 300;
+    color: var(--heading-text-color);
+    margin-block-start: 0;
+    margin-block-end: 0;
+    padding-top:10px;
+    padding-bottom: 10px;
+}
+
+table {
+    margin-left: 5px;
+    border-collapse: separate;
+    margin-bottom: 50px;
+}
+
+:root{
+    --background: none;
+    --border-color: none;
+    --heading-text-color: none;
+
+    --text-color: none;
+
+    --table-border-color:none;
+    --table-text-color:none;
+    --table-background:none;
+
+    --popup-backround: none;
+    --popup-text-color: none;
+    --popup-border-color: none;
+
+    --select-backround: none;
+    --select-text-color: none;
+}
+
+td, th {
+    font-size: 20pt;
+    text-align: center;
+    border-radius: 2px;
+}
+
+td:not(:empty), th:not(:empty){
+    border: 1px var(--table-border-color) solid ;
+    color: var(--table-text-color);
+    background-color: var(--table-background);
+}
+
+ruby.popups{
+    margin: -2px;
+    border-radius: 2px !important;
+    transition: none;
+}
+
+table ruby.popups{
+    border-radius: 0px !important;
+}
+
+ruby.popups.hover{
+    color: var(--select-text-color);
+    background-color: var(--select-backround) !important;
+    border: 1px rgba(0, 0, 0, 0) solid !important;
+    transition: none !important;
+}
+
+table ruby.popups.hover{
+    width: 100%
+}
+
+.upop.ja-text.transition{
+    border: 1px var(--popup-border-color) solid;
+    z-index: 100;
+    padding: 5px;
+    font-weight: 600;
+    background-color: var(--popup-backround);
+    color: var(--popup-text-color);
+    transition: none;
+}
+
+.line{
+    display: none;
+}
+
+span.rt{
+    display: none !important; 
+    margin: 0;
+}
+
+span.rb{
+    padding: 3px !important;
+    border-radius: 2px;
+}
+
+table span.rb{
+    padding: 15.75px !important;
+}
+
+.particles h3{
+    margin-top: 25px;
+    padding-bottom: 0px;
+}
+
+#first{
+    margin-top: 0px;
+    padding-bottom: 0px;
+}
+
+.descriptor{
+    font-size: 15pt;
+    font-family: "ＭＳ Ｐゴシック";
+    color: var(--text-color);
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    width: 750px;
+    padding: 5px;
+    background-color: var(--table-background);
+    border: 1px var(--border-color) solid;
+}
+
+.particle-container{
+    display: grid;
+    grid-template-columns: repeat(3, 325px);
+    column-gap: 10px;
+    row-gap: 10px;
+}
+
+main{
+    border: 2px var(--border-color) solid;
+    background-color: var(--table-background);
+}
+
+main::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+@property --p {
+  syntax: '<percentage>';
+  inherits: false;
+  initial-value: 100%;
+}
+
+main table{
+    position: relative;
+    margin: 0;
+}
+
+.particle-area{
+    float: left;
+    width: min-content;
+    height: min-content;
+    padding: 10px 11px 11px 10px;
+}
+
+main td:not(:empty), main th:not(:empty){
+    background-color: rgba(0, 0, 0, 0) ;
+}
+
+main table span.rb{
+    font-size: 25pt;
+}
+
+main p{
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin: 12px;
+    font-size: 15pt;
+    font-family: "ＭＳ Ｐゴシック";
+    color: var(--text-color);
+    word-break: keep-all;
+    text-align:justify;
+}
+
+.hiragana, .katakana{
+    position: relative;
+    margin-bottom: 60px;
+}
