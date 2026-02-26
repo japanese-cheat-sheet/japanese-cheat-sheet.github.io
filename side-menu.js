@@ -2,7 +2,6 @@ if(window.matchMedia("(pointer: coarse)").matches == false) {
     window.addEventListener("resize",function(){
         var devicePixelRatio = window.devicePixelRatio || 1
         var zoom =  120 + (100 - Math.round(devicePixelRatio* 100))  + "%"
-        console.log(zoom)
         document.getElementById("side-menu-button").style.zoom = zoom
         document.getElementById("side-menu").style.zoom = zoom
     })

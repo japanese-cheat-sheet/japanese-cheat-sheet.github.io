@@ -60,9 +60,6 @@ body{
     z-index: 200;
     padding-top: 90px;
     padding-left: 20px;
-    /* animation-name: open-side-menu;
-    animation-duration: 0.5s;
-    animation-fill-mode: forwards; */
 }
 
 #side-menu-text{
@@ -318,12 +315,45 @@ main p{
 
 @media (pointer:coarse) {
     html{
-        zoom:30%;
+        zoom:28%;
+    }
+
+    #side-menu-button{
+        font-size: 60pt;
+        padding: 20px;
+        padding-left: 40px;
+    }
+
+    #side-menu{
+        padding-top: 180px;
+        width: 900px;
+        height: 110%;
+        padding-left: 40px;
+    }
+
+    .menu-option{
+    position: relative;
+    display: block;
+    transition: padding-left 0.2s;
+    margin-bottom: 20px;
+    padding:5px;
+    word-break: keep-all;
+    }
+
+    #type1{
+        font-size: 3.2em;
+    }
+    #type2{
+        font-size: 2em;
+    }
+
+    .menu-option:hover{
+        padding-left:50px;
     }
 
     .center{
-        margin-top: 15vh;
-        margin-bottom: 15vh;
+        margin-top: 30vw;
+        margin-bottom: 15vw;
     }
 
     td:not(:empty), th:not(:empty){
@@ -365,6 +395,7 @@ main p{
 
     h1{
         font-size: 65pt;
+
     }
     h1 div {
         padding-top: 20px;
