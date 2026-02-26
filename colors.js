@@ -16,6 +16,7 @@ function setColors(array){
     var r = document.querySelector(':root');
     r.style.setProperty("--PRIMARY",array[0])
     r.style.setProperty("--PRIMARYalpha",array[0]+"AF")
+    r.style.setProperty("--PRIMARYlowAlpha",array[0]+"DD")
     r.style.setProperty("--SECONDARY",array[1])
 }
 setColors([window.localStorage.getItem("PRIMARY"),window.localStorage.getItem("SECONDARY")])
