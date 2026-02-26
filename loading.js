@@ -2,6 +2,7 @@ function loadingAnimation(){
     setTimeout(function(){
         var elem = document.getElementById("loading-cover")
         elem.style.opacity = 0;
+        elem.style.transition = "opacity 1s"
         console.log("complete")
         setTimeout(function(){
             elem.style.display = "none";
