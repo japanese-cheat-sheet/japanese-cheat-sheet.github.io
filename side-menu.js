@@ -9,7 +9,7 @@ if(window.matchMedia("(pointer: coarse)").matches == false) {
 
 function scrollById(Name){
     var elemRect = document.getElementById(Name).getBoundingClientRect()
-    window.scrollTo(0,elemRect.top + window.scrollY - 80)
+    window.scrollTo(0,elemRect.top + window.scrollY - 125 )
 }
 
 setTimeout(function(){
