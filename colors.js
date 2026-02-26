@@ -1,5 +1,5 @@
 // light, dark
-const COLORS = ["#E3E4E0","#12194C"]
+const COLORS = ["#E3E4E0","#0E1540"]
 if(
     window.localStorage.getItem("PRIMARY") == null || 
     window.localStorage.getItem("SECONDARY") == null || 
