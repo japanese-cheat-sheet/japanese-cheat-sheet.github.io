@@ -339,9 +339,9 @@ main p{
     }
 
     #side-menu-button{
-        font-size: 60pt;
-        padding: 20px;
-        padding-left: 40px;
+        font-size: 82pt;
+        padding: 25px;
+        padding-left: 45px;
     }
 
     #side-menu{
@@ -352,12 +352,12 @@ main p{
     }
 
     .menu-option{
-    position: relative;
-    display: block;
-    transition: padding-left 0.2s;
-    margin-bottom: 20px;
-    padding:5px;
-    word-break: keep-all;
+        position: relative;
+        display: block;
+        transition: padding-left 0.2s;
+        margin-bottom: 20px;
+        padding:5px;
+        word-break: keep-all;
     }
 
     #type1{
