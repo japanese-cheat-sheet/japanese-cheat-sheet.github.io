@@ -1,18 +1,18 @@
 {
-  "short_name": "JCS",
-  "icons": [
+    "name":"Japanese Cheat Sheet",
+    "icons": [
     {
-      "src": "/icons/icon192.ico",
-      "sizes": "192x192",
-      "type": "image/ico"
+        "src": "/icons/icon192.png",
+        "sizes": "192x192",
+        "type": "image/png"
     },
     {
-      "src": "/icons/icon512.ico",
-      "sizes": "512x512",
-      "type": "image/ico"
+        "src": "/icons/icon512.png",
+        "sizes": "512x512",
+        "type": "image/png"
     }
-  ],
-  "start_url": "/",
-  "display": "standalone",
-  "prefer_related_applications": false
+    ],
+    "start_url": ".",
+    "display": "standalone",
+    "prefer_related_applications": false
 }
