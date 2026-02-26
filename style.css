@@ -413,6 +413,10 @@ main p{
 
     }
 
+    .hiragana, .katakana{
+        margin-bottom: 150px;
+    }
+
     h1{
         font-size: 65pt;
 
@@ -422,6 +426,7 @@ main p{
     }
 
     h2{
+        margin-top: 50px;
         font-size: 45pt;
         margin-bottom: 5px;
     }

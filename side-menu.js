@@ -9,7 +9,12 @@ if(window.matchMedia("(pointer: coarse)").matches == false) {
 
 function scrollById(Name){
     var elemRect = document.getElementById(Name).getBoundingClientRect()
-    window.scrollTo(0,elemRect.top + window.scrollY - 125 )
+    if(window.matchMedia("(pointer: coarse)").matches == false) {
+        window.scrollTo(0,elemRect.top + window.scrollY - 125 )
+    } else {
+        window.scrollTo(0,elemRect.top + window.scrollY - 65 )
+    }
+    
 }
 
 setTimeout(function(){
