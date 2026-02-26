@@ -1,6 +1,6 @@
 var TEXTDATA
 
-fetch('./particles.json').then(response => {
+fetch('js/json/particles.json').then(response => {
     return response.json();
 }).then(data => {
     window.localStorage.setItem("PARTICLE-TEXT-DATA",JSON.stringify(data))

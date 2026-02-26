@@ -14,7 +14,7 @@ body{
     user-select: none;
     font-family: Arial, Helvetica, sans-serif;
     background-color: var(--PRIMARY);
-    background-image:url("bng.jpeg"), linear-gradient(var(--PRIMARY) 0 100%);
+    background-image:url("background/bng.jpeg"), linear-gradient(var(--PRIMARY) 0 100%);
     background-blend-mode:soft-light, normal;
     background-attachment:fixed;
     background-position: center;
@@ -39,7 +39,7 @@ body{
     position: fixed;
     top: 0;
     z-index: 400;
-    background-color: var(--PRIMARY);
+    background-color: var(--PRIMARYlowAlpha);
     width:100%;
     height: fit-content;
 }
@@ -77,10 +77,10 @@ body{
     scrollbar-width: none;
     pointer-events: none;
 }
+
 #side-menu::-webkit-scrollbar {
   display: none;
 }
-
 
 #side-menu-text{
     color: var(--SECONDARY);
