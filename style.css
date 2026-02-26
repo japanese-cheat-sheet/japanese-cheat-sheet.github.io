@@ -22,8 +22,16 @@ body{
     margin:0;
 }
 
-#side-menu-button{
+#menu-button-area{
     position: fixed;
+    top: 0;
+    z-index: 400;
+    background-color: var(--PRIMARY);
+    width:100%;
+    height: fit-content;
+}
+
+#side-menu-button{
     z-index: 300;
     top:0;
     vertical-align: top;
@@ -82,15 +90,14 @@ body{
     padding-left:30px;
 }
 
-
 .center{
     width: max-content;
     height: max-content;
     left: 0;
     right: 0;
     margin: auto;
-    margin-top: 3vw;
-    margin-bottom: 3vw;
+    margin-top: 6vh;
+    margin-bottom: 6vh;
     padding: 25px;
     padding-left: 50px;
     padding-right: 50px;
