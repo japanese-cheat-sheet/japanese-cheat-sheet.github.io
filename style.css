@@ -266,6 +266,12 @@ main p{
         margin-bottom: 15vh;
     }
 
+    td:not(:empty), th:not(:empty){
+        border: 3px var(--table-border-color) solid ;
+        color: var(--table-text-color);
+        background-color: var(--table-background);
+    }
+
     table span.rb{
         font-size: 30pt;
         padding: 15px !important;
@@ -317,7 +323,7 @@ main p{
         width:1210px;
         padding: 10px;
         font-family:"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro",Osaka, "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
-
+        border: 3px var(--border-color) solid;
     }
 
     main table span.rb{
@@ -327,6 +333,10 @@ main p{
 
     .particle-area {
         font-size: 100pt !important;
+    }
+
+    main{
+        border: 3px var(--border-color) solid !important;
     }
 
     main p{
