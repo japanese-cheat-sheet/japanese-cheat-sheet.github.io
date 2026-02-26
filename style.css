@@ -19,16 +19,15 @@ body{
     margin: auto;
     margin-top: 3vw;
     margin-bottom: 3vw;
-    border: 5px var(--border-color) solid;
-    padding: 50px;
-    padding-left: 100px;
-    padding-right: 100px;
+    padding: 25px;
+    padding-left: 50px;
+    padding-right: 50px;
 }
 
 h1{
     text-align: center;
     position: relative;
-    font-size: 30pt;
+    font-size: 35pt;
     color: var(--heading-text-color);
     margin-block-start: 0;
     margin-block-end: 0;
@@ -38,6 +37,10 @@ h1{
     padding-top:40px;
     padding-bottom: 60px;
     width: max-content;
+}
+
+h1 div{
+    padding-top: 15px;
 }
 
 .hint-container{
@@ -259,8 +262,23 @@ main p{
     }
 
     .center{
-        margin-top: 16vw;
-        margin-bottom: 16vw;
+        margin-top: 10vw;
+        margin-bottom: 10vw;
+    }
+
+    table span.rb{
+        font-size: 30pt;
+        padding: 15px !important;
+    }
+
+    .upop.ja-text.transition{
+        font-size: 24pt;
+    }
+
+    .particle-container{
+        grid-template-columns: repeat(3, 400px);
+        column-gap: 25px;
+        row-gap: 25px;
     }
 
     .hint-container{
@@ -270,16 +288,45 @@ main p{
     .hint-text{
         padding:0;
         font-size: 15pt;
-        border: 2px var(--border-color) solid;
+        font-weight: 1000;
+        border: 4px var(--border-color) solid;
         padding: 20px;
         padding-left: 40px;
         padding-right: 40px;
     }
 
     h1{
-        font-size: 55pt;
+        font-size: 65pt;
     }
     h1 div {
         padding-top: 20px;
     }
+
+    h2{
+        font-size: 45pt;
+        margin-bottom: 5px;
+    }
+    h3{
+        font-size: 32.5pt;
+    }
+
+    .descriptor{
+        font-size: 20pt;
+        width:1210px;
+        padding: 10px;
+    }
+
+    main table span.rb{
+        padding: 25px !important;
+        font-size: 40pt;
+    }
+
+    .particle-area {
+        font-size: 100pt !important;
+    }
+
+    main p{
+        font-size: 18pt;
+    }
+
 }

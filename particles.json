@@ -1,7 +1,7 @@
 {
     "CASE-PARTICLES":{
         "が{ga}":{
-            "1":"this is testing test",
+            "1":"Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
             "2":"this is also testing text"
         },
         "を{o}":{
@@ -36,13 +36,33 @@
         "か{ka}":{}
     },
     "INTERJECTORY-PARTICLES":{
-
+        "さ{sa}":{},
+        "よ{yo}":{},
+        "ね{ne}":{},
+        "な{na}":{},
+        "や{ya}":{},
+        "ぞ{zo}":{},
+        "ぜ{ze}":{},
+        "わ{wa}":{},
+        "か{ka}":{}
     },
     "ADVERBIAL-PARTICLES":{
-
+        "だけ{dake}":{},
+        "くらい{kurai}":{},
+        "ほど{hodo}":{},
+        "ばかり{bakara}":{},
+        "まで{made}":{},
+        "など{nado}":{},
+        "ずつ{zutsu}":{}
     },
     "BINDING-PARTICLES":{
-
+        "は{wa}":{},
+        "も{mo}":{},
+        "こそ{koso}":{},
+        "でも{demo}":{},
+        "しか{shika}":{},
+        "さえ{sae}":{},
+        "だって{datte}":{}
     },
     "CONJUNCTIVE-PARTICLES":{
         "が{ga}":{},
@@ -58,6 +78,7 @@
         "ながら{nakara}":{}
     },
     "NORMALISING-PARTICLES":{
-
+        "の{no}":{},
+        "こと{koto}":{}
     }
 }
