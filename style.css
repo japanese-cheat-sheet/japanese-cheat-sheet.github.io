@@ -1,13 +1,29 @@
+:root{
+    --PRIMARY: none;
+    --PRIMARYalpha: none;
+    --SECONDARY: none;
+}
+
 body{
     user-select: none;
     font-family: Arial, Helvetica, sans-serif;
-    background-color: var(--background);
-    background-image:url("bng.jpeg"), linear-gradient(var(--background) 0 100%);
+    background-color: var(--PRIMARY);
+    background-image:url("bng.jpeg"), linear-gradient(var(--PRIMARY) 0 100%);
     background-blend-mode:soft-light, normal;
     background-attachment:fixed;
     background-position: center;
     background-size: cover;
     margin:0;
+}
+
+.side-menu{
+    position: fixed;
+    background-color: var(--PRIMARY);
+    border: 1px;
+    top:0;
+    width: 40vw;
+    height: 100vh;
+    z-index: 200;
 }
 
 
@@ -28,7 +44,7 @@ h1{
     text-align: center;
     position: relative;
     font-size: 35pt;
-    color: var(--heading-text-color);
+    color: var(--SECONDARY);
     margin-block-start: 0;
     margin-block-end: 0;
     left: 0;
@@ -53,8 +69,8 @@ h1 div{
     padding:0;
     font-size: 10pt;
     font-family: "ＭＳ Ｐゴシック";
-    border: 2px var(--border-color) solid;
-    background-color: var(--table-background);
+    border: 2px var(--SECONDARY) solid;
+    background-color: var(--PRIMARYalpha);
     margin: 10px;
     padding: 10px;
 }
@@ -63,7 +79,7 @@ h2{
     position: relative;
     font-size: 25pt;
     font-weight: 400;
-    color: var(--heading-text-color);
+    color: var(--SECONDARY);
     margin-block-start: 0;
     margin-block-end: 0;
     padding-top:10px;
@@ -74,7 +90,7 @@ h3{
     position: relative;
     font-size: 20pt;
     font-weight: 300;
-    color: var(--heading-text-color);
+    color: var(--SECONDARY);
     margin-block-start: 0;
     margin-block-end: 0;
     padding-top:10px;
@@ -87,25 +103,6 @@ table {
     margin-bottom: 50px;
 }
 
-:root{
-    --background: none;
-    --border-color: none;
-    --heading-text-color: none;
-
-    --text-color: none;
-
-    --table-border-color:none;
-    --table-text-color:none;
-    --table-background:none;
-
-    --popup-backround: none;
-    --popup-text-color: none;
-    --popup-border-color: none;
-
-    --select-backround: none;
-    --select-text-color: none;
-}
-
 td, th {
     font-size: 20pt;
     text-align: center;
@@ -113,9 +110,9 @@ td, th {
 }
 
 td:not(:empty), th:not(:empty){
-    border: 1px var(--table-border-color) solid ;
-    color: var(--table-text-color);
-    background-color: var(--table-background);
+    border: 1px var(--SECONDARY) solid ;
+    color: var(--SECONDARY);
+    background-color: var(--PRIMARYalpha);
 }
 
 ruby.popups{
@@ -129,8 +126,8 @@ table ruby.popups{
 }
 
 ruby.popups.hover{
-    color: var(--select-text-color);
-    background-color: var(--select-backround) !important;
+    color: var(--PRIMARY);
+    background-color: var(--SECONDARY) !important;
     border: 1px rgba(0, 0, 0, 0) solid !important;
     transition: none !important;
 }
@@ -140,12 +137,12 @@ table ruby.popups.hover{
 }
 
 .upop.ja-text.transition{
-    border: 1px var(--popup-border-color) solid;
+    border: 1px var(--SECONDARY) solid;
     z-index: 100;
     padding: 5px;
     font-weight: 600;
-    background-color: var(--popup-backround);
-    color: var(--popup-text-color);
+    background-color: var(--PRIMARY);
+    color: var(--SECONDARY);
     transition: none;
 }
 
@@ -184,7 +181,7 @@ table span.rb{
 .descriptor{
     font-size: 15pt;
     font-family: "ＭＳ Ｐゴシック";
-    color: var(--text-color);
+    color: var(--SECONDARY);
     margin-block-start: 0;
     margin-block-end: 0;
     margin-top: 5px;
@@ -192,8 +189,8 @@ table span.rb{
     margin-left: 5px;
     width: 750px;
     padding: 5px;
-    background-color: var(--table-background);
-    border: 1px var(--border-color) solid;
+    background-color: var(--PRIMARYalpha);
+    border: 1px var(--SECONDARY) solid;
 }
 
 .particle-container{
@@ -204,8 +201,8 @@ table span.rb{
 }
 
 main{
-    border: 2px var(--border-color) solid;
-    background-color: var(--table-background);
+    border: 2px var(--SECONDARY) solid;
+    background-color: var(--PRIMARYalpha);
 }
 
 main::after {
@@ -246,7 +243,7 @@ main p{
     margin: 12px;
     font-size: 15pt;
     font-family: "ＭＳ Ｐゴシック";
-    color: var(--text-color);
+    color: var(--SECONDARY);
     word-break: keep-all;
     text-align:justify;
 }
@@ -267,9 +264,9 @@ main p{
     }
 
     td:not(:empty), th:not(:empty){
-        border: 3px var(--table-border-color) solid ;
-        color: var(--table-text-color);
-        background-color: var(--table-background);
+        border: 3px var(--SECONDARY) solid ;
+        color: var(--SECONDARY);
+        background-color: var(--PRIMARY);
     }
 
     table span.rb{
@@ -295,7 +292,7 @@ main p{
         padding:0;
         font-size: 15pt;
         font-weight: 1000;
-        border: 4px var(--border-color) solid;
+        border: 4px var(--SECONDARY) solid;
         padding: 20px;
         padding-left: 40px;
         padding-right: 40px;
@@ -323,7 +320,7 @@ main p{
         width:1210px;
         padding: 10px;
         font-family:"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro",Osaka, "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
-        border: 3px var(--border-color) solid;
+        border: 3px var(--SECONDARY) solid;
     }
 
     main table span.rb{
@@ -336,7 +333,7 @@ main p{
     }
 
     main{
-        border: 3px var(--border-color) solid !important;
+        border: 3px var(--SECONDARY) solid !important;
     }
 
     main p{
