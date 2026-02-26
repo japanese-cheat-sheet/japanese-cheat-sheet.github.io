@@ -1,16 +1,14 @@
+function clearColors(){
+    window.localStorage.setItem("PRIMARY", null)
+    window.localStorage.setItem("SECONDARY", null)
+}
+
 // light, dark
 const COLORS = ["#E3E4E0","#0E1540"]
-if(
-    window.localStorage.getItem("PRIMARY") == null || 
-    window.localStorage.getItem("SECONDARY") == null || 
-    window.localStorage.getItem("PRIMARY") != COLORS[0] || 
-    window.localStorage.getItem("SECONDARY") != COLORS[1]
-){
+if(window.localStorage.getItem("PRIMARY") == null || window.localStorage.getItem("SECONDARY") == null){
     window.localStorage.setItem("PRIMARY", COLORS[0])
     window.localStorage.setItem("SECONDARY", COLORS[1])
 }
-console.log(window.localStorage.getItem("PRIMARY"))
-console.log(window.localStorage.getItem("SECONDARY"))
 
 function setColors(array){
     var r = document.querySelector(':root');

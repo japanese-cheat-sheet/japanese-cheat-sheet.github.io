@@ -22,6 +22,19 @@ body{
     margin:0;
 }
 
+#loading-cover{
+    z-index: 9999;
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 200%;
+    background-color: white;
+    transition: none;
+    opacity: 0;
+    pointer-events: none;
+}
+
 #menu-button-area{
     position: fixed;
     top: 0;
@@ -60,12 +73,20 @@ body{
     z-index: 200;
     padding-top: 90px;
     padding-left: 20px;
+    overflow-y:scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    pointer-events: none;
 }
+#side-menu::-webkit-scrollbar {
+  display: none;
+}
+
 
 #side-menu-text{
     color: var(--SECONDARY);
     position: relative;
-    
+    pointer-events: all;
 }
 
 .menu-option{
@@ -325,7 +346,7 @@ main p{
     }
 
     #side-menu{
-        padding-top: 180px;
+        padding-top: 225px;
         width: 900px;
         height: 110%;
         padding-left: 40px;
@@ -352,7 +373,7 @@ main p{
     }
 
     .center{
-        margin-top: 30vw;
+        margin-top: calc(20vw + 100px);
         margin-bottom: 15vw;
     }
 
