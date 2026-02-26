@@ -1,10 +1,16 @@
 // light, dark
-
-if(window.localStorage.getItem("PRIMARY") == null && window.localStorage.getItem("SECONDARY") == null ){
-    window.localStorage.setItem("PRIMARY", "#EEEEEE")
-    window.localStorage.setItem("SECONDARY", "#111111")
-    console.log("test 1")
+const COLORS = ["#E3E4E0","#12194C"]
+if(
+    window.localStorage.getItem("PRIMARY") == null || 
+    window.localStorage.getItem("SECONDARY") == null || 
+    window.localStorage.getItem("PRIMARY") != COLORS[0] || 
+    window.localStorage.getItem("SECONDARY") != COLORS[1]
+){
+    window.localStorage.setItem("PRIMARY", COLORS[0])
+    window.localStorage.setItem("SECONDARY", COLORS[1])
 }
+console.log(window.localStorage.getItem("PRIMARY"))
+console.log(window.localStorage.getItem("SECONDARY"))
 
 var r = document.querySelector(':root');
 function setColors(array){
