@@ -1,0 +1,63 @@
+{
+    "CASE-PARTICLES":{
+        "が{ga}":{
+            "1":"this is testing test",
+            "2":"this is also testing text"
+        },
+        "を{o}":{
+            "1":"this is testing test",
+            "2":"this is also testing text"
+        },
+        "に{ni}":{},
+        "へ{e}":{},
+        "で{de}":{},
+        "と{to}":{},
+        "から{kara}":{},
+        "より{yori}":{},
+        "まで{made}":{},
+        "の{no}":{}
+    },
+    "PARALLEL-PARTICLES":{
+        "か{ka}":{},
+        "と{to}":{},
+        "や{ya}":{},
+        "とか{toka}":{},
+        "に{ni}":{}
+    },
+    "SENTENCE-ENDING-PARTICLES":{
+        "さ{sa}":{},
+        "よ{yo}":{},
+        "ね{ne}":{},
+        "な{na}":{},
+        "や{ya}":{},
+        "ぞ{zo}":{},
+        "ぜ{ze}":{},
+        "わ{wa}":{},
+        "か{ka}":{}
+    },
+    "INTERJECTORY-PARTICLES":{
+
+    },
+    "ADVERBIAL-PARTICLES":{
+
+    },
+    "BINDING-PARTICLES":{
+
+    },
+    "CONJUNCTIVE-PARTICLES":{
+        "が{ga}":{},
+        "けど{kedo}":{},
+        "のに{noni}":{},
+        "から{kara}":{},
+        "ので{node}":{},
+        "ば{ba}":{},
+        "たら{tara}":{},
+        "と{to}":{},
+        "し{shi}":{},
+        "て{te}":{},
+        "ながら{nakara}":{}
+    },
+    "NORMALISING-PARTICLES":{
+
+    }
+}

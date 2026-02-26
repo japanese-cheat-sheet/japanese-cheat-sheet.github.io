@@ -226,7 +226,7 @@ main table{
     float: left;
     width: min-content;
     height: min-content;
-    padding: 10px 11px 11px 10px;
+    padding: 10px 8px 8px 10px;
 }
 
 main td:not(:empty), main th:not(:empty){
