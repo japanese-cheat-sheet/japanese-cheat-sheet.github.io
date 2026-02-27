@@ -99,6 +99,17 @@ body{
     word-break: keep-all;
 }
 
+#type0{
+    position: relative;
+    height: 1px;
+    background-color: var(--SECONDARY);
+    margin-top: 15px;
+    margin-bottom: 15px;
+    width:275px;
+}
+#type-dark-mode{
+    font-size: 1em;
+}
 #type1{
     font-size: 1.25em;
 }
@@ -109,6 +120,13 @@ body{
 .menu-option:hover{
     padding-left:30px;
 }
+#type-dark-mode:hover{
+    padding-left:10px;
+}
+#type0:hover{
+    padding-left:0px;
+}
+
 
 .center{
     width: max-content;

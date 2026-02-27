@@ -23,7 +23,7 @@ function scrollById(event,Name){
 
 var sideToggle = false
 waitForElem("#side-menu-button").then(function(button){
-    waitForElem("side-menu").then(function(menu){
+    waitForElem("#side-menu").then(function(menu){
         button.addEventListener("click",function(){
             if(sideToggle){
                 button.innerText = "☰"
@@ -48,8 +48,8 @@ document.addEventListener("click",function(event){
     var menu = document.getElementById("side-menu")
     var banner = document.getElementById("menu-button-area")
     waitForElem("#side-menu-button").then(function(button){
-        waitForElem("side-menu").then(function(menu){
-            waitForElem("menu-button-area").then(function(banner){
+        waitForElem("#side-menu").then(function(menu){
+            waitForElem("#menu-button-area").then(function(banner){
                 if(!button.contains(event.target)){
                     counter++
                 }
@@ -71,6 +71,8 @@ document.addEventListener("click",function(event){
 })
 
 var list = [
+    ["","toggleColors(event)", "-dark-mode"],
+    ["","", 0],
     ["日本語（ＪＡＰＡＮＥＳＥ）","window.scrollTo(0,0)", 1],
     ["平仮名（ＨＩＲＡＧＡＮＡ）","scrollById(event,'hiragana')", 1],
     ["片仮名（ＫＡＴＡＫＡＮＡ）","scrollById(event,'katakana')", 1],
