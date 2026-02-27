@@ -42,7 +42,7 @@ body{
     background-color: var(--PRIMARY);
     width:100%;
     height: fit-content;
-    pointer-events: none;
+    pointer-events: all;
 }
 
 #side-menu-button{

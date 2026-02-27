@@ -21,8 +21,9 @@ function scrollById(event,Name){
     console.log(window.devicePixelRatio)
 }
 
+var sideToggle = false
 setTimeout(function(){
-    var sideToggle = false
+
     var button = document.getElementById("side-menu-button")
     var menu = document.getElementById("side-menu")
 
@@ -38,6 +39,28 @@ setTimeout(function(){
             button.style.fontWeight = "600"
             menu.style.transform = "translateX(0px)"
             sideToggle = true
+        }
+    })
+
+    document.addEventListener("click",function(event){
+        var counter = 0
+        var button = document.getElementById("side-menu-button")
+        var menu = document.getElementById("side-menu")
+        var banner = document.getElementById("menu-button-area")
+        if(!button.contains(event.target)){
+            counter++
+        }
+        if(!menu.contains(event.target)){
+            counter++
+        }
+        if(!banner.contains(event.target)){
+            counter++
+        }
+        if(counter == 3){
+            button.innerText = "☰"
+            button.style.fontWeight = "400"
+            menu.style.transform = "translateX(-100%)"
+            sideToggle = false
         }
     })
 
