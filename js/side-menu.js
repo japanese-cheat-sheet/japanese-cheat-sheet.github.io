@@ -1,9 +1,18 @@
+function adjustZoom(){
+    var devicePixelRatio = window.devicePixelRatio || 1
+    var zoom =  100 + (100 - Math.round(devicePixelRatio* 100))  + "%"
+    waitForElem("#side-menu-button").then(function(button){
+        button.style.zoom = zoom
+    })
+    waitForElem("#side-menu").then(function(menu){
+        menu.style.zoom = zoom
+    })
+}
+
 if(window.matchMedia("(pointer: coarse)").matches == false) {
+    adjustZoom()
     window.addEventListener("resize",function(){
-        var devicePixelRatio = window.devicePixelRatio || 1
-        var zoom =  120 + (100 - Math.round(devicePixelRatio* 100))  + "%"
-        document.getElementById("side-menu-button").style.zoom = zoom
-        document.getElementById("side-menu").style.zoom = zoom
+        adjustZoom()
     })
 }
 
@@ -44,9 +53,6 @@ waitForElem("#side-menu-button").then(function(button){
 
 document.addEventListener("click",function(event){
     var counter = 0
-    var button = document.getElementById("side-menu-button")
-    var menu = document.getElementById("side-menu")
-    var banner = document.getElementById("menu-button-area")
     waitForElem("#side-menu-button").then(function(button){
         waitForElem("#side-menu").then(function(menu){
             waitForElem("#menu-button-area").then(function(banner){
