@@ -6,7 +6,7 @@ speechSynthesis.addEventListener("voiceschanged", () => {
 });
 
 setTimeout(function(){
-    var elems = document.getElementsByClassName("rb")
+    var elems = document.getElementsByClassName("JAPANESE")
     if(window.matchMedia("(pointer: coarse)").matches) {
         var clicker = "dblclick"
     } else {
@@ -14,6 +14,7 @@ setTimeout(function(){
     }
     for(i=0;i<elems.length;i++){
         elems[i].parentElement.addEventListener(clicker,function(event){
+            window.speechSynthesis.cancel() 
             if(event.srcElement.parentElement.parentElement.id == "particle"){
                 if(event.srcElement.innerText == "は"){
                     synth.text = "わ"
