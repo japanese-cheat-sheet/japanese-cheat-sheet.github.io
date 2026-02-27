@@ -1,3 +1,4 @@
+// use if changing color scheme
 function clearColors(){
     window.localStorage.setItem("PRIMARY", null)
     window.localStorage.setItem("SECONDARY", null)
@@ -17,11 +18,12 @@ function setColors(array){
     r.style.setProperty("--PRIMARYlowAlpha",array[0]+"DD")
     r.style.setProperty("--SECONDARY",array[1])
 }
-setColors([window.localStorage.getItem("PRIMARY"),window.localStorage.getItem("SECONDARY")])
 
 function toggleColors(){
-        var temp = window.localStorage.getItem("PRIMARY")
-        window.localStorage.setItem("PRIMARY", window.localStorage.getItem("SECONDARY"))
-        window.localStorage.setItem("SECONDARY", temp)
-        setColors([window.localStorage.getItem("PRIMARY"), window.localStorage.getItem("SECONDARY")])
+    var temp = window.localStorage.getItem("PRIMARY")
+    window.localStorage.setItem("PRIMARY", window.localStorage.getItem("SECONDARY"))
+    window.localStorage.setItem("SECONDARY", temp)
+    setColors([window.localStorage.getItem("PRIMARY"), window.localStorage.getItem("SECONDARY")])
 }
+
+setColors([window.localStorage.getItem("PRIMARY"),window.localStorage.getItem("SECONDARY")])

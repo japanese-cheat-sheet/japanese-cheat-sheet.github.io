@@ -7,7 +7,6 @@ speechSynthesis.addEventListener("voiceschanged", () => {
 
 setTimeout(function(){
     var elems = document.getElementsByClassName("rb")
-    console.log(elems)
     if(window.matchMedia("(pointer: coarse)").matches) {
         var clicker = "dblclick"
     } else {
@@ -32,4 +31,4 @@ setTimeout(function(){
             window.speechSynthesis.speak(synth) 
         })
     }
-},1700)
+},1)

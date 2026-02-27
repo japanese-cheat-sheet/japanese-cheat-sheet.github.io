@@ -399,6 +399,7 @@ main p{
     }
 
     .particle-container{
+        margin-top: 8px;
         grid-template-columns: repeat(3, 400px);
         column-gap: 25px;
         row-gap: 25px;
@@ -443,9 +444,9 @@ main p{
     }
 
     .descriptor{
-        font-size: 20pt;
+        font-size: 25pt;
         width:1210px;
-        padding: 10px;
+        padding: 15px;
         font-family:"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro",Osaka, "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
         border: 3px var(--SECONDARY) solid;
     }
@@ -464,7 +465,7 @@ main p{
     }
 
     main p{
-        font-size: 18pt;
+        font-size: 20pt;
         font-family:"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro",Osaka, "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
 
     }

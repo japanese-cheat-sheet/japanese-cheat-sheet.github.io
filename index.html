@@ -9,13 +9,14 @@
     <link rel="icon" type="image/x-icon" href="icons/icon192.ico">
     <link rel="manifest" href="js/json/manifest.json"/>
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/japanese-l-u.js"></script>
+    <script src="js/element-wait.js"></script>
     <script src="js/particles.js"></script>
     <script src="js/side-menu.js"></script>
     <script src="js/loading.js"></script>
     <script src="js/colors.js"></script>
     <script src="js/hint-text.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="js/japanese-l-u.js"></script>
     <script src="js/tts.js"></script>
 </head>
 <body>
@@ -32,7 +33,7 @@
     <h1 class="js-post-body">日本語{にほんご}（ＪＡＰＡＮＥＳＥ）
         <div class="hint-container">
             <p class="hint-text" id="dark-mode">Ｐｒｅｓｓ　Ｐ　ｔｏ　ｔｏｇｇｌｅ　Ｄａｒｋ　Ｍｏｄｅ</p>
-            <p class="hint-text" id="zoom-in/double">Ｕｓｅ　ＣＴＲＬ＋　ｏｒ　⌘＋　ｔｏ　Ｚｏｏｍ　Ｉｎ</p>
+            <p class="hint-text" id="zoom-in-double">Ｕｓｅ　ＣＴＲＬ＋　ｏｒ　⌘＋　ｔｏ　Ｚｏｏｍ　Ｉｎ</p>
             <p class="hint-text" id="zoom-out">Ｕｓｅ　ＣＴＲＬ－　ｏｒ　⌘－　ｔｏ　Ｚｏｏｍ　Ｏｕｔ</p>
 
         </div>
@@ -420,73 +421,91 @@
         kana can have different meanings as part of a different catagory
     </p>
     <div class="particles">
+
+
         <h3 id="case-particles" class="js-post-body">格助詞{かくじょし}（ＣＡＳＥ　ＰＡＲＴＩＣＬＥＳ）</h3>
         <p class="descriptor">
             In English, word order is used to define what grammatical role (a.k.a case) a word
             has. In Japanese, Case Particles are used to identify the case of the noun that 
             comes before it, for example: subject, direct object, loaction, destination, etc.
         </p>
-        <div class="particle-container">
+        <div id="case-container" class="particle-container">
             <!-- Injected -->
         </div>
+
+
         <h3 id="parallel-particles" class="js-post-body">並立助詞{へいれつじょし}（ＰＡＲＡＬＬＥＬ　ＰＡＲＴＩＣＬＥＳ）</h3>
         <p class="descriptor">
             Parallel particles are used to put nouns and noun phrases in parallel (thus the name) or in a list, 
             and in English they mostly translate to words similar to "and" and "or".
         </p>
-        <div class="particle-container">
+        <div id="parallel-container" class="particle-container">
             <!-- Injected -->
         </div>
+
+
         <h3 id="sentence-ending-particles" class="js-post-body">終助詞{しゅうじょし}（ＳＥＮＴＥＮＣＥ－ＥＮＤＩＮＧ　ＰＡＲＴＩＣＬＥＳ）</h3>
         <p class="descriptor">
             Sentence-ending particles are kana placed at the end of sentences to show its
             force, such as emphasis, confirmation, questioning, emotion, etc.
         </p>
-        <div class="particle-container">
+        <div id="sentence-ending-container" class="particle-container">
             <!-- Injected -->
         </div>
+
+
         <h3 id="interjectory-particles" class="js-post-body">間投助詞{かんとうじょし}（ＩＮＴＥＲＪＥＣＴＯＲＹ　ＰＡＲＴＩＣＬＥＳ）</h3>
         <p class="descriptor">
             Interjectory particles can be placed mid-sentece in order to show emphasis, confirmation, 
             questioning, emotion, etc. 
         </p>
-        <div class="particle-container">
+        <div id="interjectory-container" class="particle-container">
             <!-- Injected -->
         </div>
+
+
         <h3 id="adverbial-particles" class="js-post-body">副助詞{ふくじょし}（ＡＤＶＥＲＢＩＡＬ　ＰＡＲＴＩＣＬＥＳ）</h3>
         <p class="descriptor">
             Adverbial particles act similarly to adverbs (thus the name) by modifiy words 
             or phrases to express concepts like limits, addition, emphasis, etc.
         </p>
-        <div class="particle-container">
+        <div id="adverbial-container" class="particle-container">
             <!-- Injected -->
         </div>
+
+
         <h3 id="binding-particles" class="js-post-body">係助詞{かかりじょし}（ＢＩＮＤＩＮＧ　ＰＡＲＴＩＣＬＥＳ）</h3>
         <p class="descriptor">
             Binding particles attach/bind to words and phrases and highlight how they
             should be interpreted, able to create emphasis, contrast, limitations, and
             control what the listener pays attention to.
         </p>
-        <div class="particle-container">
+        <div id="binding-container" class="particle-container">
             <!-- Injected -->
         </div>
+
+
         <h3 id="conjunctive-particles" class="js-post-body">接続助詞{せつぞくじょし}（ＣＯＮＪＵＮＣＴＩＶＥ　ＰＡＲＴＩＣＬＥＳ）</h3>
         <p class="descriptor">
             Conjunctive particles connect one clause to another and shows the relationship between
             the them, whether it is in contrast, cause or reason, time sequence, condition, etc,
             they work the same as conectives in English (thus the name).
         </p>
-        <div class="particle-container">
+        <div id="conjunctive-container" class="particle-container">
             <!-- Injected -->
         </div>
+
+
         <h3 id="normalising-particles" class="js-post-body">準体助詞{じゅんたいじょし}（ＮＯＲＭＡＬＩＳＩＮＧ　ＰＡＲＴＩＣＬＥＳ）</h3>
         <p class="descriptor">
             Normalising particles allow you to turn something that is not a noun, into a noun, allowing
             you to treat actions, situations, descriptions, etc as things/objects (a.k.a nouns)
         </p>
-        <div class="particle-container">
+        <div id="normalising-container" class="particle-container">
             <!-- Injected -->
         </div>
+
+
     </div>
 </div>
 </body>
