@@ -6,14 +6,14 @@ speechSynthesis.addEventListener("voiceschanged", () => {
 });
 
 setTimeout(function(){
-    var elems = document.getElementsByClassName("JAPANESE")
+    var elems = document.getElementsByClassName("ja-screen")
     if(window.matchMedia("(pointer: coarse)").matches) {
         var clicker = "dblclick"
     } else {
         var clicker = "click"
     }
     for(i=0;i<elems.length;i++){
-        elems[i].parentElement.addEventListener(clicker,function(event){
+        elems[i].addEventListener(clicker,function(event){
             window.speechSynthesis.cancel() 
             if(event.srcElement.parentElement.parentElement.id == "particle"){
                 if(event.srcElement.innerText == "は"){

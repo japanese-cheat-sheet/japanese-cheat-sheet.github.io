@@ -1,23 +1,15 @@
 // https://stackoverflow.com/questions/5525071/how-to-wait-until-an-element-exists
 
-function waitForElem(name, misc){
-    function getElem(value){
-        if(misc == null){
-            return document.querySelector(value)
-        } else if(misc == "classAll"){
-            return document.getElementsByClassName(value)
-        }
-    }
-
+function waitForElem(name){
     return new Promise(resolve => {
-        if(getElem(name)){
-            return resolve(getElem(name))
+        if(document.querySelector(name)){
+            return resolve(document.querySelector(name))
         }
 
         const observer = new MutationObserver(mutations => {
-            if (getElem(name)) {
+            if (document.querySelector(name)) {
                 observer.disconnect();
-                resolve(getElem(name));
+                resolve(document.querySelector(name));
             }
         });
 
@@ -27,4 +19,23 @@ function waitForElem(name, misc){
         });
 
     })
+}
+
+function waitForElemAll(name, num){
+    return new Promise(resolve => {
+        const check = () => {
+            const elements = document.getElementsByClassName(name);
+            if (elements.length >= num) {
+                observer.disconnect();
+                resolve(elements);
+                return true;
+            }
+            return false;
+        };
+
+        if (check()) return;
+
+        const observer = new MutationObserver(check);
+        observer.observe(document.documentElement, { childList: true, subtree: true });
+    });
 }

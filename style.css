@@ -127,7 +127,6 @@ body{
     padding-left:0px;
 }
 
-
 .center{
     width: max-content;
     height: max-content;
@@ -144,7 +143,7 @@ body{
 h1{
     text-align: center;
     position: relative;
-    font-size: 35pt;
+    font-size: 45pt;
     color: var(--SECONDARY);
     margin-block-start: 0;
     margin-block-end: 0;
@@ -154,26 +153,6 @@ h1{
     padding-top:40px;
     padding-bottom: 60px;
     width: max-content;
-}
-
-h1 div{
-    padding-top: 15px;
-}
-
-.hint-container{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-}
-
-.hint-text{
-    text-align: center;
-    padding:0;
-    font-size: 10pt;
-    font-family: "ＭＳ Ｐゴシック";
-    border: 2px var(--SECONDARY) solid;
-    background-color: var(--PRIMARYalpha);
-    margin: 10px;
-    padding: 10px;
 }
 
 h2{
@@ -198,8 +177,60 @@ h3{
     padding-bottom: 10px;
 }
 
+.ja-screen{
+    position: relative;
+    border-radius: 2px;
+}
+
+table .ja-screen{
+    font-size: 25pt;
+    text-align: center;
+    display:inline-block;
+    vertical-align: middle;
+    width: auto;
+    --width: 50px;
+    min-width: var(--width);
+    line-height: var(--width);
+    padding: 12px;
+    margin:-2px;
+    position: relative;
+    border-radius: 1px;
+}
+
+table .ja-screen.singleKana{
+    aspect-ratio: 1/1;
+}
+
+table .ja-screen.doubleKana{
+    padding-left: 18px;
+    padding-right: 18px;
+}
+
+.particle-area .ja-screen.double{
+    width:100%
+}
+
+.ja-screen:hover > th:not(:empty), .ja-screen:hover{
+    color: var(--PRIMARY);
+    background-color: var(--SECONDARY) !important;
+}
+
+
+
+.ja-popup{
+    color: var(--PRIMARY);
+    background-color: var(--SECONDARY) !important;
+    position: absolute;
+    font-size: 15pt;
+    border: 1px black solid;
+    width:100%;
+    text-align: center;
+    padding: 1px;
+    aspect-ratio: none;
+    line-height: 100%;
+}
+
 table {
-    margin-left: 5px;
     border-collapse: separate;
     margin-bottom: 50px;
 }
@@ -207,50 +238,14 @@ table {
 td, th {
     font-size: 20pt;
     text-align: center;
-    border-radius: 2px;
-    padding: 15.75px !important;
+    width: 1fr;
 }
 
-td:not(:empty), th:not(:empty){
+th:not(:empty){
     border: 1px var(--SECONDARY) solid ;
+    border-radius: 2px;
     color: var(--SECONDARY);
     background-color: var(--PRIMARYalpha);
-}
-
-/* ruby.popups{
-    margin: -2px;
-    border-radius: 2px !important;
-    transition: none;
-} */
-
-/* table ruby.popups{
-    border-radius: 0px !important;
-} */
-
-td:not(:empty):hover, th:not(:empty):hover{
-    color: var(--PRIMARY);
-    background-color: var(--SECONDARY) !important;
-}
-
-.upop.ja-text.transition{
-    border: 1px var(--SECONDARY) solid;
-    z-index: 100;
-    padding: 5px;
-    font-weight: 600;
-    background-color: var(--PRIMARY);
-    color: var(--SECONDARY);
-    transition: none;
-}
-
-
-span.rt{
-    display: none !important; 
-    margin: 0;
-}
-
-span.rb{
-    padding: 3px !important;
-    border-radius: 2px;
 }
 
 #particle-title{
@@ -320,10 +315,6 @@ main table{
 
 main td:not(:empty), main th:not(:empty){
     background-color: rgba(0, 0, 0, 0) ;
-}
-
-main table span.rb{
-    font-size: 25pt;
 }
 
 main p{
