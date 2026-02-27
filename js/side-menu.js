@@ -13,7 +13,12 @@ function scrollById(event,Name){
     var elem = document.getElementById(Name)
     var elemRect = elem.getBoundingClientRect()
     var topPadding = Number(window.getComputedStyle(elem, null).getPropertyValue('padding-top').replace("px",""))
-    window.scrollTo(0,elemRect.top + window.scrollY - menuA.top + menuA.height/2 + (topPadding/2 * window.devicePixelRatio))
+    if(window.matchMedia("(pointer: coarse)").matches == false) {
+        window.scrollTo(0,elemRect.top + window.scrollY - menuA.top + menuA.height/2 + (topPadding/2 * window.devicePixelRatio))
+    } else {
+        window.scrollTo(0,elemRect.top + window.scrollY - menuA.top + menuA.height/2 + topPadding/2 - 12)
+    }
+    console.log(window.devicePixelRatio)
 }
 
 setTimeout(function(){

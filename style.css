@@ -88,7 +88,6 @@ body{
     color: var(--SECONDARY);
     position: relative;
     pointer-events: all;
-    border: 1px black solid;
     padding-bottom: calc(5vw + 600px);
 }
 
@@ -118,7 +117,7 @@ body{
     right: 0;
     margin: auto;
     margin-top: 8vh;
-    margin-bottom: 6vh;
+    margin-bottom: calc(5vw + 600px);
     padding: 25px;
     padding-left: 50px;
     padding-right: 50px;
@@ -355,6 +354,10 @@ main p{
         padding-left: 40px;
     }
 
+    #side-menu-text{
+        padding-bottom: calc(5vw + 1850px);
+    }
+
     .menu-option{
         position: relative;
         display: block;
@@ -365,19 +368,19 @@ main p{
     }
 
     #type1{
-        font-size: 3.2em;
+        font-size: 3.0em;
     }
     #type2{
-        font-size: 2em;
+        font-size: 1.8em;
     }
 
     .menu-option:hover{
-        padding-left:50px;
+        padding-left:60px;
     }
 
     .center{
         margin-top: calc(22vw + 150px);
-        margin-bottom: 22vw;
+        margin-bottom: calc(22vw + 1800px);
     }
 
     td:not(:empty), th:not(:empty){
