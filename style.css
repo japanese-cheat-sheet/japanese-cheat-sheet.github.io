@@ -18,7 +18,7 @@ body{
     background-blend-mode:soft-light, normal;
     background-attachment:fixed;
     background-position: center;
-    background-size: cover;
+    background-size:contain;
     margin:0;
 }
 
@@ -42,6 +42,7 @@ body{
     background-color: var(--PRIMARYlowAlpha);
     width:100%;
     height: fit-content;
+    pointer-events: none;
 }
 
 #side-menu-button{
@@ -57,6 +58,7 @@ body{
     color: var(--SECONDARY);
     background-color: rgba(0, 0, 0, 0);
     border: none;
+    pointer-events: all;
 }
 
 #side-menu{
@@ -372,8 +374,8 @@ main p{
     }
 
     .center{
-        margin-top: calc(20vw + 100px);
-        margin-bottom: 15vw;
+        margin-top: calc(22vw + 150px);
+        margin-bottom: 22vw;
     }
 
     td:not(:empty), th:not(:empty){
