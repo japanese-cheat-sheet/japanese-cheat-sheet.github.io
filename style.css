@@ -39,7 +39,7 @@ body{
     position: fixed;
     top: 0;
     z-index: 400;
-    background-color: var(--PRIMARYlowAlpha);
+    background-color: var(--PRIMARY);
     width:100%;
     height: fit-content;
     pointer-events: none;
