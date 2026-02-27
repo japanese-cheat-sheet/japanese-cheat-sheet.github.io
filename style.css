@@ -88,6 +88,8 @@ body{
     color: var(--SECONDARY);
     position: relative;
     pointer-events: all;
+    border: 1px black solid;
+    padding-bottom: calc(5vw + 600px);
 }
 
 .menu-option{
@@ -115,7 +117,7 @@ body{
     left: 0;
     right: 0;
     margin: auto;
-    margin-top: 6vh;
+    margin-top: 8vh;
     margin-bottom: 6vh;
     padding: 25px;
     padding-left: 50px;
