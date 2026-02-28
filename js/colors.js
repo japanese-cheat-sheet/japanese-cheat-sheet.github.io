@@ -1,15 +1,17 @@
 // use if changing color scheme
 function clearColors(){
-    window.localStorage.setItem("PRIMARY", null)
-    window.localStorage.setItem("SECONDARY", null)
+    window.localStorage.removeItem("PRIMARY")
+    window.localStorage.removeItem("SECONDARY")
 }
+clearColors()
 
 // light, dark
-const COLORS = ["#E3E4E0","#0E1540"]
+const COLORS = ["#C6C8C5","#131953"]
 if(window.localStorage.getItem("PRIMARY") == null || window.localStorage.getItem("SECONDARY") == null){
     window.localStorage.setItem("PRIMARY", COLORS[0])
     window.localStorage.setItem("SECONDARY", COLORS[1])
 }
+
 if(window.localStorage.getItem("PRIMARY") == COLORS[0]){
     waitForElem("#type-dark-mode").then(function(darkmode){
         darkmode.innerText = "ダークモード（ＤＡＲＫ　ＭＯＤＥ）"
