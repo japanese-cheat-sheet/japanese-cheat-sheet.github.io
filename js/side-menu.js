@@ -22,9 +22,9 @@ function scrollById(event,Name){
     var elemRect = elem.getBoundingClientRect()
     var topPadding = Number(window.getComputedStyle(elem, null).getPropertyValue('padding-top').replace("px",""))
     if(window.matchMedia("(pointer: coarse)").matches) {
-        window.scrollTo(0,elemRect.top + window.scrollY - menuA.y + topPadding + menuA.height - 20 * window.devicePixelRatio)
+        window.scrollTo(0,elemRect.top + window.scrollY - menuA.top + topPadding + menuA.height - 25)
     } else {
-        window.scrollTo(0,elemRect.top + window.scrollY - menuA.y + topPadding + menuA.height - 10 * window.devicePixelRatio)
+        window.scrollTo(0,elemRect.top + window.scrollY - menuA.y + (topPadding * window.devicePixelRatio) + menuA.height + 10 * window.devicePixelRatio - 10)
     }
 }
 

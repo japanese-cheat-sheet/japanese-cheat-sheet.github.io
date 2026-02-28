@@ -254,7 +254,6 @@ h3 .ja-screen:hover {
     pointer-events: none;
     z-index: 100;
     min-width: 100%;
-    top:-22px;
     left:50%;
     transform: translateX(-50%);
     
@@ -281,6 +280,7 @@ h3 .ja-popup{
     padding-right: 10px;
 }
 table .ja-popup{
+    top:-22px;
     font-size: 18pt;
     padding-top:6px;
     padding-bottom: 6px;
@@ -309,11 +309,6 @@ th:not(:empty){
 }
 
 .particles h3{
-    padding-top:45px;
-    padding-bottom: 0px;
-}
-
-#case-particles{
     padding-top:25px;
     padding-bottom: 0px;
 }
@@ -338,6 +333,7 @@ th:not(:empty){
     grid-template-columns: repeat(3, 375px);
     column-gap: 10px;
     row-gap: 10px;
+    margin-bottom: 20px;
 }
 
 main{
@@ -408,7 +404,7 @@ main p{
     }
 
     #side-menu-text{
-        padding-bottom: calc(5vw + 1850px);
+        padding-bottom: 300vh;
     }
 
     .menu-option{
@@ -476,16 +472,31 @@ main p{
         
     }
     h1 .ja-popup{
+        top: -62px;
         font-size: 40pt;
+        padding: 10px;
+        padding-top:15px;
+        padding-bottom: 15px;
     }
     h2 .ja-popup{
+        top: -42px;
         font-size: 28pt;
+        padding: 8px;
+        padding-top:10px;
+        padding-bottom: 10px;
     }
     h3 .ja-popup{
-        font-size: 22pt;
+        top: -36px;
+        font-size: 22.5pt;
+        padding: 10px;
+        padding-left: 12px;
+        padding-right: 12px;
     }
     table .ja-popup{
-        font-size: 20pt;
+        top:-32px;
+        padding-top:8px;
+        padding-bottom: 8px;
+        font-size: 21pt;
     }
 
     table {

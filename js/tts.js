@@ -15,13 +15,13 @@ waitForElemAll("ja-screen", 312).then(function(ja_screen){
     }
     for(i=0;i<elems.length;i++){
         elems[i].addEventListener(clicker,function(event){
-            window.speechSynthesis.cancel() 
-            if(event.srcElement.parentElement.parentElement.id == "particle"){
-                if(event.srcElement.innerText == "は"){
+            window.speechSynthesis.cancel()
+            if(event.srcElement.parentElement.parentElement.parentElement.className == "particle-area"){
+                if(event.srcElement.innerHTML.split("<")[0] == "は"){
                     synth.text = "わ"
-                } else if (event.srcElement.innerText == "へ"){
+                } else if (event.srcElement.innerHTML.split("<")[0] == "へ"){
                     synth.text = "え"
-                } else if (event.srcElement.innerText == "を"){
+                } else if (event.srcElement.innerHTML.split("<")[0] == "を"){
                     synth.text = "お"
                 } else {
                     synth.text = event.srcElement.innerHTML.split("<")[0]

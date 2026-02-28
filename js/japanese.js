@@ -1,5 +1,5 @@
 //update with new ja-text elements
-waitForElemAll("ja-text", 253).then(function(elem){
+waitForElemAll("ja-text", 250).then(function(elem){
     var JAelems = elem
     console.log(JAelems)
     for (i=0;i<JAelems.length;i++) {
