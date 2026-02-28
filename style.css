@@ -392,7 +392,7 @@ main p{
 
 @media (pointer:coarse) {
     html{
-        zoom:28%;
+        zoom:25%;
     }
 
     #side-menu-button{
@@ -402,8 +402,7 @@ main p{
     }
 
     #side-menu{
-        padding-top: 225px;
-        width: 900px;
+        padding-top: 245px;
         height: 110%;
         padding-left: 40px;
     }
@@ -413,23 +412,39 @@ main p{
     }
 
     .menu-option{
-        position: relative;
-        display: block;
-        transition: padding-left 0.2s;
         margin-bottom: 20px;
         padding:5px;
-        word-break: keep-all;
+    }
+    #type0{
+        position: relative;
+        height: 1px;
+        padding: 0;
+        background-color: var(--SECONDARY);
+        margin-top: 30px;
+        margin-bottom: 30px;
+        width:650px;
+    }
+    #type-dark-mode{
+        font-size: 2.5em;
+        padding:10px;
+        padding-bottom: 25px;
     }
 
     #type1{
         font-size: 3.0em;
+        padding-right: 60px;
     }
     #type2{
         font-size: 1.8em;
+        padding-right: 60px;
     }
 
     .menu-option:hover{
         padding-left:60px;
+    }
+    #type-dark-mode:hover{
+        padding:10px;
+        padding-bottom: 25px;
     }
 
     .center{

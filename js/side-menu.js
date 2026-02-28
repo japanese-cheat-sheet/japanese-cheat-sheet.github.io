@@ -21,7 +21,11 @@ function scrollById(event,Name){
     var elem = document.getElementById(Name)
     var elemRect = elem.getBoundingClientRect()
     var topPadding = Number(window.getComputedStyle(elem, null).getPropertyValue('padding-top').replace("px",""))
-    window.scrollTo(0,elemRect.top + window.scrollY - menuA.y + topPadding + menuA.height - 10)
+    if(window.matchMedia("(pointer: coarse)").matches) {
+        window.scrollTo(0,elemRect.top + window.scrollY - menuA.y + topPadding + menuA.height - 20 * window.devicePixelRatio)
+    } else {
+        window.scrollTo(0,elemRect.top + window.scrollY - menuA.y + topPadding + menuA.height - 10 * window.devicePixelRatio)
+    }
 }
 
 var sideToggle = false
