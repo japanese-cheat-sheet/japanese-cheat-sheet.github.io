@@ -69,7 +69,7 @@ body{
     left:0;
     transform: translateX(-100%);
     transition: transform 0.5s;
-    width: 300px;
+    min-width: 300px;
     height: 100%;
     z-index: 200;
     padding-top: 90px;
@@ -94,9 +94,11 @@ body{
 .menu-option{
     position: relative;
     display: block;
-    transition: padding-left 0.2s;
+    transition: padding-left 0.2s ,padding-right 0.2s;
     margin-bottom: 10px;
     word-break: keep-all;
+    white-space: nowrap;
+    padding-right:0px;
 }
 
 #type0{
@@ -109,22 +111,28 @@ body{
 }
 #type-dark-mode{
     font-size: 1em;
+    padding-right:10px;
 }
 #type1{
     font-size: 1.25em;
+    padding-right:30px;
 }
 #type2{
     font-size: 0.8em;
+    padding-right:30px;
 }
 
 .menu-option:hover{
     padding-left:30px;
+    padding-right:0px !important;
 }
 #type-dark-mode:hover{
     padding-left:10px;
+    padding-right:0px;
 }
 #type0:hover{
     padding-left:0px;
+    padding-right:0px;
 }
 
 .center{
@@ -221,15 +229,13 @@ table .ja-screen.doubleKana, .ja-screen.moreParticle{
 
 }
 
-th:not(:empty):hover{
+.ja-screen:hover{
     color: var(--PRIMARY);
     background-color: var(--SECONDARY) !important;
 }
 h3 .ja-screen:hover {
     font-weight: 500;
 }
-
-
 
 .ja-popup{
     color: var(--SECONDARY);
@@ -241,9 +247,6 @@ h3 .ja-screen:hover {
     border-radius: 2px;
     white-space: nowrap;
     text-align: center;
-    padding: 6px;
-    padding-top: 8px;
-    padding-bottom: 8px;
     font-weight: 600;
     font-family: Arial, Helvetica, sans-serif;
     aspect-ratio: none;
@@ -251,19 +254,36 @@ h3 .ja-screen:hover {
     pointer-events: none;
     z-index: 100;
     min-width: 100%;
-    top:0;
+    top:-22px;
+    left:50%;
+    transform: translateX(-50%);
+    
 }
 h1 .ja-popup{
-    font-size: 25pt;
+    top: -42px;
+    padding: 8px;
+    padding-top:10px;
+    padding-bottom: 10px;
+    font-size: 28pt;
 }
 h2 .ja-popup{
+    top: -34px;
     font-size: 22pt;
+    padding: 6px;
+    padding-top:8px;
+    padding-bottom: 8px;
 }
 h3 .ja-popup{
-    font-size: 16pt;
+    top: -34px;
+    font-size: 18pt;
+    padding: 8px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 table .ja-popup{
     font-size: 18pt;
+    padding-top:6px;
+    padding-bottom: 6px;
 }
 
 table {
@@ -307,15 +327,15 @@ th:not(:empty){
     margin-top: 5px;
     margin-bottom: 18px;
     margin-left: 5px;
-    width: 750px;
-    padding: 5px;
+    width: 900px;
+    padding: 7px;
     background-color: var(--PRIMARYalpha);
     border: 1px var(--SECONDARY) solid;
 }
 
 .particle-container{
     display: grid;
-    grid-template-columns: repeat(3, 325px);
+    grid-template-columns: repeat(3, 375px);
     column-gap: 10px;
     row-gap: 10px;
 }
@@ -347,7 +367,7 @@ main table{
     float: left;
     width: min-content;
     height: min-content;
-    padding: 12px 9px 0px 12px;
+    padding: 12px 6px 0px 12px;
 }
 
 main td:not(:empty), main th:not(:empty){

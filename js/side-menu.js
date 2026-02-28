@@ -21,7 +21,7 @@ function scrollById(event,Name){
     var elem = document.getElementById(Name)
     var elemRect = elem.getBoundingClientRect()
     var topPadding = Number(window.getComputedStyle(elem, null).getPropertyValue('padding-top').replace("px",""))
-    window.scrollTo(0,elemRect.top + window.scrollY - menuA.top + menuA.height)
+    window.scrollTo(0,elemRect.top + window.scrollY - menuA.y + topPadding + menuA.height - 10)
 }
 
 var sideToggle = false
