@@ -1,10 +1,15 @@
 function loadingAnimation(){
+    var duration = 1000
+    var delay = 500
     waitForElem("#loading-cover").then(function(elem){
-        elem.style.opacity = 0;
-        elem.style.transition = "opacity 1s"
         setTimeout(function(){
-            elem.style.display = "none";
-        },1000)
+            elem.style.opacity = 0;
+            elem.style.transition = "opacity 1s"
+            setTimeout(function(){
+                elem.style.display = "none";
+            },duration)
+        },delay)
+        
     })
 }
 
