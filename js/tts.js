@@ -5,8 +5,9 @@ speechSynthesis.addEventListener("voiceschanged", () => {
     synth.voice = voices[28]
 });
 
-setTimeout(function(){
-    var elems = document.getElementsByClassName("ja-screen")
+//update with new ja-screen elements
+waitForElemAll("ja-screen", 312).then(function(ja_screen){
+    elems = ja_screen
     if(window.matchMedia("(pointer: coarse)").matches) {
         var clicker = "dblclick"
     } else {
@@ -32,4 +33,4 @@ setTimeout(function(){
             window.speechSynthesis.speak(synth) 
         })
     }
-},1)
+})

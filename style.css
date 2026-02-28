@@ -133,7 +133,7 @@ body{
     left: 0;
     right: 0;
     margin: auto;
-    margin-top: 8vh;
+    margin-top: calc(2vw + 75px);
     margin-bottom: calc(5vw + 600px);
     padding: 25px;
     padding-left: 50px;
@@ -150,8 +150,8 @@ h1{
     left: 0;
     right: 0;
     margin: auto;
-    padding-top:40px;
-    padding-bottom: 60px;
+    padding-top:50px;
+    padding-bottom: calc(2vw + 50px);
     width: max-content;
 }
 
@@ -168,7 +168,7 @@ h2{
 
 h3{
     position: relative;
-    font-size: 20pt;
+    font-size: 25pt;
     font-weight: 300;
     color: var(--SECONDARY);
     margin-block-start: 0;
@@ -184,6 +184,7 @@ h3{
 .ja-screen{
     position: relative;
     border-radius: 2px;
+    padding: 5px;
 }
 
 table .ja-screen{
@@ -198,7 +199,7 @@ table .ja-screen{
     padding: 12px;
     margin:-2px;
     position: relative;
-    border-radius: 1px;
+    border-radius: 2px;
     white-space: nowrap;
 }
 
@@ -220,6 +221,7 @@ table .ja-screen.doubleKana, .ja-screen.moreParticle{
     color: var(--PRIMARY);
     background-color: var(--SECONDARY) !important;
 }
+
 
 .ja-popup{
     color: var(--SECONDARY);
@@ -245,6 +247,12 @@ h1 .ja-popup{
 }
 h2 .ja-popup{
     font-size: 22pt;
+}
+h3 .ja-popup{
+    font-size: 16pt;
+}
+table .ja-popup{
+    font-size: 18pt;
 }
 
 table {
@@ -327,7 +335,7 @@ main table{
     float: left;
     width: min-content;
     height: min-content;
-    padding: 12px 10px 8px 12px;
+    padding: 12px 9px 0px 12px;
 }
 
 main td:not(:empty), main th:not(:empty){

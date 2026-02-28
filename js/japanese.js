@@ -1,5 +1,7 @@
+//update with new ja-text elements
 waitForElemAll("ja-text", 253).then(function(elem){
     var JAelems = elem
+    console.log(JAelems)
     for (i=0;i<JAelems.length;i++) {
         var currentElem = JAelems[i]
         var currentList = currentElem.innerText.split(/{|}/)
@@ -10,7 +12,7 @@ waitForElemAll("ja-text", 253).then(function(elem){
                 currentList[j] = [currentList[j], true, currentElem]
                 
             } else {
-                currentList[j] = [currentList[j], false]
+                currentList[j] = [currentList[j], false, currentElem]
             }
         }
         var workingList = Object.assign({}, currentList);
@@ -38,7 +40,7 @@ waitForElemAll("ja-text", 253).then(function(elem){
                 }
                 screenSpan.innerText = workingList[j][0]
                 screenSpan.id = "group" + i + "-screen"
-                workingList[j][2].append(screenSpan)
+                workingList[j][2].appendChild(screenSpan)
             } else {
                 var popupSpan = document.createElement("span")
                 popupSpan.id = "group" + i + "-popup"
@@ -50,16 +52,30 @@ waitForElemAll("ja-text", 253).then(function(elem){
                     popupSpan.className = "ja-popup"
                 }
                 popupSpan.innerText = workingList[j][0]
-                workingList[j][2].append(popupSpan)
+                workingList[j][2].appendChild(popupSpan)
                 popupSpan.style.display = "none"
-                
+
             }
         }
+
+        for(j=0;j<currentList.length;j++){
+            if(currentList[j][1] == false){
+                var remainingText = document.createElement("span")
+                remainingText.id = "group" + i + "-non-ja"
+                remainingText.className = "ja-nontext"
+                remainingText.innerText = currentList[j][0]
+                currentList[j][2].appendChild(remainingText)
+            } 
+        }
+
     }
+
+    
+    
     var popupElems = document.getElementsByClassName("ja-popup")
     var screenElems = document.getElementsByClassName("ja-screen")
-    for(i=0;i<screenElems.length;i++){
-        screenElems[i].addEventListener("mouseenter",function(event){
+    for(j=0;j<screenElems.length;j++){
+        screenElems[j].addEventListener("mouseenter",function(event){
             var popupElement = document.getElementById(event.target.id.replace("screen","popup"))
             popupElement.style.display = "block"
 
@@ -77,13 +93,10 @@ waitForElemAll("ja-text", 253).then(function(elem){
             popupElement.style.left = textRect.left - event.target.parentElement.getBoundingClientRect().left - (popupRect.width - event.target.getBoundingClientRect().width)/2 + "px"
         })
         
-        screenElems[i].addEventListener("mouseleave",function(event){
+        screenElems[j].addEventListener("mouseleave",function(event){
             var popupElement = document.getElementById(event.target.id.replace("screen","popup"))
             popupElement.style.display = "none"
         })
-            
-            
-        
     }
 })
 
