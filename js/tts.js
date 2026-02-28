@@ -24,10 +24,10 @@ waitForElemAll("ja-screen", 312).then(function(ja_screen){
                 } else if (event.srcElement.innerText == "を"){
                     synth.text = "お"
                 } else {
-                    synth.text = event.srcElement.innerText
+                    synth.text = event.srcElement.innerHTML.split("<")[0]
                 }
             } else {
-                synth.text = event.srcElement.innerText
+                synth.text = event.srcElement.innerHTML.split("<")[0]
             }
             synth.lang = "ja"
             window.speechSynthesis.speak(synth) 

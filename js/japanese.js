@@ -52,7 +52,7 @@ waitForElemAll("ja-text", 253).then(function(elem){
                     popupSpan.className = "ja-popup"
                 }
                 popupSpan.innerText = workingList[j][0]
-                workingList[j][2].appendChild(popupSpan)
+                screenSpan.appendChild(popupSpan)
                 popupSpan.style.display = "none"
 
             }
@@ -78,21 +78,7 @@ waitForElemAll("ja-text", 253).then(function(elem){
         screenElems[j].addEventListener("mouseenter",function(event){
             var popupElement = document.getElementById(event.target.id.replace("screen","popup"))
             popupElement.style.display = "block"
-
-            var textRect = event.target.getBoundingClientRect()
-            popupElement.style.minWidth = event.target.getBoundingClientRect().width + "px"
-            
-            var popupRect = popupElement.getBoundingClientRect()
-
-
-            if(event.target.parentElement.tagName == "TH"){
-                popupElement.style.top = textRect.top - event.target.parentElement.getBoundingClientRect().top - popupRect.height + 12 + "px"
-            } else {
-                popupElement.style.top = textRect.top - event.target.parentElement.getBoundingClientRect().top - popupRect.height + "px"
-            }
-            popupElement.style.left = textRect.left - event.target.parentElement.getBoundingClientRect().left - (popupRect.width - event.target.getBoundingClientRect().width)/2 + "px"
         })
-        
         screenElems[j].addEventListener("mouseleave",function(event){
             var popupElement = document.getElementById(event.target.id.replace("screen","popup"))
             popupElement.style.display = "none"

@@ -89,7 +89,7 @@ var list = [
 
 function addContents(array){
     waitForElem("#side-menu-text").then(function(container){
-            for(i=0;i<array.length;i++){
+        for(i=0;i<array.length;i++){
             var current = document.createElement("a")
             current.className = "menu-option"
             current.id = "type" + array[i][2]

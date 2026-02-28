@@ -1,7 +1,7 @@
 {
     "CASE-PARTICLES":{
         "が{ga}":{
-            "1":"This is testing text This is testing text This is testing text This is testing text This is testing text"
+            "1":"This is testing text This is testing text This is testing text This is testing text This is testing text This is testing text This is testing text This is testing text This is testing text This is testing text This is testing text This is testing text This is testing text This is testing text This is testing text This is testing text This is testing text This is testing text This is testing text This is testing text This is testing text This is testing text This is testing text This is testing text This is testing text This is testing text This is testing text This is testing text This is testing text This is testing text This is testing text This is testing text This is testing text This is testing text This is testing text"
         },
         "を{o}":{
             "1":""
@@ -72,7 +72,7 @@
         "と{to}":{},
         "し{shi}":{},
         "て{te}":{},
-        "ながら{nakara}":{}
+        "ながら{nagara}":{}
     },
     "NORMALISING-PARTICLES":{
         "の{no}":{},

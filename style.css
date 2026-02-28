@@ -185,13 +185,12 @@ h3{
     position: relative;
     border-radius: 2px;
     padding: 5px;
+    text-align: center;
+    display:inline-block;
 }
 
 table .ja-screen{
     font-size: 25pt;
-    text-align: center;
-    display:inline-block;
-    vertical-align: middle;
     width: auto;
     --width: 50px;
     min-width: var(--width);
@@ -212,21 +211,31 @@ table .ja-screen.doubleKana, .ja-screen.moreParticle{
     padding-right: 18px;
 }
 
+#group230-screen{
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
 .particle-area .ja-screen{
     aspect-ratio: none;
 
 }
 
-.ja-screen:hover > th:not(:empty), .ja-screen:hover{
+th:not(:empty):hover{
     color: var(--PRIMARY);
     background-color: var(--SECONDARY) !important;
 }
+h3 .ja-screen:hover {
+    font-weight: 500;
+}
+
 
 
 .ja-popup{
     color: var(--SECONDARY);
     background-color: var(--PRIMARY) !important;
     position: absolute;
+    display: none;
     font-size: 18pt;
     border: 2px var(--SECONDARY) solid;
     border-radius: 2px;
@@ -241,6 +250,8 @@ table .ja-screen.doubleKana, .ja-screen.moreParticle{
     line-height: 100%;
     pointer-events: none;
     z-index: 100;
+    min-width: 100%;
+    top:0;
 }
 h1 .ja-popup{
     font-size: 25pt;
@@ -278,12 +289,12 @@ th:not(:empty){
 }
 
 .particles h3{
-    margin-top: 25px;
+    padding-top:45px;
     padding-bottom: 0px;
 }
 
 #case-particles{
-    margin-top: 0px;
+    padding-top:25px;
     padding-bottom: 0px;
 }
 
@@ -294,7 +305,7 @@ th:not(:empty){
     margin-block-start: 0;
     margin-block-end: 0;
     margin-top: 5px;
-    margin-bottom: 20px;
+    margin-bottom: 18px;
     margin-left: 5px;
     width: 750px;
     padding: 5px;
@@ -312,6 +323,7 @@ th:not(:empty){
 main{
     border: 2px var(--SECONDARY) solid;
     background-color: var(--PRIMARYalpha);
+    min-height: 100px;
 }
 
 main::after {
@@ -405,24 +417,56 @@ main p{
         margin-bottom: calc(22vw + 1800px);
     }
 
+    table .ja-screen{
+        font-size: 32pt;
+        --width: 55px;
+        min-width: var(--width);
+        line-height: var(--width);
+        padding: 12px;
+        border-radius: 2px;
+
+    }
+
+    .ja-popup{
+        border: 2px var(--SECONDARY) solid;
+        border-radius: 2px;
+        padding: 6px;
+        padding-top: 8px;
+        padding-bottom: 8px;
+        font-weight: 600;
+        font-family: Arial, Helvetica, sans-serif;
+        aspect-ratio: none;
+        line-height: 100%;
+        z-index: 100;
+        
+    }
+    h1 .ja-popup{
+        font-size: 40pt;
+    }
+    h2 .ja-popup{
+        font-size: 28pt;
+    }
+    h3 .ja-popup{
+        font-size: 22pt;
+    }
+    table .ja-popup{
+        font-size: 20pt;
+    }
+
+    table {
+        border-collapse: separate;
+        margin-bottom: 50px;
+    }
+
     td:not(:empty), th:not(:empty){
         border: 3px var(--SECONDARY) solid ;
         color: var(--SECONDARY);
         background-color: var(--PRIMARY);
     }
 
-    table span.rb{
-        font-size: 30pt;
-        padding: 15px !important;
-    }
-
-    .upop.ja-text.transition{
-        font-size: 24pt;
-    }
-
     .particle-container{
         margin-top: 8px;
-        grid-template-columns: repeat(3, 400px);
+        grid-template-columns: repeat(3, 435px);
         column-gap: 25px;
         row-gap: 25px;
     }
@@ -448,7 +492,7 @@ main p{
     }
 
     h1{
-        font-size: 65pt;
+        font-size: 70pt;
 
     }
     h1 div {
@@ -457,39 +501,45 @@ main p{
 
     h2{
         margin-top: 50px;
-        font-size: 45pt;
+        font-size: 50pt;
         margin-bottom: 5px;
     }
     h3{
-        font-size: 32.5pt;
+        font-size: 35pt;
         padding-top: 30px;
     }
 
     .descriptor{
-        font-size: 25pt;
+        font-size: 20pt;
         width:1210px;
-        padding: 15px;
+        padding: 10px;
         font-family:"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro",Osaka, "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
         border: 3px var(--SECONDARY) solid;
     }
 
-    main table span.rb{
-        padding: 25px !important;
-        font-size: 40pt;
+    .particle-area {
+        padding: 12px 12px 0px 12px;
     }
 
-    .particle-area {
-        font-size: 100pt !important;
+    .particle-area table .ja-screen {
+        font-size: 32pt;
+        --width: 55px;
+        min-width: var(--width);
+        line-height: var(--width);
+        padding: 15px;
+        margin:-2px;
+        border-radius: 2px;
     }
 
     main{
         border: 3px var(--SECONDARY) solid !important;
+        min-height: 115px;
     }
 
     main p{
-        font-size: 20pt;
+        font-size: 15pt;
+        line-height: 100%;
         font-family:"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro",Osaka, "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
-
     }
 
 }
