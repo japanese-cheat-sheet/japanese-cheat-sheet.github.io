@@ -30,14 +30,18 @@ waitForElemAll("ja-text", 253).then(function(elem){
                     screenSpan.className = "ja-screen singleKana"
                 } else if(tableChecker == "TBODY" && hiraKata && workingList[j][0].length == 2){
                     screenSpan.className = "ja-screen doubleKana"
-                } else {
+                } else if(tableChecker == "DIV" && hiraKata && workingList[j][0].length >= 2){
+                    screenSpan.className = "ja-screen moreParticle"
+                } 
+                else {
                     screenSpan.className = "ja-screen"
                 }
-                
                 screenSpan.innerText = workingList[j][0]
+                screenSpan.id = "group" + i + "-screen"
                 workingList[j][2].append(screenSpan)
             } else {
                 var popupSpan = document.createElement("span")
+                popupSpan.id = "group" + i + "-popup"
                 if(tableChecker == "TBODY" && hiraKata){
                     popupSpan.className = "ja-popup hirakata"
                 } else if(tableChecker == "DIV" && hiraKata){
@@ -45,19 +49,44 @@ waitForElemAll("ja-text", 253).then(function(elem){
                 } else{
                     popupSpan.className = "ja-popup"
                 }
-                
                 popupSpan.innerText = workingList[j][0]
-                screenSpan.append(popupSpan)
+                workingList[j][2].append(popupSpan)
+                popupSpan.style.display = "none"
+                
             }
-            
-            
-            
-           
         }
+    }
+    var popupElems = document.getElementsByClassName("ja-popup")
+    var screenElems = document.getElementsByClassName("ja-screen")
+    for(i=0;i<screenElems.length;i++){
+        screenElems[i].addEventListener("mouseenter",function(event){
+            var popupElement = document.getElementById(event.target.id.replace("screen","popup"))
+            popupElement.style.display = "block"
 
+            var textRect = event.target.getBoundingClientRect()
+            popupElement.style.minWidth = event.target.getBoundingClientRect().width + "px"
+            
+            var popupRect = popupElement.getBoundingClientRect()
+
+
+            if(event.target.parentElement.tagName == "TH"){
+                popupElement.style.top = textRect.top - event.target.parentElement.getBoundingClientRect().top - popupRect.height + 12 + "px"
+            } else {
+                popupElement.style.top = textRect.top - event.target.parentElement.getBoundingClientRect().top - popupRect.height + "px"
+            }
+            popupElement.style.left = textRect.left - event.target.parentElement.getBoundingClientRect().left - (popupRect.width - event.target.getBoundingClientRect().width)/2 + "px"
+        })
+        
+        screenElems[i].addEventListener("mouseleave",function(event){
+            var popupElement = document.getElementById(event.target.id.replace("screen","popup"))
+            popupElement.style.display = "none"
+        })
+            
+            
         
     }
 })
+
     
 
          

@@ -17,7 +17,6 @@ if(window.matchMedia("(pointer: coarse)").matches == false) {
 }
 
 function scrollById(event,Name){
-    console.log(event.srcElement.getBoundingClientRect())
     var menuA = event.srcElement.getBoundingClientRect()
     var elem = document.getElementById(Name)
     var elemRect = elem.getBoundingClientRect()
@@ -27,7 +26,6 @@ function scrollById(event,Name){
     } else {
         window.scrollTo(0,elemRect.top + window.scrollY - menuA.top + menuA.height/2 + topPadding/2 - 12)
     }
-    console.log(window.devicePixelRatio)
 }
 
 var sideToggle = false

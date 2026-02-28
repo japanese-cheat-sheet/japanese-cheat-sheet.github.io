@@ -157,7 +157,7 @@ h1{
 
 h2{
     position: relative;
-    font-size: 25pt;
+    font-size: 35pt;
     font-weight: 400;
     color: var(--SECONDARY);
     margin-block-start: 0;
@@ -175,6 +175,10 @@ h3{
     margin-block-end: 0;
     padding-top:10px;
     padding-bottom: 10px;
+}
+
+.ja-text{
+    position: relative;
 }
 
 .ja-screen{
@@ -195,19 +199,21 @@ table .ja-screen{
     margin:-2px;
     position: relative;
     border-radius: 1px;
+    white-space: nowrap;
 }
 
 table .ja-screen.singleKana{
     aspect-ratio: 1/1;
 }
 
-table .ja-screen.doubleKana{
+table .ja-screen.doubleKana, .ja-screen.moreParticle{
     padding-left: 18px;
     padding-right: 18px;
 }
 
-.particle-area .ja-screen.double{
-    width:100%
+.particle-area .ja-screen{
+    aspect-ratio: none;
+
 }
 
 .ja-screen:hover > th:not(:empty), .ja-screen:hover{
@@ -215,19 +221,30 @@ table .ja-screen.doubleKana{
     background-color: var(--SECONDARY) !important;
 }
 
-
-
 .ja-popup{
-    color: var(--PRIMARY);
-    background-color: var(--SECONDARY) !important;
+    color: var(--SECONDARY);
+    background-color: var(--PRIMARY) !important;
     position: absolute;
-    font-size: 15pt;
-    border: 1px black solid;
-    width:100%;
+    font-size: 18pt;
+    border: 2px var(--SECONDARY) solid;
+    border-radius: 2px;
+    white-space: nowrap;
     text-align: center;
-    padding: 1px;
+    padding: 6px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    font-weight: 600;
+    font-family: Arial, Helvetica, sans-serif;
     aspect-ratio: none;
     line-height: 100%;
+    pointer-events: none;
+    z-index: 100;
+}
+h1 .ja-popup{
+    font-size: 25pt;
+}
+h2 .ja-popup{
+    font-size: 22pt;
 }
 
 table {
