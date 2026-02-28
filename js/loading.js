@@ -3,7 +3,7 @@ function loadingAnimation(){
         elem.style.opacity = 0;
         elem.style.transition = "opacity 1s"
         setTimeout(function(){
-        elem.style.display = "none";
+            elem.style.display = "none";
         },1000)
     })
 }
