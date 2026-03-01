@@ -1,5 +1,5 @@
 //update with new ja-text elements
-waitForElemAll("ja-text", 250).then(function(elem){
+waitForElemAll("ja-text", 300).then(function(elem){
     var JAelems = elem
     for (i=0;i<JAelems.length;i++) {
         var currentElem = JAelems[i]
@@ -41,11 +41,11 @@ waitForElemAll("ja-text", 250).then(function(elem){
                     screenSpan.className = "ja-screen"
                 }
                 screenSpan.innerText = workingList[j][0]
-                screenSpan.id = "group" + i + "-screen"
+                screenSpan.id = "group-" + i + "-screen"
                 workingList[j][2].appendChild(screenSpan)
             } else {
                 var popupSpan = document.createElement("span")
-                popupSpan.id = "group" + i + "-popup"
+                popupSpan.id = "group-" + i + "-popup"
                 if(tableChecker == "TBODY" && hiraKata){
                     popupSpan.className = "ja-popup hirakata"
                 } else if(tableChecker == "DIV" && hiraKata){

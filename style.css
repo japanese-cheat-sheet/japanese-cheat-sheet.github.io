@@ -127,10 +127,6 @@ body{
     padding-left:30px;
     padding-right:0px !important;
 }
-.type-function:hover{
-    padding-left:10px;
-    padding-right:0px;
-}
 .type0:hover{
     padding-left:0px;
     padding-right:0px;
@@ -242,11 +238,6 @@ table .ja-screen.singleKana{
 table .ja-screen.doubleKana, .ja-screen.moreParticle{
     padding-left: 18px;
     padding-right: 18px;
-}
-
-#group230-screen{
-    padding-left: 25px;
-    padding-right: 25px;
 }
 
 .particle-area .ja-screen{
@@ -450,8 +441,6 @@ main p{
     }
     .type-function{
         font-size: 2.5em;
-        padding:10px;
-        padding-bottom: 25px;
     }
 
     .type1{
@@ -466,9 +455,11 @@ main p{
     .menu-option:hover{
         padding-left:60px;
     }
+    .type0:hover{
+        padding-left:0px;
+    }
     .type-function:hover{
-        padding:10px;
-        padding-bottom: 25px;
+        padding-left: 5px;
     }
 
     .center{

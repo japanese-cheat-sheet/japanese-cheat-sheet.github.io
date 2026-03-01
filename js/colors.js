@@ -3,7 +3,6 @@ function clearColors(){
     window.localStorage.removeItem("PRIMARY")
     window.localStorage.removeItem("SECONDARY")
 }
-clearColors()
 
 // light, dark
 const COLORS = ["#C6C8C5","#131953"]

@@ -16,8 +16,10 @@ function loadingAnimation(){
 if(window.sessionStorage.getItem("playAnimation") == null){
     waitForElem("#loading-cover").then(function(elem){
         elem.style.opacity = 1;
-        var konbini = new Audio("audio/family-mart.mp3")
-        konbini.play()
+        if(window.localStorage.getItem("AUDIO") == "1"){
+            var konbini = new Audio("audio/family-mart.mp3")
+            konbini.play()
+        }
         loadingAnimation()
         window.sessionStorage.setItem("playAnimation", true)
     })

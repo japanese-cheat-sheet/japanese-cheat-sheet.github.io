@@ -14,8 +14,6 @@ waitForElem(".audio-button").then(function(elem){
     console.log(window.localStorage.getItem("AUDIO"))
 })
 
-
-
 function toggleAudio(event){
     if(window.localStorage.getItem("AUDIO") == "1") {
         window.localStorage.setItem("AUDIO", "0")
@@ -24,5 +22,4 @@ function toggleAudio(event){
         window.localStorage.setItem("AUDIO", "1")
         event.srcElement.innerText = "ミュート（ＭＵＴＥ）"
     }
-    console.log(window.localStorage.getItem("AUDIO"))
 }

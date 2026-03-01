@@ -1,3 +1,9 @@
+// padding ajustments for ヴ
+waitForElem("#group-231-screen").then(function(elem){
+    elem.style.paddingLeft = "25px"
+    elem.style.paddingRight = "25px"
+})
+
 fetch('js/json/particles.json').then(response => {
     return response.json();
 }).then(data => {
