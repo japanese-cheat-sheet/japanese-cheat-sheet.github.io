@@ -75,7 +75,8 @@ document.addEventListener("click",function(event){
 })
 
 var list = [
-    ["","toggleAudio(event)", "-function audio-button"],
+    ["","toggleIntro()", "-function intro-audio"],
+    ["","toggleAudio()", "-function audio-button"],
     ["","toggleColors(event)", "-function dark-mode"],
     ["","", 0],
     ["日本語（ＪＡＰＡＮＥＳＥ）","window.scrollTo(0,0)", 1],

@@ -16,7 +16,8 @@ function loadingAnimation(){
 if(window.sessionStorage.getItem("playAnimation") == null){
     waitForElem("#loading-cover").then(function(elem){
         elem.style.opacity = 1;
-        if(window.localStorage.getItem("AUDIO") == "1"){
+        console.log(window.localStorage.getItem("AUDIO-INTRO") == "1")
+        if(window.localStorage.getItem("AUDIO-INTRO") == "1"){
             var konbini = new Audio("audio/family-mart.mp3")
             konbini.play()
         }
