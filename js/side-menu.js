@@ -75,7 +75,8 @@ document.addEventListener("click",function(event){
 })
 
 var list = [
-    ["","toggleColors(event)", "-dark-mode"],
+    ["","toggleAudio(event)", "-function audio-button"],
+    ["","toggleColors(event)", "-function dark-mode"],
     ["","", 0],
     ["日本語（ＪＡＰＡＮＥＳＥ）","window.scrollTo(0,0)", 1],
     ["平仮名（ＨＩＲＡＧＡＮＡ）","scrollById(event,'hiragana')", 1],
@@ -95,8 +96,7 @@ function addContents(array){
     waitForElem("#side-menu-text").then(function(container){
         for(i=0;i<array.length;i++){
             var current = document.createElement("a")
-            current.className = "menu-option"
-            current.id = "type" + array[i][2]
+            current.className = "menu-option " +"type" + array[i][2]
             current.setAttribute("onclick",array[i][1])
             current.innerText = array[i][0]
             container.appendChild(current)

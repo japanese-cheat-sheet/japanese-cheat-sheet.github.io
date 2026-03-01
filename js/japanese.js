@@ -1,7 +1,6 @@
 //update with new ja-text elements
 waitForElemAll("ja-text", 250).then(function(elem){
     var JAelems = elem
-    console.log(JAelems)
     for (i=0;i<JAelems.length;i++) {
         var currentElem = JAelems[i]
         var currentList = currentElem.innerText.split(/{|}/)
@@ -9,8 +8,11 @@ waitForElemAll("ja-text", 250).then(function(elem){
         for(j=0;j<currentList.length;j++){
             // Hiragana | Katakana | a-z | Kanji
             if(currentList[j].match(/[\u3040-\u30a0]|[\u30a0-\u30ff]|[\u0061-\u007A]|[\u4e00-\u9faf]/)){
-                currentList[j] = [currentList[j], true, currentElem]
-                
+                if(currentList[j].includes("＊")){
+                    currentList[j] = [currentList[j].replace("＊",""), false, currentElem]
+                } else {
+                    currentList[j] = [currentList[j], true, currentElem]
+                }
             } else {
                 currentList[j] = [currentList[j], false, currentElem]
             }

@@ -15,22 +15,24 @@ waitForElemAll("ja-screen", 312).then(function(ja_screen){
     }
     for(i=0;i<elems.length;i++){
         elems[i].addEventListener(clicker,function(event){
-            window.speechSynthesis.cancel()
-            if(event.srcElement.parentElement.parentElement.parentElement.className == "particle-area"){
-                if(event.srcElement.innerHTML.split("<")[0] == "は"){
-                    synth.text = "わ"
-                } else if (event.srcElement.innerHTML.split("<")[0] == "へ"){
-                    synth.text = "え"
-                } else if (event.srcElement.innerHTML.split("<")[0] == "を"){
-                    synth.text = "お"
+            if(window.localStorage.getItem("AUDIO") == "1"){
+                window.speechSynthesis.cancel()
+                if(event.srcElement.parentElement.parentElement.parentElement.className == "particle-area"){
+                    if(event.srcElement.innerHTML.split("<")[0] == "は"){
+                        synth.text = "わ"
+                    } else if (event.srcElement.innerHTML.split("<")[0] == "へ"){
+                        synth.text = "え"
+                    } else if (event.srcElement.innerHTML.split("<")[0] == "を"){
+                        synth.text = "お"
+                    } else {
+                        synth.text = event.srcElement.innerHTML.split("<")[0]
+                    }
                 } else {
                     synth.text = event.srcElement.innerHTML.split("<")[0]
                 }
-            } else {
-                synth.text = event.srcElement.innerHTML.split("<")[0]
+                synth.lang = "ja"
+                window.speechSynthesis.speak(synth) 
             }
-            synth.lang = "ja"
-            window.speechSynthesis.speak(synth) 
         })
     }
 })

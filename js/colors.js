@@ -13,11 +13,11 @@ if(window.localStorage.getItem("PRIMARY") == null || window.localStorage.getItem
 }
 
 if(window.localStorage.getItem("PRIMARY") == COLORS[0]){
-    waitForElem("#type-dark-mode").then(function(darkmode){
+    waitForElem(".dark-mode").then(function(darkmode){
         darkmode.innerText = "ダークモード（ＤＡＲＫ　ＭＯＤＥ）"
     })
 } else {
-    waitForElem("#type-dark-mode").then(function(darkmode){
+    waitForElem(".dark-mode").then(function(darkmode){
         darkmode.innerText = "ライトモード（ＬＩＧＨＴ　ＭＯＤＥ）"
     })
 }
