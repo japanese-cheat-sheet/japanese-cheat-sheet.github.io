@@ -11,7 +11,7 @@ fetch('js/json/particles.json').then(response => {
 })
 
 const TEXTDATA = JSON.parse(window.localStorage.getItem("PARTICLE-TEXT-DATA"))
-
+console.log(TEXTDATA)
 async function addParticleBox(particle, text, container){
     waitForElemAll("particle-container",8).then(function(elems){
         var containers = elems
