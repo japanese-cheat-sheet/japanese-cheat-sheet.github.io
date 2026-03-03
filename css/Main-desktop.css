@@ -433,7 +433,7 @@ Hiragana and Katakana
 }
 .quiz-container{
     position: relative;
-    height: 735px;
+    height: 660px;
     width: 100%;
     background-color: var(--PRIMARYalpha);
     border: 1px var(--SECONDARY) solid;

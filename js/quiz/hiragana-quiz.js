@@ -93,7 +93,7 @@ function hiraQuizComplete(){
     if(hiraganaPercentage == 100){
         var extraText = "\n\nPerfect Score　ദ്ദി(˵ •̀ ᴗ - ˵ ) ✧\n\n"
     } else if ((hiraganaPercentage < 100 && hiraganaPercentage >= 66)){
-        var extraText = "\n\nGood Score　<(￣︶￣)>\n\n"
+        var extraText = "\n\nGood Score　(ﾉ´ヮ`)ﾉ*: ･ﾟ\n\n"
     } else if ((hiraganaPercentage < 66 && hiraganaPercentage >= 33)){
         var extraText = "\n\nNot Bad　(ﾉ^ヮ^)ﾉ\n\n"
     } else {
