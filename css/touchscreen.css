@@ -1,0 +1,223 @@
+@media (pointer:coarse) {
+    html{
+        zoom:25%;
+    }
+    body{
+        background-image:url("../background/konbiniMobile.png"), linear-gradient(var(--PRIMARY) 0 100%);
+        background-position: center;
+    }
+    #side-menu-button{
+        font-size: 100pt;
+        padding: 25px;
+        padding-left: 60px;
+    }
+
+    #side-menu{
+        padding-top: 275px;
+        height: 110%;
+        padding-left: 40px;
+    }
+
+    #side-menu-text{
+        padding-bottom: 300vh;
+    }
+
+    .menu-option{
+        margin-bottom: 20px;
+        padding:5px;
+    }
+    .type0{
+        position: relative;
+        height: 1px;
+        padding: 0;
+        background-color: var(--SECONDARY);
+        margin-top: 30px;
+        margin-bottom: 30px;
+        width:650px;
+    }
+    .type-function{
+        font-size: 2.5em;
+    }
+
+    .type1{
+        font-size: 3.0em;
+        padding-right: 60px;
+    }
+    .type2{
+        font-size: 1.8em;
+        padding-right: 60px;
+    }
+
+    .menu-option:hover{
+        padding-left:60px;
+    }
+    .type0:hover{
+        padding-left:0px;
+    }
+    .type-function:hover{
+        padding-left: 5px;
+    }
+
+    .center{
+        margin-top: calc(22vw + 200px);
+        margin-bottom: calc(22vw + 1800px);
+    }
+
+    table .ja-screen{
+        font-size: 32pt;
+        --width: 55px;
+        min-width: var(--width);
+        line-height: var(--width);
+        padding: 12px;
+        border-radius: 2px;
+
+    }
+
+    .ja-popup{
+        border: 2px var(--SECONDARY) solid;
+        border-radius: 2px;
+        padding: 6px;
+        padding-top: 8px;
+        padding-bottom: 8px;
+        font-weight: 600;
+        font-family: Arial, Helvetica, sans-serif;
+        aspect-ratio: none;
+        line-height: 100%;
+        z-index: 100;
+        
+    }
+    h1 .ja-popup{
+        top: -62px;
+        font-size: 40pt;
+        padding: 10px;
+        padding-top:15px;
+        padding-bottom: 15px;
+    }
+    h2 .ja-popup{
+        top: -42px;
+        font-size: 28pt;
+        padding: 8px;
+        padding-top:10px;
+        padding-bottom: 10px;
+    }
+    h3 .ja-popup{
+        top: -36px;
+        font-size: 22.5pt;
+        padding: 10px;
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+    table .ja-popup{
+        top:-32px;
+        padding-top:8px;
+        padding-bottom: 8px;
+        font-size: 21pt;
+    }
+
+    table {
+        border-collapse: separate;
+        margin-bottom: 50px;
+    }
+
+    td:not(:empty), th:not(:empty){
+        border: 3px var(--SECONDARY) solid ;
+        color: var(--SECONDARY);
+        background-color: var(--PRIMARY);
+    }
+
+    .particle-container{
+        margin-top: 8px;
+        grid-template-columns: repeat(3, 435px);
+        column-gap: 25px;
+        row-gap: 25px;
+    }
+
+    .hint-container{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hint-text{
+        padding:0;
+        font-size: 15pt;
+        font-weight: 1000;
+        border: 4px var(--SECONDARY) solid;
+        padding: 20px;
+        padding-left: 40px;
+        padding-right: 40px;
+        font-family:"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro",Osaka, "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+
+    }
+
+    .hiragana, .katakana{
+        margin-bottom: 80px;
+    }
+
+    h1{
+        font-size: 70pt;
+    }
+    #intro-text-title{
+        font-size: 45pt;
+        padding-top: 30px;
+        font-weight: 500;
+    }
+    #intro-text-title .ja-screen{
+        border-radius: 2px;
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+    #intro-text{
+        width: 1300px;
+        text-align: justify;
+        padding: 8px;
+        font-size:22pt;
+        font-weight: 400;
+        letter-spacing: -4px;
+    }
+    .space{
+        height: 15px;
+    }
+
+    h2{
+        margin-top: 50px;
+        font-size: 50pt;
+        margin-bottom: 5px;
+    }
+    h3{
+        font-size: 35pt;
+        padding-top: 30px;
+    }
+
+    .descriptor{
+        font-size: 20pt;
+        width:1210px;
+        padding: 10px;
+        font-family:"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro",Osaka, "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+        border: 3px var(--SECONDARY) solid;
+    }
+
+    .particle-area {
+        padding: 12px 12px 0px 12px;
+    }
+
+    .particle-area table .ja-screen {
+        font-size: 32pt;
+        --width: 55px;
+        min-width: var(--width);
+        line-height: var(--width);
+        padding: 15px;
+        margin:-2px;
+        border-radius: 2px;
+    }
+
+    main{
+        border: 3px var(--SECONDARY) solid !important;
+        min-height: 115px;
+    }
+
+    main p{
+        font-size: 15pt;
+        line-height: 100%;
+        font-family:"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro",Osaka, "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+    }
+
+}

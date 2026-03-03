@@ -6,19 +6,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Bread & Butter</title>
     <link rel="icon" type="image/x-icon" href="icons/icon192.png">
+
     <link rel="manifest" href="js/json/manifest.json"/>
-    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="css/Main-desktop.css">
+    <link rel="stylesheet" href="css/touchscreen.css">
+    
     <script src="js/element-wait.js"></script>
-    <script src="js/audio-settings.js"></script>
-    <script type="module" src="js/particles.js"></script>
-    <script src="js/colors.js"></script>
-    <script src="js/loading.js"></script>
-    <script src="js/side-menu.js"></script>
-    <script src="js/japanese.js"></script>
-    <script src="js/tts.js"></script>
-    <script src="js/pwa.js"></script>
-    <script src="js/kana-quiz.js"></script>
+    <script src="js/side-menu/audio-settings.js"></script>
+    <script src="js/side-menu/colors.js"></script>
+    <script src="js/webpage/loading.js"></script>
+    <script src="js/side-menu/side-menu.js"></script>
+    <script src="js/japanese/japanese.js"></script>
+    <script src="js/japanese/tts.js"></script>
+    <script src="js/webpage/pwa.js"></script>
+    <script type="module" src="js/quiz/hiragana-quiz.js"></script>
+    <script type="module" src="js/quiz/katakana-quiz.js"></script>
+
 </head>
 <body>
 <div id="loading-cover"></div>
@@ -55,158 +62,172 @@
             ）
         </p>
     </h4>
-    <div class="hiragana">
-    <h2 id="hiragana"><span class="ja-text">平仮名{ひらがな}</span>（ＨＩＲＡＧＡＮＡ）<button class="quiz-button" id="hiragana-quiz"></button></h2>
-        <div id="hiragana-contents">
-            <table>
-                <tr>
-                    <th class="ja-text">あ{a}</th>
-                    <th class="ja-text">か{ka}</th>
-                    <th class="ja-text">さ{sa}</th>
-                    <th class="ja-text">た{ta}</th>
-                    <th class="ja-text">な{na}</th>
-                    <th class="ja-text">は{ha}</th>
-                    <th class="ja-text">ま{ma}</th>
-                    <th class="ja-text">や{ya}</th>
-                    <th class="ja-text">ら{ra}</th>
-                    <th class="ja-text">わ{wa}</th>
-                    <th class="ja-text">ぱ{pa}</th>
-                    <th class="ja-text">ば{ba}</th>
-                    <th class="ja-text">だ{da}</th>
-                    <th class="ja-text">ざ{za}</th>
-                    <th class="ja-text">が{ga}</th>
-                </tr>
-                <tr>
-                    <th class="ja-text">い{i}</th>
-                    <th class="ja-text">き{ki}</th>
-                    <th class="ja-text">し{shi}</th>
-                    <th class="ja-text">ち{chi}</th>
-                    <th class="ja-text">に{ni}</th>
-                    <th class="ja-text">ひ{hi}</th>
-                    <th class="ja-text">み{mi}</th>
-                    <th></th>
-                    <th class="ja-text">り{ri}</th>
-                    <th></th>
-                    <th class="ja-text">ぴ{pi}</th>
-                    <th class="ja-text">び{bi}</th>
-                    <th class="ja-text">ぢ{di}</th>
-                    <th class="ja-text">じ{ji}</th>
-                    <th class="ja-text">ぎ{gi}</th>
-                </tr>
-                <tr>
-                    <th class="ja-text">う{u}</th>
-                    <th class="ja-text">く{ku}</th>
-                    <th class="ja-text">す{su}</th>
-                    <th class="ja-text">つ{tsu}</th>
-                    <th class="ja-text">ぬ{nu}</th>
-                    <th class="ja-text">ふ{fu}</th>
-                    <th class="ja-text">む{mu}</th>
-                    <th class="ja-text">ゆ{yu}</th>
-                    <th class="ja-text">る{ru}</th>
-                    <th></th>
-                    <th class="ja-text">ぷ{pu}</th>
-                    <th class="ja-text">ぶ{bu}</th>
-                    <th class="ja-text">づ{dzu}</th>
-                    <th class="ja-text">ず{zu}</th>
-                    <th class="ja-text">ぐ{gu}</th>
-                </tr>
-                <tr>
-                    <th class="ja-text">え{e}</th>
-                    <th class="ja-text">け{ke}</th>
-                    <th class="ja-text">せ{se}</th>
-                    <th class="ja-text">て{te}</th>
-                    <th class="ja-text">ね{ne}</th>
-                    <th class="ja-text">へ{he}</th>
-                    <th class="ja-text">め{me}</th>
-                    <th></th>
-                    <th class="ja-text">れ{re}</th>
-                    <th></th>
-                    <th class="ja-text">ぺ{pe}</th>
-                    <th class="ja-text">べ{be}</th>
-                    <th class="ja-text">で{de}</th>
-                    <th class="ja-text">ぜ{ze}</th>
-                    <th class="ja-text">げ{ge}</th>
-                </tr>
-                <tr>
-                    <th class="ja-text">お{o}</th>
-                    <th class="ja-text">こ{ko}</th>
-                    <th class="ja-text">そ{so}</th>
-                    <th class="ja-text">と{to}</th>
-                    <th class="ja-text">の{no}</th>
-                    <th class="ja-text">ほ{ho}</th>
-                    <th class="ja-text">も{mo}</th>
-                    <th class="ja-text">よ{yo}</th>
-                    <th class="ja-text">ろ{ro}</th>
-                    <th class="ja-text">を{wo}</th>
-                    <th class="ja-text">ぽ{po}</th>
-                    <th class="ja-text">ぼ{bo}</th>
-                    <th class="ja-text">ど{do}</th>
-                    <th class="ja-text">ぞ{zo}</th>
-                    <th class="ja-text">ご{go}</th>
-                </tr>
-                <tr>
-                    <th class="ja-text">ん{n}</th>
-                    <th></th>
-                    <th></th>
-                    <th></th>
-                    <th></th>
-                    <th></th>
-                    <th></th>
-                    <th></th>
-                    <th></th>
-                    <th></th>
-                    <th></th>
-                    <th></th>
-                    <th></th>
-                    <th></th>
-                    <th></th>
-                </tr>
-            </table>
-            <table>
-                <tr>
-                    <th class="ja-text">きゃ{kya}</th>
-                    <th class="ja-text">しゃ{sha}</th>
-                    <th class="ja-text">ちゃ{cha}</th>
-                    <th class="ja-text">にゃ{nya}</th>
-                    <th class="ja-text">ひゃ{hya}</th>
-                    <th class="ja-text">みゃ{mya}</th>
-                    <th class="ja-text">りゃ{rya}</th>
-                    <th class="ja-text">ぴゃ{pya}</th>
-                    <th class="ja-text">びゃ{bya}</th>
-                    <th class="ja-text">じゃ{ja}</th>
-                    <th class="ja-text">ぎゃ{gya}</th>
-                </tr>
-                <tr>
-                    <th class="ja-text">きゅ{kyu}</th>
-                    <th class="ja-text">しゅ{shu}</th>
-                    <th class="ja-text">ちゅ{chu}</th>
-                    <th class="ja-text">にゅ{nyu}</th>
-                    <th class="ja-text">ひゅ{hyu}</th>
-                    <th class="ja-text">みゅ{myu}</th>
-                    <th class="ja-text">りゅ{ryu}</th>
-                    <th class="ja-text">ぴゅ{pyu}</th>
-                    <th class="ja-text">びゅ{byu}</th>
-                    <th class="ja-text">じゅ{ju}</th>
-                    <th class="ja-text">ぎゅ{gyu}</th>
-                </tr>
-                <tr>
-                    <th class="ja-text">きょ{kyo}</th>
-                    <th class="ja-text">しょ{sho}</th>
-                    <th class="ja-text">ちょ{cho}</th>
-                    <th class="ja-text">にょ{nyo}</th>
-                    <th class="ja-text">ひょ{hyo}</th>
-                    <th class="ja-text">みょ{myo}</th>
-                    <th class="ja-text">りょ{ryo}</th>
-                    <th class="ja-text">ぴょ{pyo}</th>
-                    <th class="ja-text">びょ{byo}</th>
-                    <th class="ja-text">じょ{jo}</th>
-                    <th class="ja-text">ぎょ{gyo}</th>
-                </tr>
-            </table>
-        </div>
+    <h2 id="kana-title"><span class="ja-text">仮名{がな}</span>（ＷＲＩＴＩＮＧ　ＳＹＳＴＥＭ）</h2>
+    <h3 id="hiragana-title"><span class="ja-text">平仮名{ひらがな}</span>（ＨＩＲＡＧＡＮＡ）<button class="quiz-button" id="hiragana-quiz"></button></h3>
+    <div id="hiragana-contents">
+        <table>
+            <tr>
+                <th class="ja-text">あ{a}</th>
+                <th class="ja-text">か{ka}</th>
+                <th class="ja-text">さ{sa}</th>
+                <th class="ja-text">た{ta}</th>
+                <th class="ja-text">な{na}</th>
+                <th class="ja-text">は{ha}</th>
+                <th class="ja-text">ま{ma}</th>
+                <th class="ja-text">や{ya}</th>
+                <th class="ja-text">ら{ra}</th>
+                <th class="ja-text">わ{wa}</th>
+                <th class="ja-text">ぱ{pa}</th>
+                <th class="ja-text">ば{ba}</th>
+                <th class="ja-text">だ{da}</th>
+                <th class="ja-text">ざ{za}</th>
+                <th class="ja-text">が{ga}</th>
+            </tr>
+            <tr>
+                <th class="ja-text">い{i}</th>
+                <th class="ja-text">き{ki}</th>
+                <th class="ja-text">し{shi}</th>
+                <th class="ja-text">ち{chi}</th>
+                <th class="ja-text">に{ni}</th>
+                <th class="ja-text">ひ{hi}</th>
+                <th class="ja-text">み{mi}</th>
+                <th></th>
+                <th class="ja-text">り{ri}</th>
+                <th></th>
+                <th class="ja-text">ぴ{pi}</th>
+                <th class="ja-text">び{bi}</th>
+                <th class="ja-text">ぢ{di}</th>
+                <th class="ja-text">じ{ji}</th>
+                <th class="ja-text">ぎ{gi}</th>
+            </tr>
+            <tr>
+                <th class="ja-text">う{u}</th>
+                <th class="ja-text">く{ku}</th>
+                <th class="ja-text">す{su}</th>
+                <th class="ja-text">つ{tsu}</th>
+                <th class="ja-text">ぬ{nu}</th>
+                <th class="ja-text">ふ{fu}</th>
+                <th class="ja-text">む{mu}</th>
+                <th class="ja-text">ゆ{yu}</th>
+                <th class="ja-text">る{ru}</th>
+                <th></th>
+                <th class="ja-text">ぷ{pu}</th>
+                <th class="ja-text">ぶ{bu}</th>
+                <th class="ja-text">づ{dzu}</th>
+                <th class="ja-text">ず{zu}</th>
+                <th class="ja-text">ぐ{gu}</th>
+            </tr>
+            <tr>
+                <th class="ja-text">え{e}</th>
+                <th class="ja-text">け{ke}</th>
+                <th class="ja-text">せ{se}</th>
+                <th class="ja-text">て{te}</th>
+                <th class="ja-text">ね{ne}</th>
+                <th class="ja-text">へ{he}</th>
+                <th class="ja-text">め{me}</th>
+                <th></th>
+                <th class="ja-text">れ{re}</th>
+                <th></th>
+                <th class="ja-text">ぺ{pe}</th>
+                <th class="ja-text">べ{be}</th>
+                <th class="ja-text">で{de}</th>
+                <th class="ja-text">ぜ{ze}</th>
+                <th class="ja-text">げ{ge}</th>
+            </tr>
+            <tr>
+                <th class="ja-text">お{o}</th>
+                <th class="ja-text">こ{ko}</th>
+                <th class="ja-text">そ{so}</th>
+                <th class="ja-text">と{to}</th>
+                <th class="ja-text">の{no}</th>
+                <th class="ja-text">ほ{ho}</th>
+                <th class="ja-text">も{mo}</th>
+                <th class="ja-text">よ{yo}</th>
+                <th class="ja-text">ろ{ro}</th>
+                <th class="ja-text">を{wo}</th>
+                <th class="ja-text">ぽ{po}</th>
+                <th class="ja-text">ぼ{bo}</th>
+                <th class="ja-text">ど{do}</th>
+                <th class="ja-text">ぞ{zo}</th>
+                <th class="ja-text">ご{go}</th>
+            </tr>
+            <tr>
+                <th class="ja-text">ん{n}</th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+            </tr>
+        </table>
+        <table>
+            <tr>
+                <th class="ja-text">きゃ{kya}</th>
+                <th class="ja-text">しゃ{sha}</th>
+                <th class="ja-text">ちゃ{cha}</th>
+                <th class="ja-text">にゃ{nya}</th>
+                <th class="ja-text">ひゃ{hya}</th>
+                <th class="ja-text">みゃ{mya}</th>
+                <th class="ja-text">りゃ{rya}</th>
+                <th class="ja-text">ぴゃ{pya}</th>
+                <th class="ja-text">びゃ{bya}</th>
+                <th class="ja-text">じゃ{ja}</th>
+                <th class="ja-text">ぎゃ{gya}</th>
+            </tr>
+            <tr>
+                <th class="ja-text">きゅ{kyu}</th>
+                <th class="ja-text">しゅ{shu}</th>
+                <th class="ja-text">ちゅ{chu}</th>
+                <th class="ja-text">にゅ{nyu}</th>
+                <th class="ja-text">ひゅ{hyu}</th>
+                <th class="ja-text">みゅ{myu}</th>
+                <th class="ja-text">りゅ{ryu}</th>
+                <th class="ja-text">ぴゅ{pyu}</th>
+                <th class="ja-text">びゅ{byu}</th>
+                <th class="ja-text">じゅ{ju}</th>
+                <th class="ja-text">ぎゅ{gyu}</th>
+            </tr>
+            <tr>
+                <th class="ja-text">きょ{kyo}</th>
+                <th class="ja-text">しょ{sho}</th>
+                <th class="ja-text">ちょ{cho}</th>
+                <th class="ja-text">にょ{nyo}</th>
+                <th class="ja-text">ひょ{hyo}</th>
+                <th class="ja-text">みょ{myo}</th>
+                <th class="ja-text">りょ{ryo}</th>
+                <th class="ja-text">ぴょ{pyo}</th>
+                <th class="ja-text">びょ{byo}</th>
+                <th class="ja-text">じょ{jo}</th>
+                <th class="ja-text">ぎょ{gyo}</th>
+            </tr>
+        </table>
     </div>
-    <div class="katakana">
-    <h2 id="katakana"><span class="ja-text">片仮名{かたかな}</span>（ＫＡＴＡＫＡＮＡ）</h2>
+    <div id="hiragana-quiz-contents" style="display: none;">
+        <div class="quiz-container">
+            <div class="quiz-center" id="hiragana-center">
+            <div class="quiz-letter-display" id="hiragana-display"></div>
+                <div class="quiz-input-area">
+                    <textarea class="quiz-input-box" rows="1" id="hiragana-input"></textarea>
+                    <button class="quiz-submit-button" id="hiragana-submit">ＳＵＢＭＩＴ</button>
+                </div>
+            </div>
+            <div class="quiz-result" id="hiragana-results" style="display: none;">
+                <p id="hiragana-result-title" class="result-title"></p>
+                <p id="hiragana-result-info" class="result-info"></p>
+            </div>
+        </div> 
+    </div>
+    <h3 id="katakana-title"><span class="ja-text">片仮名{かたかな}</span>（ＫＡＴＡＫＡＮＡ）<button class="quiz-button" id="katakana-quiz"></button></h3>
+    <div id="katakana-contents">
         <table>
             <tr>
                 <th class="ja-text">ア{a}</th>
@@ -219,7 +240,6 @@
                 <th class="ja-text">ヤ{ya}</th>
                 <th class="ja-text">ラ{ra}</th>
                 <th class="ja-text">ワ{wa}</th>
-                <th></th>
                 <th class="ja-text">パ{pa}</th>
                 <th class="ja-text">バ{ba}</th>
                 <th class="ja-text">ダ{da}</th>
@@ -236,7 +256,6 @@
                 <th class="ja-text">ミ{mi}</th>
                 <th></th>
                 <th class="ja-text">リ{ri}</th>
-                <th></th>
                 <th></th>
                 <th class="ja-text">ピ{pi}</th>
                 <th class="ja-text">ビ{bi}</th>
@@ -255,7 +274,6 @@
                 <th class="ja-text">ユ{yu}</th>
                 <th class="ja-text">ル{ru}</th>
                 <th></th>
-                <th></th>
                 <th class="ja-text">プ{pu}</th>
                 <th class="ja-text">ブ{bu}</th>
                 <th class="ja-text">ヅ{dzu}</th>
@@ -272,7 +290,6 @@
                 <th class="ja-text">メ{me}</th>
                 <th></th>
                 <th class="ja-text">レ{re}</th>
-                <th></th>
                 <th></th>
                 <th class="ja-text">ペ{pe}</th>
                 <th class="ja-text">ベ{be}</th>
@@ -291,7 +308,6 @@
                 <th class="ja-text">ヨ{yo}</th>
                 <th class="ja-text">ロ{ro}</th>
                 <th class="ja-text">ヲ{wo}</th>
-                <th></th>
                 <th class="ja-text">ポ{po}</th>
                 <th class="ja-text">ボ{bo}</th>
                 <th class="ja-text">ド{do}</th>
@@ -300,7 +316,6 @@
             </tr>
             <tr>
                 <th class="ja-text">ン{n}</th>
-                <th></th>
                 <th></th>
                 <th></th>
                 <th></th>
@@ -358,166 +373,175 @@
                 <th class="ja-text">ギョ{gyo}</th>
             </tr>
         </table>
-        <table>
-            <tr>
-                <th class="ja-text">ヴァ{va}</th>
-                <th class="ja-text">ファ{fa}</th>
-                <th class="ja-text">ヒェ{hye}</th>
-                <th class="ja-text">トゥ{tu}</th>
-                <th class="ja-text">ティ{ti}</th>
-                <th class="ja-text">ツァ{tsa}</th>
-                <th class="ja-text">シェ{she}</th>
-                <th class="ja-text">クァ{kwa}</th>
-                <th class="ja-text">キェ{kye}</th>
-                <th class="ja-text">イェ{ye}</th>
-            </tr>
-            <tr>
-                <th class="ja-text">ヴィ{vi}</th>
-                <th class="ja-text">フィ{fi}</th>
-                <th></th>
-                <th class="ja-text">トュ{tyu}</th>
-                <th class="ja-text">ディ{di}</th>
-                <th class="ja-text">ツェ{tse}</th>
-                <th class="ja-text">チェ{che}</th>
-                <th class="ja-text">クィ{kwi}</th>
-                <th class="ja-text">ギェ{gye}</th>
-                <th class="ja-text">ウィ{wi}</th>
-            </tr>
-            <tr>
-                <th class="ja-text">ヴ{vu}</th>
-                <th class="ja-text">フュ{fyu}</th>
-                <th></th>
-                <th class="ja-text">ドゥ{du}</th>
-                <th class="ja-text">デュ{dyu}</th>
-                <th class="ja-text">ツォ{tso}</th>
-                <th></th>
-                <th class="ja-text">クェ{kwe}</th>
-                <th></th>
-                <th class="ja-text">ウェ{we}</th>
-            </tr>
-            <tr>
-                <th class="ja-text">ヴェ{ve}</th>
-                <th class="ja-text">フェ{fe}</th>
-                <th></th>
-                <th class="ja-text">ドュ{dyu}</th>
-                <th></th>
-                <th></th>
-                <th></th>
-                <th class="ja-text">クォ{kwo}</th>
-                <th></th>
-                <th class="ja-text">ウォ{wo}</th>
-            </tr>
-            <tr>
-                <th class="ja-text">ヴォ{vo}</th>
-                <th class="ja-text">フォ{fo}</th>
-                <th></th>
-                <th></th>
-                <th></th>
-                <th></th>
-                <th></th>
-                <th></th>
-                <th></th>
-                <th></th>
-            </tr>
-        </table>
     </div>
-    <h2 id="particle-title"><span class="ja-text">助詞{じょし}</span>（ＰＡＲＴＩＣＬＥＳ）</h2>
+    <div id="katakana-quiz-contents" style="display: none;">
+        <div class="quiz-container" id="katakana-container">
+            <div class="quiz-center" id="katakana-center">
+                <div class="quiz-letter-display" id="katakana-display"></div>
+                <div class="quiz-input-area">
+                    <textarea class="quiz-input-box" rows="1" id="katakana-input"></textarea>
+                    <button class="quiz-submit-button" id="katakana-submit">ＳＵＢＭＩＴ</button>
+                </div>
+            </div>
+            <div class="quiz-result" id="katakana-results" style="display: none;">
+                <p id="katakana-result-title" class="result-title"></p>
+                <p id="katakana-result-info" class="result-info"></p>
+            </div>
+        </div> 
+    </div>
+    <h3 id="pronunciation-title"><span class="ja-text">発音{はつおん}</span>（ＰＲＯＮＵＮＣＩＡＴＩＯＮ）</h3>
+    <h2 id="vocab-title"><span class="ja-text">単語{たんご}</span>（ＶＯＣＡＢＵＬＡＲＹ）</h2>
+    <h2 id="vocab-title"><span class="ja-text">文法{ぶんぽう}</span>（ＧＲＡＭＭＡＲ）</h2>
+    <h3 id="grammer-title"><span class="ja-text">助詞{じょし}</span>（ＰＡＲＴＩＣＬＥＳ）</h3>
     <p class="descriptor">
             Particles are a key aspect of grammer in Japanese, they act as suffixes 
             or short words that follow after a noun, verb, adjective or sentence, 
             their range varies from indicating the function and meaning of words, to 
             changing a sentence's tone and speaker affect.
     </p>
-    <p class="descriptor">
-        Please note that particles can overlap catagories, and that a single 
-        kana can have different meanings as part of a different catagory
-    </p>
-    <div class="particles">
-
-
-        <h3 id="case-particles"><span class="ja-text">格助詞{かくじょし}</span>（ＣＡＳＥ　ＰＡＲＴＩＣＬＥＳ）</h3>
-        <p class="descriptor">
-            In English, word order is used to define what grammatical role (a.k.a case) a word
-            has. In Japanese, Case Particles are used to identify the case of the noun that 
-            comes before it, for example: subject, direct object, loaction, destination, etc.
-        </p>
-        <div id="case-container" class="particle-container">
-            <!-- Injected -->
+    <div class="particles-contents">
+        <div id="particle-container">
+            <main>
+                <div class="particle-area">
+                    <table>
+                        <th id="particle" class="ja-text">は{wa}</th>
+                    </table>
+                </div>
+            </main>
+            <main>
+                <div class="particle-area">
+                    <table>
+                        <th id="particle" class="ja-text">が{ga}</th>
+                    </table>
+                </div>
+            </main>
+            <main>
+                <div class="particle-area">
+                    <table>
+                        <th id="particle" class="ja-text">に{ni}</th>
+                    </table>
+                </div>
+            </main>
+            <main>
+                <div class="particle-area">
+                    <table>
+                        <th id="particle" class="ja-text">へ{e}</th>
+                    </table>
+                </div>
+            </main>
+            <main>
+                <div class="particle-area">
+                    <table>
+                        <th id="particle" class="ja-text">で{de}</th>
+                    </table>
+                </div>
+            </main>
+            <main>
+                <div class="particle-area">
+                    <table>
+                        <th id="particle" class="ja-text">ね{ne}</th>
+                    </table>
+                </div>
+            </main>
+            <main>
+                <div class="particle-area">
+                    <table>
+                        <th id="particle" class="ja-text">か{ka}</th>
+                    </table>
+                </div>
+            </main>
+            <main>
+                <div class="particle-area">
+                    <table>
+                        <th id="particle" class="ja-text">と{to}</th>
+                    </table>
+                </div>
+            </main>
+            <main>
+                <div class="particle-area">
+                    <table>
+                        <th id="particle" class="ja-text">や{ya}</th>
+                    </table>
+                </div>
+            </main>
+            <main>
+                <div class="particle-area">
+                    <table>
+                        <th id="particle" class="ja-text">も{mo}</th>
+                    </table>
+                </div>
+            </main>
+            <main>
+                <div class="particle-area">
+                    <table>
+                        <th id="particle" class="ja-text">よ{yo}</th>
+                    </table>
+                </div>
+            </main>
+            <main>
+                <div class="particle-area">
+                    <table>
+                        <th id="particle" class="ja-text">を{o}</th>
+                    </table>
+                </div>
+            </main>
+            <main>
+                <div class="particle-area">
+                    <table>
+                        <th id="particle" class="ja-text">の{no}</th>
+                    </table>
+                </div>
+            </main>
+            <main>
+                <div class="particle-area">
+                    <table>
+                        <th id="particle" class="ja-text">な{na}</th>
+                    </table>
+                </div>
+            </main>
+            <main>
+                <div class="particle-area">
+                    <table>
+                        <th id="particle" class="ja-text">から{kara}</th>
+                    </table>
+                </div>
+            </main>
+            <main>
+                <div class="particle-area">
+                    <table>
+                        <th id="particle" class="ja-text">まで{made}</th>
+                    </table>
+                </div>
+            </main>
+            <main>
+                <div class="particle-area">
+                    <table>
+                        <th id="particle" class="ja-text">より{yori}</th>
+                    </table>
+                </div>
+            </main>
+            <main>
+                <div class="particle-area">
+                    <table>
+                        <th id="particle" class="ja-text">だけ{dake}</th>
+                    </table>
+                </div>
+            </main>
+            <main>
+                <div class="particle-area">
+                    <table>
+                        <th id="particle" class="ja-text">しか{shika}</th>
+                    </table>
+                </div>
+            </main>
+            <main>
+                <div class="particle-area">
+                    <table>
+                        <th id="particle" class="ja-text">し{shi}</th>
+                    </table>
+                </div>
+            </main>
         </div>
-
-
-        <h3 id="parallel-particles"><span class="ja-text">並立助詞{へいれつじょし}</span>（ＰＡＲＡＬＬＥＬ　ＰＡＲＴＩＣＬＥＳ）</h3>
-        <p class="descriptor">
-            Parallel particles are used to put nouns and noun phrases in parallel (thus the name) or in a list, 
-            and in English they mostly translate to words similar to "and" and "or".
-        </p>
-        <div id="parallel-container" class="particle-container">
-            <!-- Injected -->
-        </div>
-
-
-        <h3 id="sentence-ending-particles"><span class="ja-text">終助詞{しゅうじょし}</span>（ＳＥＮＴＥＮＣＥ－ＥＮＤＩＮＧ　ＰＡＲＴＩＣＬＥＳ）</h3>
-        <p class="descriptor">
-            Sentence-ending particles are kana placed at the end of sentences to show its
-            force, such as emphasis, confirmation, questioning, emotion, etc.
-        </p>
-        <div id="sentence-ending-container" class="particle-container">
-            <!-- Injected -->
-        </div>
-
-
-        <h3 id="interjectory-particles"><span class="ja-text">間投助詞{かんとうじょし}</span>（ＩＮＴＥＲＪＥＣＴＯＲＹ　ＰＡＲＴＩＣＬＥＳ）</h3>
-        <p class="descriptor">
-            Interjectory particles can be placed mid-sentece in order to show emphasis, confirmation, 
-            questioning, emotion, etc. 
-        </p>
-        <div id="interjectory-container" class="particle-container">
-            <!-- Injected -->
-        </div>
-
-
-        <h3 id="adverbial-particles"><span class="ja-text">副助詞{ふくじょし}</span>（ＡＤＶＥＲＢＩＡＬ　ＰＡＲＴＩＣＬＥＳ）</h3>
-        <p class="descriptor">
-            Adverbial particles act similarly to adverbs (thus the name) by modifiy words 
-            or phrases to express concepts like limits, addition, emphasis, etc.
-        </p>
-        <div id="adverbial-container" class="particle-container">
-            <!-- Injected -->
-        </div>
-
-
-        <h3 id="binding-particles"><span class="ja-text">係助詞{かかりじょし}</span>（ＢＩＮＤＩＮＧ　ＰＡＲＴＩＣＬＥＳ）</h3>
-        <p class="descriptor">
-            Binding particles attach/bind to words and phrases and highlight how they
-            should be interpreted, able to create emphasis, contrast, limitations, and
-            control what the listener pays attention to.
-        </p>
-        <div id="binding-container" class="particle-container">
-            <!-- Injected -->
-        </div>
-
-
-        <h3 id="conjunctive-particles"><span class="ja-text">接続助詞{せつぞくじょし}</span>（ＣＯＮＪＵＮＣＴＩＶＥ　ＰＡＲＴＩＣＬＥＳ）</h3>
-        <p class="descriptor">
-            Conjunctive particles connect one clause to another and shows the relationship between
-            the them, whether it is in contrast, cause or reason, time sequence, condition, etc,
-            they work the same as conectives in English (thus the name).
-        </p>
-        <div id="conjunctive-container" class="particle-container">
-            <!-- Injected -->
-        </div>
-
-
-        <h3 id="normalising-particles"><span class="ja-text">準体助詞{じゅんたいじょし}</span>（ＮＯＲＭＡＬＩＳＩＮＧ　ＰＡＲＴＩＣＬＥＳ）</h3>
-        <p class="descriptor">
-            Normalising particles allow you to turn something that is not a noun, into a noun, allowing
-            you to treat actions, situations, descriptions, etc as things/objects (a.k.a nouns)
-        </p>
-        <div id="normalising-container" class="particle-container">
-            <!-- Injected -->
-        </div>
-
-
     </div>
 </div>
 </body>

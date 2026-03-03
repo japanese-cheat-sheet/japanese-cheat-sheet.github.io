@@ -1,0 +1,595 @@
+:root{
+    --PRIMARY: none;
+    --PRIMARYalpha: none;
+    --PRIMARYlowAlpha: none;
+    --SECONDARY: none;
+}
+html{
+    scroll-behavior: smooth;
+    overflow-x:visible;
+}
+body{ 
+    user-select: none;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--PRIMARY);
+    background-image:url("../background/konbiniDesktop.png"), linear-gradient(var(--PRIMARY) 0 100%);
+    background-blend-mode:soft-light, normal;
+    background-attachment:fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:cover;
+    margin:0;
+}
+
+/*
+############################################################
+JA-TEXT SETTINGS/OPTIONS
+############################################################
+*/
+
+/*//////////////////////////////////////////////////////////
+.ja-text .ja-screen .ja-popup .inline-ja
+//////////////////////////////////////////////////////////*/
+
+.ja-text{
+    position: relative;
+}
+.ja-screen{
+    position: relative;
+    border-radius: 2px;
+    padding: 5px;
+    text-align: center;
+    display:inline-block;
+}
+.ja-screen:hover{
+    color: var(--PRIMARY);
+    background-color: var(--SECONDARY) !important;
+}
+.ja-popup{
+    color: var(--SECONDARY);
+    background-color: var(--PRIMARY) !important;
+    position: absolute;
+    display: none;
+    font-size: 18pt;
+    border: 2px var(--SECONDARY) solid;
+    border-radius: 2px;
+    white-space: nowrap;
+    text-align: center;
+    font-weight: 600;
+    font-family: Arial, Helvetica, sans-serif;
+    aspect-ratio: none;
+    line-height: 100%;
+    pointer-events: none;
+    z-index: 100;
+    min-width: 100%;
+    left:50%;
+    transform: translateX(-50%);
+}
+.inline-ja{
+    font-size: 13pt;
+    letter-spacing: 0px;
+}
+.inline-ja .ja-screen{
+    --padding: 3px;
+    --left-right: 6px;
+    padding: var(--padding);
+    margin: calc(var(--padding)*-1);
+    padding-left: var(--left-right);
+    padding-right: var(--left-right);
+    margin-left: calc(var(--left-right)*-1);
+    margin-right: calc(var(--left-right)*-1);
+}
+.inline-ja .ja-popup{
+    top:-26px;
+    font-size: 12pt;
+    padding-top:6px;
+    padding-bottom: 6px;
+    font-weight: 600;
+}
+
+/*//////////////////////////////////////////////////////////
+.ja-screen Element Options
+//////////////////////////////////////////////////////////*/
+
+#intro-text-title .ja-screen{
+    border-radius: 2px;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+h3 .ja-screen:hover {
+    font-weight: 500;
+}
+table .ja-screen{
+    font-size: 25pt;
+    width: auto;
+    --width: 50px;
+    min-width: var(--width);
+    line-height: var(--width);
+    padding: 12px;
+    margin:-2px;
+    position: relative;
+    border-radius: 2px;
+    white-space: nowrap;
+}
+table .ja-screen.singleKana{
+    aspect-ratio: 1/1;
+}
+table .ja-screen.doubleKana, .ja-screen.moreParticle{
+    padding-left: 18px;
+    padding-right: 18px;
+}
+.particle-area .ja-screen{
+    aspect-ratio: none;
+}
+
+/*//////////////////////////////////////////////////////////
+.ja-popup Element Options
+//////////////////////////////////////////////////////////*/
+
+h1 .ja-popup{
+    top: -42px;
+    padding: 8px;
+    padding-top:10px;
+    padding-bottom: 10px;
+    font-size: 28pt;
+}
+h2 .ja-popup{
+    top: -34px;
+    font-size: 22pt;
+    padding: 6px;
+    padding-top:8px;
+    padding-bottom: 8px;
+}
+h3 .ja-popup{
+    top: -34px;
+    font-size: 18pt;
+    padding: 8px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+table .ja-popup{
+    top:-25px;
+    font-size: 18pt;
+    padding-top:6px;
+    padding-bottom: 6px;
+}
+
+/*
+############################################################
+LOADING SCREEN
+############################################################
+*/
+
+#loading-cover{
+    z-index: 9999;
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 200%;
+    background-color: white;
+    transition: none;
+    opacity: 0;
+    pointer-events: none;
+}
+
+/*
+############################################################
+SIDE MENU
+############################################################
+*/
+
+/*//////////////////////////////////////////////////////////
+Banner
+//////////////////////////////////////////////////////////*/
+
+#menu-button-area{
+    position: fixed;
+    top: 0;
+    z-index: 400;
+    background-color: var(--PRIMARY);
+    width:100%;
+    height: fit-content;
+    pointer-events: all;
+}
+
+#side-menu-button{
+    z-index: 300;
+    top:0;
+    margin: 5px;
+    padding:0px;
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-bottom: 5px;
+    font-size: 35pt;
+    font-weight: 400;
+    color: var(--SECONDARY);
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    pointer-events: all;
+}
+
+/*//////////////////////////////////////////////////////////
+Side Menu Area
+//////////////////////////////////////////////////////////*/
+
+#side-menu{
+    zoom:100%;
+    position: fixed;
+    background-color: var(--PRIMARYlowAlpha);
+    top:0;
+    left:0;
+    transform: translateX(-100%);
+    transition: transform 0.5s;
+    min-width: 300px;
+    height: 100%;
+    z-index: 200;
+    padding-top: 90px;
+    padding-left: 20px;
+    overflow-y:scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    pointer-events: none;
+}
+
+#side-menu::-webkit-scrollbar {
+  display: none;
+}
+
+/*//////////////////////////////////////////////////////////
+Side Menu Contents/Text
+//////////////////////////////////////////////////////////*/
+
+#side-menu-text{
+    color: var(--SECONDARY);
+    position: relative;
+    pointer-events: all;
+    padding-bottom: calc(5vw + 600px);
+}
+.menu-option{
+    position: relative;
+    display: block;
+    transition: padding-left 0.2s ,padding-right 0.2s;
+    margin-bottom: 10px;
+    word-break: keep-all;
+    white-space: nowrap;
+    padding-right:0px;
+}
+.menu-option:hover{
+    padding-left:30px;
+    padding-right:0px !important;
+}
+.type0{
+    position: relative;
+    height: 1px;
+    background-color: var(--SECONDARY);
+    margin-top: 15px;
+    margin-bottom: 15px;
+    width:275px;
+}
+.type0:hover{
+    padding-left:0px;
+    padding-right:0px;
+}
+.type-function{
+    font-size: 1em;
+    padding-right:10px;
+}
+.type1{
+    font-size: 1.25em;
+    padding-right:30px;
+}
+.type2{
+    font-size: 0.8em;
+    padding-right:30px;
+}
+
+/*
+############################################################
+MAIN PAGE AREA
+############################################################
+*/
+
+.center{
+    width: max-content;
+    height: max-content;
+    left: 0;
+    right: 0;
+    margin: auto;
+    margin-top: calc(3vw + 65px);
+    margin-bottom: calc(5vw + 600px);
+    padding: 25px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+/*//////////////////////////////////////////////////////////
+Headings
+//////////////////////////////////////////////////////////*/
+
+h1{
+    text-align: center;
+    position: relative;
+    font-size: 50pt;
+    color: var(--SECONDARY);
+    margin-block-start: 0;
+    margin-block-end: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    padding-top:50px;
+    padding-bottom: 1vw;
+    width: max-content;
+}
+h2{
+    position: relative;
+    font-size: 35pt;
+    font-weight: 400;
+    color: var(--SECONDARY);
+    margin-block-start: 0;
+    margin-block-end: 0;
+    padding-top:10px;
+    padding-bottom: 10px;
+}
+h3{
+    position: relative;
+    font-size: 25pt;
+    font-weight: 300;
+    color: var(--SECONDARY);
+    margin-block-start: 0;
+    margin-block-end: 0;
+    padding-top:10px;
+    padding-bottom: 0px;
+}
+
+
+/*//////////////////////////////////////////////////////////
+Intro Text
+//////////////////////////////////////////////////////////*/
+
+#intro-text-title{
+    padding: 0;
+    padding-top: 10px;
+    font-weight: 500;
+}
+#intro-text{
+    width: 1000px;
+    padding: 8px;
+    word-break: keep-all;
+    font-size: 12pt;
+    font-weight: 400;
+    color: var(--SECONDARY);
+    margin-block-start: 0;
+    margin-block-end: 0;
+    text-align: justify;
+    letter-spacing: -3px;
+}
+.space{
+    height: 12px;
+}
+#end-space{
+    height: 30px;
+}
+.kaomoji{
+    letter-spacing: 0px;
+}
+#pwa-text{
+    margin-block-start: 0;
+    margin-block-end: 0;
+    display: none;
+}
+
+/*//////////////////////////////////////////////////////////
+Table Elements
+//////////////////////////////////////////////////////////*/
+
+table {
+    border-collapse: separate;
+    margin-bottom: 50px;
+}
+td, th {
+    font-size: 20pt;
+    text-align: center;
+    width: 1fr;
+}
+th:not(:empty){
+    border: 1px var(--SECONDARY) solid ;
+    border-radius: 2px;
+    color: var(--SECONDARY);
+    background-color: var(--PRIMARYalpha);
+}
+
+/*//////////////////////////////////////////////////////////
+Hiragana and Katakana
+//////////////////////////////////////////////////////////*/
+
+.quiz-button{
+    position: relative;
+    font-size: 20pt;
+    top:-2px;
+    padding: 2px;
+    border: 1px var(--SECONDARY) solid ;
+    border-radius: 2px;
+    color: var(--SECONDARY);
+    background-color: var(--PRIMARYalpha);
+}
+.quiz-button:hover{
+    color: var(--PRIMARY);
+    border: 1px var(--PRIMARY) solid ;
+    background-color: var(--SECONDARY);
+}
+.quiz-button:active{
+    color: var(--SECONDARY);
+    border: 1px var(--SECONDARY) solid ;
+    background-color: var(--PRIMARY);
+}
+
+.quiz-center{
+    position: absolute;
+    top:50%;
+    left:50%;
+    translate: -50% -50%;
+}
+.quiz-container{
+    position: relative;
+    height: 785px;
+    width: 99%;
+    background-color: var(--PRIMARYalpha);
+    border: 1px var(--SECONDARY) solid;
+    border-radius: 2px;
+}
+.quiz-letter-display{
+    position: relative;
+    --height: 200px;
+    width: 350px;
+    height: var(--height);
+    line-height: var(--height);
+    text-align: center;
+    font-size:80pt;
+    margin-left: 110px;
+    margin-right: 110px;
+    margin-bottom: 40px;
+    color: var(--SECONDARY);
+    background-color: rgba(0, 0, 0, 0);
+    border: 1px var(--SECONDARY) solid;
+
+}
+.quiz-input-area{
+    position: relative;
+    width: 85%;
+    left:50%;
+    translate: -50%;
+    padding: 20px;
+    border: 1px var(--SECONDARY) solid;
+
+}
+.quiz-input-box{
+    position: relative;
+    padding: 20px;
+    --height: 50px;
+    width: 200px;
+    text-transform: uppercase;
+    height: var(--height);
+    line-height: var(--height);
+    color: var(--SECONDARY);
+    border: 1px var(--SECONDARY) solid;
+    background-color: rgba(0, 0, 0, 0);
+    vertical-align: middle;
+
+    text-align: center;
+    font-size: 30pt;
+    font-family: "ＭＳ Ｐゴシック";
+    white-space: nowrap;
+
+    overflow: hidden;
+    outline: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    resize: none;
+}
+.quiz-submit-button{
+    position: relative;
+    color: var(--SECONDARY);
+    border: 1px var(--SECONDARY) solid;
+    background-color: rgba(0, 0, 0, 0);
+    padding: 15px;
+    margin: 12px;
+    font-size: 18pt;
+    float:right;
+    vertical-align: middle;
+}
+.quiz-submit-button:hover{
+    color: var(--PRIMARY);
+    border: 1px var(--PRIMARY) solid;
+    background-color: var(--SECONDARY);
+}
+.quiz-submit-button:active{
+    color: var(--SECONDARY);
+    border: 1px var(--SECONDARY) solid;
+    background-color: var(--PRIMARY);
+}
+
+.result-title {
+    position: absolute;
+    top:20%;
+    left:50%;
+    translate: -50% -20%;
+    font-size: 50pt;
+    color: var(--SECONDARY);
+    width: 80%;
+    text-align: center;
+}
+.result-info {
+    position: absolute;
+    top:50%;
+    left:50%;
+    translate: -50% -50%;
+    font-size: 20pt;
+    color: var(--SECONDARY);
+    width: 90%;
+    text-align: center;
+}
+/*//////////////////////////////////////////////////////////
+Particle Titles
+//////////////////////////////////////////////////////////*/
+
+#particle-title{
+    padding-bottom: 0px;
+}
+.descriptor{
+    font-size: 15pt;
+    font-family: "ＭＳ Ｐゴシック";
+    color: var(--SECONDARY);
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-top: 5px;
+    margin-bottom: 18px;
+    margin-left: 5px;
+    width: 900px;
+    padding: 7px;
+    background-color: var(--PRIMARYalpha);
+    border: 1px var(--SECONDARY) solid;
+}
+
+/*//////////////////////////////////////////////////////////
+Particle Contents
+//////////////////////////////////////////////////////////*/
+
+#particle-container{
+    display: grid;
+    grid-template-columns: repeat(3, 375px);
+    column-gap: 10px;
+    row-gap: 10px;
+    margin-bottom: 20px;
+}
+
+main{
+    border: 2px var(--SECONDARY) solid;
+    background-color: var(--PRIMARYalpha);
+    min-height: 100px;
+}
+.particle-area{
+    float: left;
+    width: min-content;
+    height: min-content;
+    padding: 12px 6px 0px 12px;
+}
+main table{
+    position: relative;
+    margin: 0;
+}
+main td:not(:empty), main th:not(:empty){
+    background-color: rgba(0, 0, 0, 0) ;
+}
+
+main p{
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin: 12px;
+    font-size: 15pt;
+    font-family: "ＭＳ Ｐゴシック";
+    color: var(--SECONDARY);
+    word-break: keep-all;
+    text-align:justify;
+}

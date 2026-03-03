@@ -11,9 +11,9 @@ if(window.localStorage.getItem("AUDIO") == null || window.localStorage.getItem("
 }
 waitForElem(".audio-button").then(function(elem){
     if(window.localStorage.getItem("AUDIO") == "1") {
-        elem.innerText = "ミュート（ＭＵＴＥ）"
+        elem.innerText = "ミュート解除（ＵＮＭＵＴＥＤ）"
     } else {
-        elem.innerText = "ミュート解除（ＵＮＭＵＴＥ）"
+        elem.innerText = "ミュート（ＭＵＴＥＤ）"
     }
 })
 
@@ -31,12 +31,12 @@ function toggleAudio(){
             if(window.localStorage.getItem("AUDIO") == "1") {
                 window.localStorage.setItem("AUDIO", "0")
                 window.localStorage.setItem("AUDIO-INTRO", "0")
-                audio.innerText = "ミュート解除（ＵＮＭＵＴＥ）"
+                audio.innerText = "ミュート（ＭＵＴＥＤ）"
                 intro.innerText = "コンビニの音オフ（ＩＮＴＲＯ　ＯＦＦ）"
             } else {
                 window.localStorage.setItem("AUDIO", "1")
                 window.localStorage.setItem("AUDIO-INTRO", "1")
-                audio.innerText = "ミュート（ＭＵＴＥ）"
+                audio.innerText = "ミュート解除（ＵＮＭＵＴＥＤ）"
                 intro.innerText = "コンビニの音オン　（ＩＮＴＲＯ　ＯＮ）"
             }
             console.log("audio = " + window.localStorage.getItem("AUDIO"))

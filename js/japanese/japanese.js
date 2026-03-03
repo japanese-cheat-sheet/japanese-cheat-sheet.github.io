@@ -1,17 +1,15 @@
 //update with new ja-text elements
-waitForElemAll("ja-text", 300).then(function(elem){
+waitForElemAll("ja-text", 230).then(function(elem){
     var JAelems = elem
     for (i=0;i<JAelems.length;i++) {
         var currentElem = JAelems[i]
         var currentList = currentElem.innerText.split(/{|}/)
         currentList = currentList.filter(function(e){return e})
-        console.log(currentList)
         for(j=0;j<currentList.length;j++){
             if(j%2==0){
                 currentElem.innerText = ""
                 var screenSpan = document.createElement("span")
                 var tableChecker = currentElem.parentElement.tagName
-                console.log(tableChecker)
                 if(tableChecker == "TR" && currentList[j].length == 1){
                     screenSpan.className = "ja-screen singleKana"
                 } else if(tableChecker == "TR" && currentList[j].length == 2){
@@ -69,7 +67,5 @@ waitForElemAll("ja-text", 300).then(function(elem){
         })
     }
 })
-
-    
 
          
