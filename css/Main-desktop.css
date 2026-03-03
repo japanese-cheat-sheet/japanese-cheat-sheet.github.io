@@ -432,11 +432,12 @@ Hiragana and Katakana
 }
 .quiz-container{
     position: relative;
-    height: 785px;
-    width: 99%;
+    height: 735px;
+    width: 98%;
     background-color: var(--PRIMARYalpha);
     border: 1px var(--SECONDARY) solid;
     border-radius: 2px;
+    margin-bottom: 50px;
 }
 .quiz-letter-display{
     position: relative;
