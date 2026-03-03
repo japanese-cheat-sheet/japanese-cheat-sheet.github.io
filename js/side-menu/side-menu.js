@@ -82,16 +82,7 @@ var list = [
     ["日本語（ＪＡＰＡＮＥＳＥ）","window.scrollTo(0,0)", 1],
     ["仮名（ＷＲＩＴＩＮＧ　ＳＹＳＴＥＭ）","scrollById(event,'kana-title')", 1],
     ["平仮名（ＨＩＲＡＧＡＮＡ）","scrollById(event,'hiragana-title')", 2],
-    ["片仮名（ＫＡＴＡＫＡＮＡ）","scrollById(event,'katakana-title')", 2],
-    ["助詞（ＰＡＲＴＩＣＬＥＳ）","scrollById(event,'particle-title')", 1],
-    ["格助詞（ＣＡＳＥ　ＰＡＲＴＩＣＬＥＳ）","scrollById(event,'case-particles')",2],
-    ["並立助詞（ＰＡＲＡＬＬＥＬ　ＰＡＲＴＩＣＬＥＳ）","scrollById(event,'parallel-particles')",2],
-    ["終助詞（ＳＥＮＴＥＮＣＥ－ＥＮＤＩＮＧ　ＰＡＲＴＩＣＬＥＳ）","scrollById(event,'sentence-ending-particles')",2],
-    ["間投助詞（ＩＮＴＥＲＪＥＣＴＯＲＹ　ＰＡＲＴＩＣＬＥＳ）","scrollById(event,'interjectory-particles')",2],
-    ["副助詞（ＡＤＶＥＲＢＩＡＬ　ＰＡＲＴＩＣＬＥＳ）","scrollById(event,'adverbial-particles')",2],
-    ["係助詞（ＢＩＮＤＩＮＧ　ＰＡＲＴＩＣＬＥＳ）","scrollById(event,'binding-particles')",2],
-    ["接続助詞（ＣＯＮＪＵＮＣＴＩＶＥ　ＰＡＲＴＩＣＬＥＳ）","scrollById(event,'conjunctive-particles')",2],
-    ["準体助詞（ＮＯＲＭＡＬＩＳＩＮＧ　ＰＡＲＴＩＣＬＥＳ）","scrollById(event,'normalising-particles')",2]
+    ["片仮名（ＫＡＴＡＫＡＮＡ）","scrollById(event,'katakana-title')", 2]
 ]
 
 function addContents(array){

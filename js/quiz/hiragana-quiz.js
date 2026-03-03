@@ -1,8 +1,8 @@
 var hiraganaContent
 hiraganaContent = await fetch("../js/json/hiragana.json")
 .then(responce => responce.json())
-var allHiraganaKana = ["test1","test2","test3","test4","test5"]//Object.keys(hiraganaContent)
-var allHiraganaAnswers = ["test1","test2","test3","test4","test5"]//Object.values(hiraganaContent)
+var allHiraganaKana = Object.keys(hiraganaContent)
+var allHiraganaAnswers = Object.values(hiraganaContent)
 var hiraganaTotalNum = allHiraganaKana.length
 var hiraganaTotalCorrect = 0
 
