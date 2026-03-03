@@ -82,7 +82,11 @@ var list = [
     ["日本語（ＪＡＰＡＮＥＳＥ）","window.scrollTo(0,0)", 1],
     ["仮名（ＷＲＩＴＩＮＧ　ＳＹＳＴＥＭ）","scrollById(event,'kana-title')", 1],
     ["平仮名（ＨＩＲＡＧＡＮＡ）","scrollById(event,'hiragana-title')", 2],
-    ["片仮名（ＫＡＴＡＫＡＮＡ）","scrollById(event,'katakana-title')", 2]
+    ["片仮名（ＫＡＴＡＫＡＮＡ）","scrollById(event,'katakana-title')", 2],
+    ["漢字（ＫＡＮＪＩ）","scrollById(event,'kanji-title')", 1],
+    ["単語（ＶＯＣＡＢＵＬＡＲＹ）","scrollById(event,'vocab-title')", 1],
+    ["文法（ＧＲＡＭＭＡＲ）","scrollById(event,'grammer-title')", 1],
+    ["助詞（ＰＡＲＴＩＣＬＥＳ）","scrollById(event,'particle-title')", 2],
 ]
 
 function addContents(array){

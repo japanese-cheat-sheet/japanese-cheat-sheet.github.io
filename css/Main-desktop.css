@@ -412,6 +412,7 @@ Hiragana and Katakana
     border-radius: 2px;
     color: var(--SECONDARY);
     background-color: var(--PRIMARYalpha);
+    float: right;
 }
 .quiz-button:hover{
     color: var(--PRIMARY);
@@ -433,7 +434,7 @@ Hiragana and Katakana
 .quiz-container{
     position: relative;
     height: 735px;
-    width: 98%;
+    width: 100%;
     background-color: var(--PRIMARYalpha);
     border: 1px var(--SECONDARY) solid;
     border-radius: 2px;
@@ -453,7 +454,6 @@ Hiragana and Katakana
     color: var(--SECONDARY);
     background-color: rgba(0, 0, 0, 0);
     border: 1px var(--SECONDARY) solid;
-
 }
 .quiz-input-area{
     position: relative;

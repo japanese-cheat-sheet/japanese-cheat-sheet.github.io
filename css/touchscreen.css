@@ -125,27 +125,40 @@
         background-color: var(--PRIMARY);
     }
 
-    .particle-container{
+    #particle-container{
         margin-top: 8px;
-        grid-template-columns: repeat(3, 435px);
-        column-gap: 25px;
-        row-gap: 25px;
+        grid-template-columns: repeat(3, 445px);
+        column-gap: 15px;
+        row-gap: 15px;
     }
-
-    .hint-container{
-        grid-template-columns: repeat(2, 1fr);
+    .quiz-button{
+        font-size: 22pt;
+        top:-2px;
+        padding: 4px;
     }
-
-    .hint-text{
-        padding:0;
-        font-size: 15pt;
-        font-weight: 1000;
-        border: 4px var(--SECONDARY) solid;
-        padding: 20px;
-        padding-left: 40px;
-        padding-right: 40px;
-        font-family:"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro",Osaka, "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
-
+    .quiz-button:hover{
+    color: var(--SECONDARY);
+    border: 1px var(--SECONDARY) solid ;
+    background-color: var(--PRIMARYalpha);
+    }
+    .quiz-button:active{
+    color: var(--SECONDARY);
+    border: 1px var(--SECONDARY) solid ;
+    background-color: var(--PRIMARYalpha);
+    }
+    .quiz-container{
+        height: 850px;
+        margin-bottom: 5px;
+    }
+    .quiz-letter-display{
+        --height: 300px;
+        width: 600px;
+        height: var(--height);
+        line-height: var(--height);
+        font-size:140pt;
+    }
+    .quiz-input-box{
+        width: 425px;
     }
 
     .hiragana, .katakana{
