@@ -56,7 +56,12 @@ document.addEventListener("click",function(event){
     })
 })
 
+function openForm() {
+    window.open("https://rune-spatula-bbb.notion.site/ebd//31cf990f08338050bd3bd481851d9d32", '_blank').focus();
+}
+
 var list = [
+    ["ご意見用紙（ＦＥＥＤＢＡＣＫ　ＦＯＲＭ）","openForm()", "-function"],
     ["","toggleAudio()", "-function audio-button"],
     ["","toggleColors(event)", "-function dark-mode"],
     ["","", 0],
@@ -69,6 +74,7 @@ var list = [
     ["文法（ＧＲＡＭＭＡＲ）","scrollById(event,'grammer-title')", 1],
     ["助詞（ＰＡＲＴＩＣＬＥＳ）","scrollById(event,'particle-title')", 2],
 ]
+//
 
 function addContents(array){
     waitForElem("#side-menu-text").then(function(container){
