@@ -15,6 +15,7 @@
     ],
     "start_url": "../../.",
     "display": "standalone",
-    "theme_color": "#EEEEEE",
+    "theme_color": "#BC002D",
+    "background_color": "#BC002D",
     "prefer_related_applications": false
 }

@@ -21,10 +21,10 @@ function toggleAudio(){
     waitForElem(".audio-button").then(function(audio){
         if(window.localStorage.getItem("AUDIO") == "1") {
             window.localStorage.setItem("AUDIO", "0")
-            audio.innerText = muteText
+            audio.innerText = unmuteText
         } else {
             window.localStorage.setItem("AUDIO", "1")
-            audio.innerText = unmuteText
+            audio.innerText = muteText
         }
     })
 }

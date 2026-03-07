@@ -8,7 +8,7 @@ speechSynthesis.addEventListener("voiceschanged", () => {
 //update with new ja-screen elements
 waitForElemAll("ja-screen", 210).then(function(ja_screen){
     elems = ja_screen
-    if(window.matchMedia("(pointer: coarse)").matches) {
+    if(window.matchMedia("(pointer: coarse)").matches){
         var clicker = "dblclick"
     } else {
         var clicker = "click"

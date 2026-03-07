@@ -1,6 +1,6 @@
 function loadingAnimation(){
     var duration = 1000
-    var delay = 500
+    var delay = 750
     waitForElem("#loading-cover").then(function(elem){
         setTimeout(function(){
             elem.style.opacity = 0;
