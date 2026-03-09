@@ -71,8 +71,10 @@ var list = [
     ["片仮名（ＫＡＴＡＫＡＮＡ）","scrollById(event,'katakana-title')", 2],
     ["漢字（ＫＡＮＪＩ）","scrollById(event,'kanji-title')", 1],
     ["単語（ＶＯＣＡＢＵＬＡＲＹ）","scrollById(event,'vocab-title')", 1],
-    ["文法（ＧＲＡＭＭＡＲ）","scrollById(event,'grammer-title')", 1],
+    ["文法（ＧＲＡＭＭＡＲ）","scrollById(event,'grammar-title')", 1],
     ["助詞（ＰＡＲＴＩＣＬＥＳ）","scrollById(event,'particle-title')", 2],
+    ["数詞（ＣＯＵＮＴＥＲＳ）","scrollById(event,'counter-title')", 1]
+
 ]
 //
 

@@ -21,12 +21,13 @@
     <script src="js/webpage/title.js"></script>
     <script src="js/element-wait.js"></script>
     <script src="js/side-menu/audio-settings.js"></script>
-    <script src="js/side-menu/colors.js"></script>
+    <script src="js/webpage/colors.js"></script>
     <script src="js/webpage/loading.js"></script>
     <script src="js/side-menu/side-menu.js"></script>
     <script src="js/japanese/japanese.js"></script>
     <script src="js/japanese/tts.js"></script>
     <script src="js/webpage/device.js"></script>
+    <script src="js/webpage/orientation.js"></script>
     <script type="module" src="js/quiz/hiragana-quiz.js"></script>
     <script type="module" src="js/quiz/katakana-quiz.js"></script>
 
@@ -45,10 +46,10 @@
     <div id="opening-center">
         <h1 id="main-heading"><span class="ja-text">日本語の定番チートシート{にほんご・の・ていばん・チートシート}</span></h1>
         <p id="main-subheading">Ｔｈｅ　Ｊａｐａｎｅｓｅ　Ｇｏ－Ｔｏ　Ｃｈｅａｔ　Ｓｈｅｅｔ</p>
-        <p class="main-info" id="computer-zoom">Ｍａｋｅ　ｓｕｒｅ　ｔｏ　ｕｓｅ　<span class="control-key">ＣＴＲＬ</span>＋　ａｎｄ　<span class="control-key">ＣＴＲＬ</span>－　ｔｏ　ａｄｊｕｓｔ　ｃｏｎｅｎｔ　ｓｉｚｅ</p>
-        <p class="main-info" id="computer-zoom"><span style="letter-spacing: 0px;">（</span>Ｎｏｔｅ：　ｔｏ　ｇｅｔ　ｔｈｅ　ｂｅｓｔ　ａｄｊｕｓｔｍｅｎｔｓ，　ｚｏｏｍ　ｏｕｔ　ｕｎｔｉｌ　ｔｈｅｒｅ　ｉｓ　ｎｏ　ｓｉｄｅｗａｙｓ　ｓｃｒｏｌｌ，<br>
+        <p class="main-info" id="computer-zoom1">Ｍａｋｅ　ｓｕｒｅ　ｔｏ　ｕｓｅ　<span class="control-key">ＣＴＲＬ</span>＋　ａｎｄ　<span class="control-key">ＣＴＲＬ</span>－　ｔｏ　ａｄｊｕｓｔ　ｃｏｎｅｎｔ　ｓｉｚｅ</p>
+        <p class="main-info" id="computer-zoom2"><span style="letter-spacing: 0px;">（</span>Ｎｏｔｅ：　ｔｏ　ｇｅｔ　ｔｈｅ　ｂｅｓｔ　ａｄｊｕｓｔｍｅｎｔｓ，　ｚｏｏｍ　ｏｕｔ　ｕｎｔｉｌ　ｔｈｅｒｅ　ｉｓ　ｎｏ　ｓｉｄｅｗａｙｓ　ｓｃｒｏｌｌ，
         ｔｈｅｎ　ａｄｊｕｓｔ　ｔｈｅ　ｚｏｏｍ　ｆｒｏｍ　ｔｈａｔ　ｐｏｉｎｔ　ｔｏ　ｙｏｕｒ　ｌｉｋｉｎ<span style="letter-spacing: 0px;">ｇ）</span></p>
-        <p class="main-info">Ｓｃｒｏｌｌ　ｄｏｗｎ　ｏｒ　ｕｓｅ　ｔｈｅ　ｓｉｄｅ　ｍｅｎｕ　<span style="letter-spacing: 0px;">（☰）</span>ｔｏ　ｇｏ　ｔｏ　ａ　ｔｏｐｉｃ</p>
+        <p class="main-info" id="scroll-guide">Ｓｃｒｏｌｌ　ｄｏｗｎ　ｏｒ　ｕｓｅ　ｔｈｅ　ｓｉｄｅ　ｍｅｎｕ　<span style="letter-spacing: 0px;">（☰）</span>ｔｏ　ｇｏ　ｔｏ　ａ　ｔｏｐｉｃ</p>
         <p id="main-arrow">▼</p>
     </div>
 </div>
@@ -56,7 +57,7 @@
     <h2 id="kana-title"><span class="ja-text">仮名{かな}</span>（ＫＡＮＡ）</h2>
     <p class="descriptor">
         Kana refers to the symbols/character that make up the 
-        japanese language, these mostly refer to Hiragana and 
+        Japanese language, these mostly refer to Hiragana and 
         Katakana.<br><br>
         Firstly however, a good concept to learn before Hiragana and Katakana
         is about Rōmaji. Rōmaji is about using the Latin alphabet (English
@@ -143,7 +144,7 @@
         <span class="ja-text inline-ja">ゅ{yu}</span>, 
         and 
         <span class="ja-text inline-ja">ょ{yo}</span>, when typing in 
-        Japanese using Rōmaji, you can make these small symbols by putting an "x" or an "l"
+        Japanese using Rōmaji, you can make these small symbols by putting an "x"
         before the Rōmaji, for example typing "xyo" will make "<span class="ja-text inline-ja">ょ{yo}</span>"
         <br><br>
         There are rare circumstances where diagraphs occur with a different pair of
@@ -463,7 +464,7 @@
     </div>
     <h2 id="kanji-title"><span class="ja-text">漢字{かんじ}</span>（ＫＡＮＪＩ）</h2>
     <h2 id="vocab-title"><span class="ja-text">単語{たんご}</span>（ＶＯＣＡＢＵＬＡＲＹ）</h2>
-    <h2 id="grammer-title"><span class="ja-text">文法{ぶんぽう}</span>（ＧＲＡＭＭＡＲ）</h2>
+    <h2 id="grammar-title"><span class="ja-text">文法{ぶんぽう}</span>（ＧＲＡＭＭＡＲ）</h2>
     <h3 id="particle-title"><span class="ja-text">助詞{じょし}</span>（ＰＡＲＴＩＣＬＥＳ）</h3>
     <p class="descriptor">
         Particles are a key aspect of grammer in Japanese, they act as suffixes 

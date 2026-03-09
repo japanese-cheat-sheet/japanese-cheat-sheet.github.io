@@ -5,8 +5,11 @@ speechSynthesis.addEventListener("voiceschanged", () => {
     synth.voice = voices[28]
 });
 
+// use for debugging
+console.log(document.getElementsByClassName("ja-screen"))
+
 //update with new ja-screen elements
-waitForElemAll("ja-screen", 210).then(function(ja_screen){
+waitForElemAll("ja-screen", 285).then(function(ja_screen){
     elems = ja_screen
     if(window.matchMedia("(pointer: coarse)").matches){
         var clicker = "dblclick"

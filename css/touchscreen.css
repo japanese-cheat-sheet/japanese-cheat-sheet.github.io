@@ -1,4 +1,8 @@
 @media (pointer:coarse) {
+    *{
+        -webkit-tap-highlight-color: transparent;
+    }
+    
     html{
         zoom:25%;
     }
@@ -39,6 +43,7 @@
     }
     .type-function{
         font-size: 2.5em;
+        padding-right: 60px;
     }
 
     .type1{
@@ -61,7 +66,7 @@
     }
 
     #opening-screen{
-        height: calc(100vh * 4);
+        height: calc(100lvh * 4);
     }
 
     #main-heading{
@@ -79,15 +84,15 @@
     }
 
     #main-subheading{
-        font-size: 12vw;
+        font-size: 10vw;
         font-weight: 500;
         width: max-content;
     }
 
     .main-info, #main-arrow{
-        font-size: 8.5vw;
+        font-size: 6vw;
         width: max-content;
-        max-width: calc(75vw*4);
+        max-width: calc(65vw*4);
         letter-spacing: -0.15vw;
     }
     .main-info{
@@ -95,12 +100,11 @@
     }
 
     #main-arrow{
-        font-size: 12vw;
-        top:2vw;
+        top:2.5vw;
     }
     @keyframes arrow-down{
-        0%{top:2vw;}
-        100%{top:8vw;}
+        0%{top:2.5vw;}
+        100%{top:8.5vw;}
     }
 
     .center{

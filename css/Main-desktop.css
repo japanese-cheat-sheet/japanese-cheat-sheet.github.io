@@ -1,7 +1,6 @@
 :root{
     --PRIMARY: none;
     --PRIMARYalpha: none;
-    --PRIMARYlowAlpha: none;
     --SECONDARY: none;
 }
 html{
@@ -52,7 +51,8 @@ JA-TEXT SETTINGS/OPTIONS
 }
 .ja-screen:hover{
     color: var(--PRIMARY);
-    background-color: var(--SECONDARY) ;
+    background-color: var(--SECONDARY);
+    cursor: pointer;
 }
 .ja-popup{
     color: var(--SECONDARY);
@@ -211,7 +211,7 @@ Side Menu Area
 #side-menu{
     zoom:100%;
     position: fixed;
-    background-color: var(--PRIMARYlowAlpha);
+    background-color: var(--PRIMARYalpha);
     top:0;
     left:0;
     transform: translateX(-100%);
@@ -280,7 +280,7 @@ Side Menu Contents/Text
 .type-function{
     font-size: 1em;
     padding-right:30px;
-    font-weight: 600;
+    font-weight: 500;
 }
 .type1{
     font-size: 1.35em;
@@ -290,6 +290,7 @@ Side Menu Contents/Text
 .type2{
     font-size: 1em;
     padding-right:30px;
+    font-weight: 400;
 }
 
 /*
@@ -401,7 +402,7 @@ OPENING PAGE AREA
     padding-top: 1vw;
 }
 
-#computer-zoom{
+#computer-zoom1, #computer-zoom2{
     display: block;
 }
 
@@ -500,6 +501,7 @@ Hiragana and Katakana
     color: var(--PRIMARY);
     border: 1px var(--SECONDARY) solid ;
     background-color: var(--SECONDARY);
+    cursor: pointer;
 }
 .quiz-button:active{
     color: var(--SECONDARY);

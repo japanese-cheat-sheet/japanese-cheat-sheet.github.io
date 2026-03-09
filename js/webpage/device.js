@@ -1,22 +1,3 @@
-setInterval(function(){
-    
-    waitForElem("#computer-zoom").then(function(zoom){
-        if(window.matchMedia("(pointer: coarse)").matches){
-            zoom.style.display = "none"
-        } else {
-            zoom.style.display = "block"
-        }
-    })
-
-    waitForElemAll(".control-key").then(function(control){
-        if(window.navigator.platform.toUpperCase().indexOf('MAC')){
-            control.innerText = "⌘"
-        } else {
-            control.innerText = "ＣＴＲＬ"
-        }
-    })
-},1)
-
 function adjustZoom(){
     var devicePixelRatio = window.devicePixelRatio || 1
     var zoom =  120 + (100 - Math.round(devicePixelRatio* 100))  + "%"
@@ -34,3 +15,34 @@ if(window.matchMedia("(pointer: coarse)").matches == false){
         adjustZoom()
     })
 } else {}
+
+setInterval(function(){
+    
+    waitForElem("#computer-zoom1").then(function(zoom1){
+    waitForElem("#computer-zoom2").then(function(zoom2){
+        if(window.matchMedia("(pointer: coarse)").matches){
+            zoom1.style.display = "none"
+            zoom2.style.display = "none"
+        } else {
+            zoom1.style.display = "block"
+            zoom2.style.display = "block"
+        }
+    })
+    })
+
+    waitForElemAll(".control-key").then(function(control){
+        if(window.navigator.platform.toUpperCase().indexOf('MAC')){
+            control.innerText = "⌘"
+        } else {
+            control.innerText = "ＣＴＲＬ"
+        }
+    })
+
+    waitForElem("#opening-screen").then(function(screen){
+        if(window.matchMedia("(pointer: coarse)").matches){
+
+
+        }
+    })
+},1)
+
