@@ -1,13 +1,15 @@
 var hiraganaContent
 hiraganaContent = await fetch("../js/json/hiragana.json")
 .then(responce => responce.json())
+const permAllHiragana = Object.keys(hiraganaContent)
 var allHiraganaKana = Object.keys(hiraganaContent)
 var allHiraganaAnswers = Object.values(hiraganaContent)
 var hiraganaTotalNum = allHiraganaKana.length
 var hiraganaTotalCorrect = 0
 
 var hiraganaInput, hiraganaSubmitButton, hiraganaDisplay,
-hiraganaQuizElems, hiraganaResultsElem, hiraganaResultTitle, hiraganaResultInfo
+hiraganaQuizElems, hiraganaResultsElem, hiraganaResultTitle,
+hiraganaResultInfo, hiraganaQuestionCounter
 hiraganaInput = await waitForElem("#hiragana-input").then(responce => responce)
 hiraganaSubmitButton = await waitForElem("#hiragana-submit").then(responce => responce)
 hiraganaDisplay = await waitForElem("#hiragana-display").then(responce => responce)
@@ -15,6 +17,7 @@ hiraganaQuizElems = await waitForElem("#hiragana-center").then(responce => respo
 hiraganaResultsElem = await waitForElem("#hiragana-results").then(responce => responce)
 hiraganaResultTitle = await waitForElem("#hiragana-result-title").then(responce => responce)
 hiraganaResultInfo = await waitForElem("#hiragana-result-info").then(responce => responce)
+hiraganaQuestionCounter = await waitForElem("#hiragana-counter").then(responce => responce)
 
 function hiraReset(){
     allHiraganaKana = Object.keys(hiraganaContent)
@@ -25,6 +28,7 @@ function hiraReset(){
     hiraganaTotalCorrect = 0
     hiraganaResultsElem.style.display = "none"
     hiraganaQuizElems.style.display = "block"
+    hiraganaQuestionCounter = ""
     hiraSetQuestion()
 }
 
@@ -46,7 +50,7 @@ function hiraSubmit(){
 }
 
 function hiraResult(correct){
-    var delay = 750
+    var delay = 950
     if(correct){
         var extra = 0
         hiraganaTotalCorrect += 1
@@ -93,9 +97,9 @@ function hiraQuizComplete(){
     if(hiraganaPercentage == 100){
         var extraText = "\n\nPerfect Score　ദ്ദി(˵ •̀ ᴗ - ˵ ) ✧\n\n"
     } else if ((hiraganaPercentage < 100 && hiraganaPercentage >= 66)){
-        var extraText = "\n\nGood Score　(ﾉ´ヮ`)ﾉ*: ･ﾟ\n\n"
+        var extraText = "\n\nGood Score　(ﾉ^ヮ^)ﾉ\n\n"
     } else if ((hiraganaPercentage < 66 && hiraganaPercentage >= 33)){
-        var extraText = "\n\nNot Bad　(ﾉ^ヮ^)ﾉ\n\n"
+        var extraText = "\n\nNot Bad　(ﾉ´ヮ`)ﾉ*: ･ﾟ\n\n"
     } else {
         var extraText = "\n\nThere's room for improvement　(´-ω-`( _ _ )\n\n"
     }
@@ -106,6 +110,7 @@ function hiraQuizComplete(){
 var hiraganaCurrentQuestion
 var hiraganaCurrentAnswer
 function hiraSetQuestion(){
+    hiraganaQuestionCounter.innerText = hiraganaTotalCorrect + "/" + (permAllHiragana.length - allHiraganaKana.length)
     var currentIndex = Math.floor(Math.random()*allHiraganaKana.length)
     hiraganaCurrentQuestion = allHiraganaKana[currentIndex]
     hiraganaCurrentAnswer = allHiraganaAnswers[currentIndex].toUpperCase()

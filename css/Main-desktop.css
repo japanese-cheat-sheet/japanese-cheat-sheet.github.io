@@ -169,7 +169,7 @@ LOADING SCREEN
     left:0;
     width: 100%;
     height: 200%;
-    background-color: #FFFFFF;
+    background-color: #BC002D;
     transition: none;
     opacity: 0;
     pointer-events: none;
@@ -525,12 +525,21 @@ Hiragana and Katakana
 .quiz-container{
     position: relative;
     height: 660px;
-    width: 100%;
+    width: 99%;
     background-color: var(--PRIMARYalpha);
     border: 1px var(--SECONDARY) solid;
     border-radius: 2px;
     margin-bottom: 50px;
 }
+.quiz-question-counter{
+    margin-block-start: 0;
+    margin-block-end: 0;
+    color: var(--SECONDARY);
+    font-family: "ＭＳ Ｐゴシック";
+    padding: 15px;
+    font-size:35pt;
+}
+
 .quiz-letter-display{
     position: relative;
     --height: 200px;

@@ -1,13 +1,15 @@
 var katakanaContent
 katakanaContent = await fetch("../js/json/katakana.json")
 .then(responce => responce.json())
+const permAllKatakana = Object.keys(katakanaContent)
 var allKatakanaKana = Object.keys(katakanaContent)
 var allKatakanaAnswers = Object.values(katakanaContent)
 var katakanaTotalNum = allKatakanaKana.length
 var katakanaTotalCorrect = 0
 
 var katakanaInput, katakanaSubmitButton, katakanaDisplay,
-katakanaQuizElems, katakanaResultsElem, katakanaResultTitle, katakanaResultInfo
+katakanaQuizElems, katakanaResultsElem, katakanaResultTitle, 
+katakanaResultInfo, katakanaQuestionCounter
 katakanaInput = await waitForElem("#katakana-input").then(responce => responce)
 katakanaSubmitButton = await waitForElem("#katakana-submit").then(responce => responce)
 katakanaDisplay = await waitForElem("#katakana-display").then(responce => responce)
@@ -15,6 +17,7 @@ katakanaQuizElems = await waitForElem("#katakana-center").then(responce => respo
 katakanaResultsElem = await waitForElem("#katakana-results").then(responce => responce)
 katakanaResultTitle = await waitForElem("#katakana-result-title").then(responce => responce)
 katakanaResultInfo = await waitForElem("#katakana-result-info").then(responce => responce)
+katakanaQuestionCounter = await waitForElem("#katakana-counter").then(responce => responce)
 
 function kataReset(){
     allKatakanaKana = Object.keys(katakanaContent)
@@ -106,6 +109,7 @@ function kataQuizComplete(){
 var katakanaCurrentQuestion
 var katakanaCurrentAnswer
 function kataSetQuestion(){
+    katakanaQuestionCounter.innerText = katakanaTotalCorrect + "/" + (permAllKatakana.length - allKatakanaKana.length)
     var currentIndex = Math.floor(Math.random()*allKatakanaKana.length)
     katakanaCurrentQuestion = allKatakanaKana[currentIndex]
     katakanaCurrentAnswer = allKatakanaAnswers[currentIndex].toUpperCase()

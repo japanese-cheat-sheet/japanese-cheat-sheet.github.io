@@ -122,7 +122,19 @@
         line-height: var(--width);
         padding: 12px;
         border-radius: 2px;
+    }
+    
+    .ja-screen.singleKana {
+        aspect-ratio: 1/1;
+        width:70px;
+        line-height: 70px;
+        font-size: 40pt;
+    }
 
+    :not(main) .ja-screen.doubleKana{
+        /* width:00px; */
+        line-height: 70px;
+        font-size: 37pt;
     }
 
     .ja-popup{
@@ -138,32 +150,27 @@
         z-index: 100;
         
     }
-    h1 .ja-popup{
-        top: -62px;
-        font-size: 40pt;
-        padding: 10px;
-        padding-top:15px;
-        padding-bottom: 15px;
-    }
+
     h2 .ja-popup{
-        top: -42px;
-        font-size: 28pt;
-        padding: 8px;
+        top: -55px;
+        font-size: 35pt;
+        padding: 10px;
         padding-top:10px;
         padding-bottom: 10px;
+        border: 4px var(--SECONDARY) solid;
     }
     h3 .ja-popup{
-        top: -36px;
-        font-size: 22.5pt;
-        padding: 10px;
+        top: -45px;
+        font-size: 24pt;
+        padding: 12px;
         padding-left: 12px;
         padding-right: 12px;
     }
     table .ja-popup{
-        top:-32px;
-        padding-top:8px;
-        padding-bottom: 8px;
-        font-size: 21pt;
+        top:-50px;
+        padding-top:10px;
+        padding-bottom: 10px;
+        font-size: 30pt;
     }
 
     table {
@@ -199,8 +206,8 @@
     background-color: var(--PRIMARYalpha);
     }
     .quiz-container{
-        height: 850px;
-        margin-bottom: 5px;
+        height: 820px;
+        margin-bottom: 45px;
     }
     .quiz-letter-display{
         --height: 300px;
@@ -211,10 +218,6 @@
     }
     .quiz-input-box{
         width: 425px;
-    }
-
-    .hiragana, .katakana{
-        margin-bottom: 80px;
     }
     
     #intro-text-title{
@@ -250,11 +253,22 @@
     }
 
     .descriptor{
-        font-size: 20pt;
-        width:1210px;
-        padding: 10px;
+        font-size: 25pt;
+        width:1380px;
+        padding: 20px;
         font-family:"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro",Osaka, "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
-        border: 3px var(--SECONDARY) solid;
+        border: 10px var(--SECONDARY) double;
+    }
+    .inline-ja{
+        font-size: 25pt;
+        letter-spacing: 0px;
+    }
+    .inline-ja .ja-popup{
+        top:-55px;
+        font-size: 25pt;
+        padding: 12px;
+        font-weight: 600;
+        border: 4px var(--SECONDARY) solid;
     }
 
     .particle-area {
