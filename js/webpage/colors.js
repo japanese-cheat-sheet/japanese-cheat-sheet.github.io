@@ -13,21 +13,21 @@ COLORS.includes(window.localStorage.getItem("PRIMARY")) == false || COLORS.inclu
 }
 
 function changeFavicon(dark){
-    var sizes = [16,32,48]
+    var sizes = ["16","32","48"]
     if(dark){
         var darkText = "dark"
     } else {
         var darkText = ""
     }
-    for(i=0;i<sizes.length;i++){
-        document.getElementById("icon"+sizes[i]).remove()
-        var current = document.createElement("link")
-        current.id = "icon"+ sizes[i]
-        current.rel = "icon"
-        current.type = "image/x-icon"
-        current.href = "icons/icon16"+ darkText +".ico" + "?v=" + Date.now()
-        document.head.appendChild(current)
-    }
+    //change with pereference
+    var currentsize = 0
+    try{document.getElementById("icon"+sizes[currentsize]).remove()}catch{}
+    var current = document.createElement("link")
+    current.id = "icon"+ sizes[currentsize]
+    current.rel = "icon"
+    current.type = "image/x-icon"
+    current.href = "icons/icon"+ sizes[currentsize] + darkText + ".ico" + "?v=" + Date.now()
+    document.head.appendChild(current)
 }
 
 if(window.localStorage.getItem("PRIMARY") == COLORS[0]){

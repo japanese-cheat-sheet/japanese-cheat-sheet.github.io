@@ -1,5 +1,5 @@
 //update with new ja-text elements
-waitForElemAll("ja-text", 291).then(function(elem){
+waitForElemAll("ja-text", 290).then(function(elem){
     var JAelems = elem
     for (i=0;i<JAelems.length;i++) {
         var currentElem = JAelems[i]
@@ -14,7 +14,7 @@ waitForElemAll("ja-text", 291).then(function(elem){
                     screenSpan.className = "ja-screen singleKana"
                 } else if(tableChecker == "TR" && currentList[j].length == 2 && currentElem.id != "particle"){
                     screenSpan.className = "ja-screen doubleKana"
-                } else if(tableChecker == "TABLE" && currentList[j].length >= 2){
+                } else if(tableChecker == "TR" && currentList[j].length >= 2 && currentElem.id == "particle"){
                     screenSpan.className = "ja-screen moreParticle"
                 } 
                 else {

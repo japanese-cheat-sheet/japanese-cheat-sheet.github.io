@@ -72,6 +72,10 @@
     #opening-screen{
         height: calc(100lvh * 4);
     }
+    #opening-center{
+        top: calc(50dvh * 4);
+        left: calc(50dvw * 4);
+    }
 
     #main-heading{
         font-size: 30vw;
@@ -186,14 +190,17 @@
 
     #particle-container{
         margin-top: 8px;
-        grid-template-columns: repeat(3, 445px);
+        grid-template-columns: repeat(3, 470px);
         column-gap: 15px;
         row-gap: 15px;
     }
     .quiz-button{
-        font-size: 22pt;
-        top:-2px;
-        padding: 4px;
+        font-size: 21pt;
+        top:18px;
+        right:10px;
+        padding: 12px;
+        padding-left: 22px;
+        
     }
     .quiz-button:hover{
     color: var(--SECONDARY);
@@ -243,12 +250,12 @@
     }
 
     h2{
-        margin-top: 50px;
-        font-size: 50pt;
-        margin-bottom: 5px;
+        margin-top: 70px;
+        font-size: 70pt;
+        margin-bottom: 0px;
     }
     h3{
-        font-size: 35pt;
+        font-size: 45pt;
         padding-top: 30px;
     }
 
@@ -272,17 +279,22 @@
     }
 
     .particle-area {
-        padding: 12px 12px 0px 12px;
+        padding: 14px 14px 0px 14px;
     }
 
     .particle-area table .ja-screen {
-        font-size: 32pt;
-        --width: 55px;
+        font-size: 40pt;
+        --width: 75px;
         min-width: var(--width);
         line-height: var(--width);
         padding: 15px;
         margin:-2px;
         border-radius: 2px;
+    }
+
+    .particle-area table .ja-screen.moreParticle{
+        padding-left: 25px;
+        padding-right: 25px;
     }
 
     main{

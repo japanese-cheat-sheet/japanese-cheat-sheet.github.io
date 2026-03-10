@@ -34,7 +34,6 @@ function hiraReset(){
 
 function hiraSubmit(){
     if((event.key == "Enter" || event.type == "click") && hiraganaInput.value != ""){
-        console.log(allHiraganaKana.length)
         if(hiraganaInput.value.toUpperCase() == hiraganaCurrentAnswer){
             hiraganaInput.blur()
             hiraganaInput.value = ""
@@ -110,7 +109,7 @@ function hiraQuizComplete(){
 var hiraganaCurrentQuestion
 var hiraganaCurrentAnswer
 function hiraSetQuestion(){
-    hiraganaQuestionCounter.innerText = hiraganaTotalCorrect + "/" + (permAllHiragana.length - allHiraganaKana.length)
+    try{hiraganaQuestionCounter.innerText = hiraganaTotalCorrect + "/" + (permAllHiragana.length - allHiraganaKana.length)}catch{}
     var currentIndex = Math.floor(Math.random()*allHiraganaKana.length)
     hiraganaCurrentQuestion = allHiraganaKana[currentIndex]
     hiraganaCurrentAnswer = allHiraganaAnswers[currentIndex].toUpperCase()

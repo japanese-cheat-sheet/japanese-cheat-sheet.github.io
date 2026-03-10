@@ -70,6 +70,7 @@ var list = [
     ["仮名（ＫＡＮＡ）","scrollById(event,'kana-title')", 1],
     ["平仮名（ＨＩＲＡＧＡＮＡ）","scrollById(event,'hiragana-title')", 2],
     ["片仮名（ＫＡＴＡＫＡＮＡ）","scrollById(event,'katakana-title')", 2],
+    ["長音と促音（ＬＯＮＧ　ＶＯＷＥＬＳ\nＡＮＤ　ＤＯＵＢＬＥ　ＣＯＮＳＴＡＮＴＳ）","scrollById(event,'vowel-const-title')", 2],
     ["漢字（ＫＡＮＪＩ）","scrollById(event,'kanji-title')", 1],
     ["単語（ＶＯＣＡＢＵＬＡＲＹ）","scrollById(event,'vocab-title')", 1],
     ["文法（ＧＲＡＭＭＡＲ）","scrollById(event,'grammar-title')", 1],
